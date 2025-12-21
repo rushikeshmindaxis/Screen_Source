@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screensource - One Stop Solution</title>
+  <link rel="icon" type="image/png" href="images/LOGO_final.png">
+  <link rel="icon" type="image/png" href="images/LOGO_final.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Include in <head> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body {
+ font-family: 'Myriad Pro', Arial, sans-serif;
+    background: linear-gradient(to bottom, #f5f8ff);
+  color: #222;
+  overflow-x: hidden;
+}
+
+
+  
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+<!-- LOADER SECTION START -->
+<!-- Include Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<section id="loader" style="position:fixed; top:0; left:0; width:100%; height:110vh; background:#f5f8ff; display:flex; justify-content:center; align-items:center; z-index:9999; overflow:hidden; font-family:'Poppins', sans-serif;">
+
+  <!-- Diagonal Background Layer -->
+  <div class="bg-layer" style="position:absolute; width:200%; height:100%; background:#f5f8ff; z-index:1;"></div>
+
+  <!-- Animated Diagonal Box -->
+  <div class="diagonal-box" style="
+    position:absolute; width:200%; height:90%;
+  background: linear-gradient(135deg, rgba(252,217,50,0.8) 0%, rgba(249,76,156,0.8) 33%, rgba(69,195,240,0.8) 66%, rgba(68,68,68,0.8) 100%);
+
+    top:-100%; left:-60%;
+    transform:rotate(-30deg);
+    z-index:2;
+    animation:slideInBoxBounce 1.5s ease-out forwards;
+  "></div>
+
+  <!-- Colored Diagonal Bars -->
+  <div class="bars-container">
+    <div class="bar top-bar yellow" style="--bar-delay: 0s; left: 15%;"></div>
+    <div class="bar top-bar pink" style="--bar-delay: 0.2s; left: 30%;"></div>
+    <div class="bar bottom-bar blue" style="--bar-delay: 0.4s; left: 65%;"></div>
+    <div class="bar bottom-bar black" style="--bar-delay: 0.6s; left: 80%;"></div>
+  </div>
+
+  <!-- Loader Content -->
+<div class="loader-content" style="
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  opacity: 0;
+  padding: 0 20px;
+  animation: fadeIn 2s ease-in-out 0.1s forwards;
+">
+  
+  <!-- ✅ White transparent background behind logo -->
+  <div style="
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.35);
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  ">
+    <img src="images/LOGO_final.png" 
+         alt="Screensource Logo" 
+         class="loader-logo" 
+         style="max-width:380px; margin-bottom:10px;" />
+  </div>
+
+  <p class="loader-text" style="
+    font-size: 45px;
+    font-weight: 700;
+    color: #fcd932;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-left: 40px;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9),
+                 0 0 10px rgba(252, 217, 50, 0.6),
+                 0 0 20px rgba(252, 217, 50, 0.4);
+  ">
+    One Stop Solution for Printing Material
+  </p>
+</div>
+
+  <!-- Optional Sound Effect -->
+  <audio id="loaderSound" src="sounds/whoosh.mp3" preload="auto"></audio>
+
+  <!-- Styles -->
+  <style>
+    @keyframes slideInBoxBounce {
+      0% { top: -100%; }
+      70% { top: 20%; }
+      100% { top: 15%; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes barExpand {
+      0% { opacity: 0; transform: rotate(45deg) scaleY(0.3); }
+      100% { opacity: 1; transform: rotate(45deg) scaleY(1.2); }
+    }
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 0 transparent; }
+      50% { box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); }
+    }
+
+    .bars-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .bar {
+      position: absolute;
+      width: 90px;
+      height: 540px;
+      opacity: 0;
+      transform: rotate(45deg) scaleY(0);
+      animation: barExpand 1.2s ease-out forwards, glowPulse 2.5s ease-in-out infinite;
+      animation-delay: var(--bar-delay);
+      border-radius: 50px;
+    }
+    .yellow { background: #fcd932; }
+    .pink   { background: #f94c9c; }
+    .blue   { background: #45c3f0; }
+    .black  { background: #444444; }
+    .top-bar { top: -300px; }
+    .bottom-bar { bottom: -300px; }
+
+    /* Mobile & Tablet Responsive */
+    @media (max-width: 1024px) {
+      .diagonal-box { height: 120%; }
+    }
+
+    /* Hide loader for mobile */
+    @media (max-width: 768px) {
+      #loader {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .bar {
+        width: 30px;
+        height: 180px;
+      }
+      .diagonal-box { height: 140%; left: -80%; }
+      .loader-logo {
+        max-width: 180px !important;
+      }
+      .loader-text {
+        font-size: 16px !important;
+        margin-top: 5px !important;
+      }
+    }
+
+    /* --- Desktop Responsiveness --- */
+    /* Extra Large Screens (above 1600px) */
+    @media (min-width: 1600px) {
+      .diagonal-box { height: 90%; left: -60%; }
+      .bar { width: 100px; height: 600px; }
+      .loader-logo { max-width: 420px; }
+      .loader-text { font-size: 50px; }
+    }
+
+    /* Large Desktop (1440px–1600px) */
+    @media (max-width: 1599px) and (min-width: 1440px) {
+      .diagonal-box { height: 100%; left: -65%; }
+      .bar { width: 80px; height: 480px; }
+      .loader-logo { max-width: 340px; }
+      .loader-text { font-size: 36px; }
+    }
+
+    /* Standard Desktop (1025px–1439px) */
+    @media (max-width: 1439px) and (min-width: 1025px) {
+      .diagonal-box { height: 110%; left: -70%; }
+      .bar { width: 70px; height: 420px; }
+      .loader-logo { max-width: 280px; }
+      .loader-text { font-size: 28px; }
+    }
+
+  </style>
+
+  <!-- Script -->
+  <script>
+    window.addEventListener("load", () => {
+      const sound = document.getElementById("loaderSound");
+      if (sound) sound.play().catch(() => {});
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        loader.style.transition = "all 1s ease";
+        loader.style.transform = "translateY(-100%)";
+        loader.style.opacity = "0";
+        setTimeout(() => loader.style.display = "none", 1000);
+      }, 5500);
+    });
+  </script>
+</section>
+
+
+ <!-- LOADER SECTION END --> 
+
+    <!-- Header -->
+  <!-- NAVBAR SECTION START -->
+<section id="navbar-section">
+<style>
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Myriad Pro', Arial, sans-serif;
+    background: linear-gradient(to bottom, #f5f8ff);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 11px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #111;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 90px;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links > li > a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px 8px;
+  transition: all 0.3s ease;
+}
+.nav-links > li > a:hover {
+  color: #EC008C;
+}
+.nav-links,
+.nav-links li,
+.dropdown-menu,
+.sub-dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-links > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+   background: linear-gradient(to right, #00B5E2, #EC008C, #FFD200, #333);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links > li > a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown-menu,
+.sub-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 10px 0;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 999;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  overflow: visible; /* ✅ Prevents clipping of sub-menus */
+}
+
+/* Dropdown Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dropdown Links */
+.dropdown-menu a,
+.sub-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 15px;
+  color: #222;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.dropdown-menu a:hover,
+.sub-dropdown-menu a:hover {
+background: linear-gradient(90deg, #EC008C, #FFC1E3);
+
+  color: white;
+  padding-left: 20px;
+}
+
+.dropdown-menu a:not(:last-child),
+.sub-dropdown-menu a:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Sub-dropdown Positioning */
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0; /* ✅ Removed negative margin to avoid gap issues */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  min-width: 250px;
+}
+
+/* Show dropdowns on hover (Desktop) */
+.nav-links li:hover > .dropdown-menu {
+  display: block;
+}
+
+.sub-dropdown:hover > .sub-dropdown-menu {
+  display: block;
+}
+
+/* Add arrow indicators
+.nav-links li > a::after {
+  content: "";
+}
+
+.dropdown-menu > .sub-dropdown > a::after {
+  content: "›";
+  margin-left: auto;
+  font-size: 14px;
+  color: #999;
+} */
+
+/* Mobile Styles */
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Sidebar Nav */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    row-gap: 20px;
+    left: -280px;
+    height: 100vh;
+    width: 280px;
+    background: #222; /* Dark background */
+    flex-direction: column;
+    padding: 80px 0 20px;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divider line */
+  }
+
+  .nav-links > li > a {
+    display: block;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+
+  .nav-links > li > a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .dropdown-menu,
+  .sub-dropdown-menu {
+    position: static;
+    background: #222;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+  }
+
+  .dropdown-menu a,
+  .sub-dropdown-menu a {
+    color: white;
+    padding-left: 25px;
+  }
+
+  .dropdown-menu.show,
+  .sub-dropdown-menu.show {
+    display: flex !important;
+  }
+
+  .nav-links li:hover > .dropdown-menu,
+  .sub-dropdown:hover > .sub-dropdown-menu {
+    display: none;
+  }
+}
+
+/* Overlay for Mobile Menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+</style>
+
+
+<div class="navbar" id="navbar">
+  <div class="logo">
+   <img src="images/LOGO_final.png" alt="Logo" />
+  </div>
+
+  <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+<ul class="nav-links" id="navLinks">
+  <li><a href="index.html">HOME</a></li>
+
+    <li><a href="About_US.html">ABOUT US</a></li>
+
+<li>
+  <a class="dropdown-toggle">BRANDS <span class="dropdown-arrow">▾</span></a>
+  <ul class="dropdown-menu">
+    <li><a href="MAC_DERMIDE.html">MacDermid Alpha Autotype</a></li>
+    <li><a href="Orafol.html">Orafol Adhesive</a></li>
+    <li><a href="3M.html">3M Tapes</a></li>
+    <li><a href="Polyvantis.html">Polyvantis <small>(Sabic)</small></a></li>
+    <li><a href="Nittoku.html">Nittoku</a></li>
+    <li><a href="Print_color.html">Print color</a></li>
+    <li><a href="Yessor.html">Yessor Tech</a></li>
+    <li><a href="Sansui.html">Sansui</a></li>
+    <li><a href="NittoL.html">Nitto Denko</a></li>
+    <li><a href="Avery.html">Avery Dennison</a></li>
+    <li><a href="technova.html">TechNova (NovaLife)</a></li>
+  </ul>
+</li>
+
+  <!-- ✅ New SERVICES Menu -->
+  <li>
+    <a class="dropdown-toggle">SERVICES <span class="dropdown-arrow">▾</span></a>
+<ul class="dropdown-menu">
+  <li><a href="Stretching.html">Stretching Services</a></li>
+  <li><a href="Exposing.html">Exposing Services</a></li>
+  <li><a href="MAchine_Stre.html">Stretching Machines</a></li>
+  <li><a href="Machines_EXPO.html">Exposing Machines</a></li>
+</ul>
+  </li>
+
+
+  <!-- ✅ End SERVICES Menu -->
+
+  <li><a href="Contact.html">CONTACT US</a></li>
+</ul>
+
+</div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('overlay');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('show');
+      closeAllMenus();
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const menu = toggle.nextElementSibling;
+          menu.classList.toggle('show');
+          closeOthers(menu, '.dropdown-menu');
+        }
+      });
+    });
+
+    document.querySelectorAll('.sub-dropdown > a').forEach(sub => {
+      sub.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const subMenu = sub.nextElementSibling;
+          subMenu.classList.toggle('show');
+          closeOthers(subMenu, '.sub-dropdown-menu');
+        }
+      });
+    });
+
+    function closeOthers(current, selector) {
+      document.querySelectorAll(selector).forEach(menu => {
+        if (menu !== current) menu.classList.remove('show');
+      });
+    }
+
+    function closeAllMenus() {
+      document.querySelectorAll('.dropdown-menu, .sub-dropdown-menu').forEach(menu => {
+        menu.classList.remove('show');
+      });
+    }
+
+    document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          overlay.classList.remove('show');
+          closeAllMenus();
+        }
+      });
+    });
+  </script>
+</section>
+
+<!-- NAVBAR SECTION END -->
+
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+background: linear-gradient(
+  to bottom,
+  rgba(255, 255, 255, 1) 0%,     /* pure white at top */
+  rgba(255, 255, 255, 0.5) 10%, /* smoother bright start */
+  rgba(255, 255, 255, 0.5) 30%,  /* soft transition */
+  rgba(0, 0, 0, 0.9) 100%        /* fade into deep black */
+),
+    url('images/ALL_Machines_04.JPG') no-repeat center center/cover;
+  text-align: center;
+  font-family: 'Myriad Pro', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -1;
+  padding: 20px;
+  flex-wrap: wrap;
+">
+
+  <!-- Darker Overlay for contrast -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.1); 
+    z-index: 1;
+  "></div>
+
+  <!-- Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+    width: 100%;
+  ">
+<!-- Include Google Fonts in <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+
+<!-- Include Google Fonts in your <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+<!-- Include Google Fonts in your <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Fade and slide up */
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Glow pulse */
+    @keyframes glowPulse {
+      0%, 100% {
+        text-shadow:
+          2px 2px 6px rgba(0, 0, 0, 0.85),
+          0 0 10px rgba(255, 113, 192, 0.25);
+        color: #fff;
+      }
+      50% {
+        text-shadow:
+          2px 2px 10px rgba(0, 0, 0, 1),
+          0 0 20px rgba(255, 113, 192, 0.6);
+        color: white;
+      }
+    }
+
+    /* Typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    /* Blinking caret */
+    @keyframes blinkCaret {
+      0%, 100% { border-color: transparent }
+      50% { border-color: #ff71c0 }
+    }
+
+    .animated-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      max-width: 1500px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+      text-align: center;
+      color: #fff;
+      animation: fadeSlideUp 0.8s ease forwards;
+      white-space: nowrap;       /* Prevent line breaks */
+      overflow: hidden;          /* Hide overflowing text */
+      border-right: 3px solid #ff71c0; /* Caret */
+      width: 0;                  /* Start width for typing */
+      animation:
+        fadeSlideUp 0.8s ease forwards,
+        typing 4s steps(80, end) forwards,
+        blinkCaret 0.75s step-end infinite;
+      animation-delay: 0s, 0.8s, 0.8s;
+    }
+
+    /* Start glow pulse after typing is done */
+    .animated-text.glow {
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+  </style>
+
+  <p class="animated-text" id="animatedText">
+    Welcome to Screensource, your premier supplier of high-quality screen printing raw materials in Pune, India. We are your one-stop shop, dedicated to providing everything you need for exceptional prints — from start to finish.
+  </p>
+
+  <script>
+    // After typing finishes, add glow animation
+    const text = document.getElementById('animatedText');
+    // Typing duration is 4s + 0.8s delay (fadeSlideUp)
+    setTimeout(() => {
+      text.style.animation = 'glowPulse 3s ease-in-out infinite';
+      text.style.borderRight = 'none'; // Remove caret after typing
+      text.style.whiteSpace = 'normal'; // Allow wrapping
+      text.style.overflow = 'visible'; // Show full text
+      text.style.width = 'auto';        // Reset width
+    }, 4800);
+  </script>
+
+
+
+
+<div style="
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+">
+
+</div>
+
+</section>
+
+
+<!-- About Section --><!-- About Section -->
+<!-- Add this in your <head> for fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+  #about {
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #f5f8ff, #e2ebf7);
+    font-family: 'Poppins', Arial, sans-serif;
+    margin-top: 100vh;
+  }
+
+  .about-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+    opacity: 1; /* Always visible */
+    transform: none; /* No movement */
+  }
+
+  .about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0d2f53;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Highlight behind 'Product Range' */
+  .about-text h2 span {
+    position: relative;
+    color: #6a8dff;
+  }
+  .about-text h2 span::before {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: #d0dcff;
+    border-radius: 4px;
+    z-index: -1;
+  }
+
+  .about-text p {
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.85;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .about-text ul {
+    list-style: none;
+    padding-left: 0;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .about-text ul li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    font-weight: 500;
+  }
+
+  /* Custom bullet icon */
+  .about-text ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #6a8dff;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  /* Image styles */
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    opacity: 1; /* Always visible */
+    transform: none;
+  }
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0 20px 45px rgba(106, 141, 255, 0.25);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-wrapper {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .about-text h2 {
+      font-size: 2rem;
+    }
+    .about-text p, .about-text ul li {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+
+<section id="about">
+  <div class="about-wrapper" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+
+    <!-- Text Content -->
+    <div class="about-text" style="flex: 1;">
+      <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #222;">
+        Our Comprehensive <span style="color: #6a8dff;">Product Range</span>
+      </h2>
+      <p style="margin-bottom: 20px; font-size: 1.1rem; color: #555;">
+        We offer a complete range of essential screen printing products, including:
+      </p>
+      <ul style="list-style: disc; padding-left: 20px; font-size: 1rem; color: #444; line-height: 1.6;">
+        <li>Inks: A wide variety of high-performance inks for any application.</li>
+        <li>Adhesives: Reliable adhesives for secure screen and film mounting.</li>
+        <li>Frames: Durable frames to provide a stable foundation for your work.</li>
+        <li>Meshes: High-quality meshes for achieving sharp, precise detail.</li>
+        <li>Films: A full range of films for creating perfect stencils.</li>
+      </ul>
+    </div>
+
+    <!-- Image -->
+    <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+      <img 
+        src="images/HOME_ABOUT_IMAGE.webp" 
+        alt="Screen Printing Materials" 
+        loading="eager" 
+        style="max-width: 100%; height: auto; display: block;"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+<!-- <script>
+  // Simple scroll fade in animation
+  function revealOnScroll() {
+    const text = document.querySelector('.about-text');
+    const image = document.querySelector('.about-image');
+    const windowBottom = window.innerHeight;
+
+    if (text.getBoundingClientRect().top < windowBottom - 100) {
+      text.classList.add('visible');
+    }
+    if (image.getBoundingClientRect().top < windowBottom - 100) {
+      image.classList.add('visible');
+    }
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script> -->
+
+
+<section style="padding: 60px 20px;  background: linear-gradient(to bottom, #e2ebf7, #f5f8ff); font-family: 'Poppins', sans-serif; text-align: center; position: relative; overflow: hidden;">
+
+  <!-- Heading -->
+  <h2 style="
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1px;
+  ">
+    Authorized Distributors
+    <span style="
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 5px;
+      background: linear-gradient(90deg, #f94c9c, #45c3f0);
+      border-radius: 3px;
+      animation: glowLine 2s infinite alternate;
+    "></span>
+  </h2>
+
+  <!-- Intro -->
+  <p style="max-width: 750px; margin: 25px auto 50px; color: #555; font-size: 1.05rem; line-height: 1.7;">
+    We proudly partner with industry leaders to bring you products that stand for quality, innovation, and reliability.
+  </p>
+
+  <!-- Three Column Layout -->
+  <div class="distributor-wrapper">
+
+    <!-- Divider Lines -->
+    <div class="divider left-divider"></div>
+    <div class="divider right-divider"></div>
+
+    <!-- Left Column - MacDermid Alpha -->
+    <div class="distributor left">
+      <div class="logo-title">
+        <div class="logo-container">
+          <img src="images/----------------222222-removebg-preview.png" alt="MacDermid Alpha">
+        </div>
+        <h3>MacDermid Alpha</h3>
+      </div>
+      <p>
+        Screen Chemicals and Polyester Films — a comprehensive range for your pre-press needs, delivering top-tier quality and reliability.
+      </p>
+    </div>
+
+    <!-- Center Column - TechNova -->
+    <!-- Center Column - TechNova -->
+<div class="distributor center">
+  <div class="logo-title center-logo-title">
+    <div class="logo-container">
+      <img src="images/tech_nova.jpg" alt="TechNova">
+    </div>
+    <h3>TechNova</h3>
+  </div>
+  <p>
+    TechNova is one of the world's largest suppliers of print solutions and India's most trusted partner for offset, digital and flexo printing. With 50+ years of innovation, we empower businesses across industries with world-class solutions, eco-friendly technologies and a deep commitment to ethics, excellence and customer-first partnerships.
+  </p>
+</div>
+
+
+    <!-- Right Column - Orafol -->
+    <div class="distributor right">
+      <div class="logo-title">
+        <div class="logo-container">
+          <img src="images/COMPANY_LOGO_08.png" alt="Orafol">
+        </div>
+        <h3>Orafol</h3>
+      </div>
+      <p>
+        Adhesive Tapes and Vinyls — high-performance solutions ideal for both graphic and industrial applications.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+@keyframes glowLine {
+  0% { box-shadow: 0 0 10px rgba(249,76,156,0.6); }
+  100% { box-shadow: 0 0 20px rgba(69,195,240,0.8); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInCenter {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+/* Center Column - Stack logo and heading vertically */
+.center-logo-title {
+  flex-direction: column; /* vertical stack */
+  align-items: center;    /* center horizontally */
+  gap: 15px;              /* space between logo and heading */
+}
+
+.center-logo-title h3 {
+  margin-top: 0; /* remove any extra margin */
+  text-align: center;
+}
+
+/* Layout Styling */
+.distributor-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Divider Lines */
+.divider {
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  width: 3px;
+  background: linear-gradient(180deg, #f94c9c, #45c3f0);
+  animation: glowLine 2s infinite alternate;
+  border-radius: 2px;
+}
+.left-divider { left: 33.3%; }
+.right-divider { left: 66.6%; }
+
+/* Distributor Columns */
+.distributor {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  gap: 20px;
+}
+
+.distributor.left { 
+  text-align: right; 
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.distributor.center {
+  text-align: center;
+  animation: fadeInCenter 0.8s ease forwards;
+}
+
+.distributor.right { 
+  text-align: left; 
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+/* Logo + Title Row */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.distributor.left .logo-title {
+  flex-direction: row-reverse;
+}
+
+.logo-container {
+  background: linear-gradient(135deg, #ffffff, #f2faff);
+  border-radius: 12px;
+  padding: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-container img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.distributor h3 {
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin: 0;
+}
+
+.distributor p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 12px;
+  max-width: 95%;
+}
+
+@media (max-width: 1024px) {
+  .distributor-wrapper {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .divider { display: none; }
+  .distributor.left, .distributor.center, .distributor.right {
+    text-align: center;
+  }
+  .logo-title { flex-direction: column; }
+  .distributor p { margin: 0 auto; }
+  .distributor h3 { font-size: 1.6rem; }
+  .distributor p { font-size: 1rem; }
+}
+</style>
+
+
+
+<!-- //////////////////////////////// OUR CLIENT////////////////////////////// -->
+<!-- Include GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<section style="padding: 100px 20px; background: linear-gradient(to bottom,#f5f8ff ,#e2ebf7 ); font-family: 'Poppins', sans-serif; position: relative; overflow: hidden;">
+  <!-- Animated light effect -->
+  <div style="position: absolute; top: 0; left: -50%; width: 200%; height: 120%; background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%); animation: moveLight 12s linear infinite;"></div>
+
+  <div style="max-width: 1400px; margin: auto; display: flex; align-items: flex-start; gap: 60px; flex-wrap: wrap; flex-direction: row;" id="clientsWrapper">
+
+    <!-- Heading -->
+    <div style="flex: 1 1 250px; min-width: 250px;">
+<h2 style="
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 500;
+    line-height: 1.3;
+    position: relative;
+    padding-left: 30px; /* enough space for vertical bar */
+    background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block; /* allows wrapping */
+    max-width: 100%;
+">
+    <!-- Vertical colored bar -->
+    <span style="
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(180deg, #fe320a, #ff7b5c);
+        border-radius: 5px;
+    "></span>
+
+    Brands we work with
+</h2>
+
+    </div>
+
+    <!-- Slider -->
+<div style="flex: 3 1 700px; overflow: hidden; position: relative;">
+  <div class="clients-slider">
+
+    <a href="MAC_DERMIDE.html" target="">
+      <img src="images/----------------222222-removebg-preview.png" alt="Client 1">
+    </a>
+
+<img src="images/COMPANY_LOGO_02.png" alt="Client 2">
+
+
+    <a href="3M.html" target="">
+      <img src="images/COMPANY_LOGO_03.png" alt="Client 3">
+    </a>
+
+    <a href="Nittoku.html" target="">
+      <img src="images/NITTOKU_LOGO-removebg-preview.png" alt="Client 4">
+    </a>
+
+    <a href="JK_lite.html" target="">
+      <img src="images/JK_LITE_LOGO.png" alt="Client 7">
+    </a>
+
+    <a href="Orafol.html" target="">
+      <img src="images/COMPANY_LOGO_08.png" alt="Client 8">
+    </a>
+
+
+      <img src="images/NBCD_LOGO-removebg-preview.png" alt="Client 10">
+
+
+      <img src="images/COMPANY_LOGO_11-removebg-preview.png" alt="Client 11">
+
+
+    <a href="NittoL.html" target="">
+      <img src="images/NITTO_LOGO_NEW.svg" alt="Client 12">
+    </a>
+
+    <a href="Print_color.html" target="">
+      <img src="images/PRINT_COLOR_LOGO.png" alt="Client 13">
+    </a>
+
+    <a href="Sansui.html" target="">
+      <img src="images/SUNSUI_LOGO-removebg-preview.png" alt="Client 14">
+    </a>
+
+    <a href="Yessor.html" target="">
+      <img src="images/YESSOR_LOGO.png" alt="Client 15">
+    </a>
+
+
+      <img src="images/4_PILLARS_LOGO-removebg-preview.png" alt="Client 16">
+
+
+      <img src="images/PHOTOKINA_LAGO-removebg-preview.png" alt="Client 17">
+
+
+      <img src="images/tech_nova.jpg" alt="Client 18">
+    
+  </div>
+</div>
+
+  </div>
+
+<style>
+  @keyframes moveLight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(50%); }
+  }
+
+  .clients-slider {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+  .clients-slider img {
+    max-height: 90px;
+    object-fit: contain;
+    background: white;
+    padding: 14px 26px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+  }
+
+  .clients-slider img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    filter: brightness(1.1);
+  }
+
+  @media (max-width: 768px) {
+    #clientsWrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .clients-slider {
+      gap: 20px; /* slightly smaller gap for mobile */
+    }
+
+    .clients-slider img {
+      max-height: 60px;
+      padding: 8px 16px;
+    }
+
+    /* Center heading for mobile */
+    h2 {
+      font-size: 2.2rem !important;
+      text-align: center;
+      padding-left: 0 !important;
+      display: block;
+      width: 100%;
+    }
+
+    /* Remove the colored bar in mobile */
+    h2 span {
+      display: none !important;
+    }
+  }
+</style>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector(".clients-slider");
+    const logosHTML = slider.innerHTML;
+
+    // Duplicate logos for seamless looping
+    slider.innerHTML += logosHTML;
+
+    function initScroll() {
+        let totalWidth = 0;
+        slider.querySelectorAll("img").forEach(img => {
+            totalWidth += img.offsetWidth + parseInt(getComputedStyle(slider).gap);
+        });
+
+        // Increase duration to slow down scroll
+        let duration = window.innerWidth < 768 ? 15 : 30; // slower on both mobile & desktop
+
+        gsap.killTweensOf(slider);
+        gsap.set(slider, { x: 0 }); // reset before starting
+        gsap.to(slider, {
+            x: -totalWidth / 2,
+            duration: duration,
+            ease: "linear",
+            repeat: -1
+        });
+    }
+
+    function checkImagesLoaded() {
+        const images = slider.querySelectorAll("img");
+        let loadedCount = 0; // FIX: define counter
+
+        images.forEach(img => {
+            if (img.complete) {
+                loadedCount++;
+            } else {
+                img.addEventListener("load", () => {
+                    loadedCount++;
+                    if (loadedCount === images.length) initScroll();
+                });
+            }
+        });
+
+        if (loadedCount === images.length) initScroll();
+    }
+
+    window.addEventListener("resize", () => {
+        setTimeout(initScroll, 200); // recalc on resize
+    });
+
+    checkImagesLoaded();
+});
+</script>
+
+
+
+<!-- //////////////////////////////// OUR CLIENT////////////////////////////// -->
+
+
+<!-- ///////////////////////// OUR SERVICES /////////////////////  -->
+
+<section class="services-section">
+  <h2>Screen Printing Products</h2>
+
+  <div class="slider-wrapper">
+    <button class="scroll-btn left" onclick="scrollSlider(-1)">&#10094;</button>
+
+    <div class="services-container" id="servicesSlider">
+      <!-- Cards inserted by JS -->
+    </div>
+
+    <button class="scroll-btn right" onclick="scrollSlider(1)">&#10095;</button>
+  </div>
+
+  <style>
+    /* Your existing styles remain unchanged */
+    .services-section {
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #e2ebf7, #f5f8ff);
+      font-family: 'Poppins', sans-serif;
+    }
+    .services-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0, #444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .slider-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .scroll-btn {
+      font-size: 2rem;
+      background: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+      transition: background 0.3s;
+    }
+    .scroll-btn:hover {
+      background: #f0f0f0;
+    }
+    .services-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px;
+      flex: 1;
+    }
+    .services-container::-webkit-scrollbar {
+      display: none;
+    }
+    .card-wrapper {
+      min-width: 290px;
+      max-width: 320px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .card {
+      height: 380px;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border: 3px solid;
+      border-image: linear-gradient(45deg, #fcd932, #f94c9c, #45c3f0, #444) 1;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+      flex-grow: 1;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .view-button {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background: linear-gradient(to right, #f94c9c, #45c3f0);
+      color: white;
+      padding: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      opacity: 0;
+      transition: opacity 0.3s ease, bottom 0.3s ease;
+    }
+    .card-wrapper:hover .view-button {
+      opacity: 1;
+      bottom: 0;
+    }
+    @media (max-width: 600px) {
+      .scroll-btn {
+        display: none;
+      }
+    }
+  </style>
+
+  <script>
+    const services = [
+      {
+        title: "MacDermid Alpha",
+        image: "images/MACD_15.JPG",
+        link: "MAC_DERMIDE.html",
+        description: "High-performance polyester films tailored for industrial screen printing applications."
+      },
+      {
+        title: "Orafol (Adhesive Tapes ) ",
+        image: "images/Orafol-1375.webp",
+        link: "Orafol.html",
+        description: "Durable polycarbonate films offering excellent clarity and chemical resistance."
+      },
+      {
+        title: "3M",
+        image: "images/3M_03.JPG",
+        link: "3M.html",
+        description: "Versatile vinyl films designed for durable and vibrant industrial prints."
+      },
+      {
+        title: "Sabic Polycaronate films",
+        image: "images/SABIC_02.jpg",
+        link: "Sabic.html",
+        description: "Protective films that guard surfaces from scratches and damage during manufacturing."
+      },
+       {
+        title: "Screen Stretching Services ",
+        image: "images/ALL_Machines_05.JPG",
+        link: "Stretching.html",
+        description: "Premium quality release papers designed for smooth, reliable transfer during printing processes."
+      },
+      {
+        title: "Screen Exposing Services ",
+        image: "images/ALL_Machines_04.JPG",
+        link: "Exposing.html",
+        description: "Expertly crafted velvet films that deliver distinctive texture and exceptional finish to your printed materials."
+      },
+      {
+        title: "Screen Stretching Machine ",
+        image: "images/screen-stretching.jpg",
+        link: "MAchine_Stre.html",
+        description: "Quality release papers that ensure easy and reliable transfer in printing processes."
+      },
+      {
+        title: "Screen Exposing machines ",
+        image: "images/ALL_Machines_02.JPG",
+        link: "Machines_EXPO.html",
+        description: "Specialized velvet films providing a unique texture and finish to prints."
+      },
+      {
+        title: "Nittoku Mesh",
+        image: "images/Nittoku_mesh (2).jpg",
+        link: "Nittoku.html",
+        description: "Fine and velvet textured films offering exceptional print fidelity and feel."
+      },
+      {
+        title: "Printcolor",
+        image: "images/PRINT_COLOR.JPG",
+        link: "Print_color.html",
+        description: "Flexible films optimized for high-speed screen printing and durability."
+      },
+      {
+        title: "Yessor Wipes ",
+        image: "images/Yessor.jpg",
+        link: "Yessor.html",
+        description: "High-quality inks formulated for vibrant colors and consistent coverage."
+      },
+      {
+        title: "Sunsui ",
+        image: "images/sunsui.jpg",
+        link: "Sansui.html",
+        description: "Essential chemicals to support and enhance your screen printing process."
+      },
+      {
+        title: "Nitto",
+        image: "images/nitto_808.png",
+        link: "NittoL.html",
+        description: "Reliable emulsions and chemicals for precise stencil preparation."
+      },
+      {
+        title: "Avery ",
+        image: "images/Avery_011.jpg",
+        link: "Avery.html",
+        description: "Durable and lightweight aluminium frames for stable and long-lasting screens."
+      }
+    ];
+
+    const slider = document.getElementById('servicesSlider');
+
+    services.forEach(service => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'card-wrapper';
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${service.image}" alt="${service.title}" />
+        <div class="card-content">
+          <h3>${service.title}</h3>
+          <p>${service.description}</p>
+        </div>
+      `;
+
+      const viewBtn = document.createElement('a');
+      viewBtn.href = service.link;
+      viewBtn.className = 'view-button';
+      viewBtn.textContent = 'View';
+
+      wrapper.appendChild(card);
+      wrapper.appendChild(viewBtn);
+
+      slider.appendChild(wrapper);
+    });
+
+    function scrollSlider(direction) {
+      const scrollAmount = 340;
+      slider.scrollLeft += direction * scrollAmount;
+    }
+  </script>
+</section>
+
+
+
+
+
+
+<!-- Testimonial Slider Section -->
+<!-- Testimonial Slider Section -->
+<section id="testimonials" style="background: linear-gradient(to bottom,#e2ebf7,#f5f8ff); color:#333; font-family:'Poppins', sans-serif; padding:100px 20px; position:relative;">
+  <div style="max-width:1300px; margin:auto;">
+    <h2 style="text-align:center; font-size:3rem; background:linear-gradient(90deg,#6a8dff,#ff71c0); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:60px;">
+      What Our Clients Say
+    </h2>
+
+    <!-- Swiper -->
+    <div class="swiper testimonial-swiper" style="padding-bottom: 60px;">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+          <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Ramesh K. – Textile Printer<br>
+          "Screensource is my go-to place for everything related to screen printing. From frames and mesh to specialty inks, they have it all. What I really appreciate is their deep technical knowledge — they’ve guided me on mesh tension and ink compatibility, which has improved my print quality significantly. Highly recommended!"</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+          <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Anjali P. – Startup Entrepreneur<br>
+          "As someone new to screen printing, I was overwhelmed with the technical details. The Screensource team patiently explained the process, suggested the right mesh counts. It’s rare to find a supplier who is also a teacher. They truly live up to their reputation as a one-stop solution."</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+          <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Imran S. – Industrial Printing Solutions<br>
+          "In our line of work, precision is everything. Screensource not only supplies high-quality materials but also backs them up with industry-level expertise. Their advice on optimizing our screen stretching has saved us time and reduced waste. Exceptional service and knowledgeable staff."</p>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+          <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Priya M. – Graphic Printing Studio<br>
+          "What sets Screensource apart is their ability to solve problems. I once had an urgent, complex order and needed the right emulsion and stencil prep guidance. They walked me through the process and we met the client deadline without issues. That kind of technical backing is priceless."</p>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+          <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Vikram T. – Printing Press Owner<br>
+          "The convenience of finding everything under one roof is unmatched. Screensource comes from their technical know-how — they’ve helped me troubleshoot print defects and improve production efficiency.Screen printers of any size can benefit from their expertise."</p>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+          <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Amit P. – Professional Screen Printer<br>
+          "Screensource has completely streamlined my work. I get all my frames, mesh, inks, and chemicals from one place, and the team’s technical suggestions have improved my print consistency a lot. They’re more than just suppliers — they’re true printing partners."</p>
+        </div>
+
+<!-- Slide 7 -->
+<div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+  <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Neha R. – Custom Apparel Business Owner<br>
+  "I’ve been sourcing my screen printing materials from Screensource. They not only have everything I need, but their staff always explains which products will work best for my jobs. The right advice has saved me from costly mistakes."<br>
+  They makes every project smoother.</p>
+</div>
+
+<!-- Slide 8 -->
+<div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+  <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Sandeep V. – Industrial Printing Unit<br>
+  "We require precise tension and perfect registration for our orders. Screensource’s technical knowledge and supply quality have exceeded our expectations. Their guidance on mesh counts and emulsions has improved our output significantly."<br>
+  True partners in production excellence.</p>
+</div>
+
+<!-- Slide 9 -->
+<div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+  <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Priyanka S. – Printing Startup Founder<br>
+  "Starting a printing business is overwhelming, but Screensource made it easy. They helped me choose the right equipment, taught me how to use it properly, and now I feel confident taking on any order. Their expertise is priceless."<br>
+  They’ve set me up for long-term success.</p>
+</div>
+
+<!-- Slide 10 -->
+<div class="swiper-slide" style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+  <p style="font-size:1rem; line-height:1.8;">⭐⭐⭐⭐⭐ Mohit K. – Graphic Designer & Printer<br>
+  "With Screensource, I don’t just get materials — I get solutions. Their technical team knows the printing process inside out and always helps me troubleshoot issues quickly. That customer focus keeps me coming back."<br>
+  Reliable support every time.</p>
+</div>
+
+
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination" style="margin-top:30px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ?????????????????????????  FOOTER ????????????????????????????????// -->
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<footer style="background: linear-gradient(90deg, #002855, #00509d); color: white; padding: 70px 20px; font-family: 'Poppins', sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+
+    <!-- Company Info -->
+    <div style="flex: 1 1 220px;">
+      <h3 style="font-size: 26px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #ffcc70, #ff71c0, #6a8dff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">
+        Screensource
+      </h3>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0 0 15px 0;">
+        Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.
+      </p>
+<div style="display: flex; gap: 15px; align-items: center; margin-top: 10px;">
+  <a href="https://www.facebook.com/ScreensourcePune/" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" style="width: 100%; height: auto;">
+  </a>
+
+  <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 100%; height: auto;">
+  </a>
+
+  <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="images/indiamart.png" alt="IndiaMART" style="width: 100%; height: auto;">
+  </a>
+</div>
+
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 150px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-link"></i> Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="index.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Home</a></li>
+        <li><a href="About_US.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">About Us</a></li>
+        <li><a href="Contact.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Brands -->
+    <div style="flex: 1 1 200px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-box-open"></i> Brands</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="MAC_DERMIDE.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">MacDermid Alpha Autotype</a></li>
+        <li><a href="Orafol.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Orafol Adhesive</a></li>
+        <li><a href="3M.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">3M Tapes</a></li>
+        <li><a href="Polyvantis.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Polyvantis <small>(Sabic)</small></a></li>
+        <li><a href="Nittoku.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Nittoku</a></li>
+        <li><a href="Print_color.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Print color</a></li>
+        <li><a href="Yessor.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Yessor Tech</a></li>
+        <li><a href="Sansui.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Sansui</a></li>
+        <li><a href="NittoL.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Nitto Denko</a></li>
+        <li><a href="Avery.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Avery Dennison</a></li>
+        <li><a href="technova.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">TechNova (NovaLife)</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div style="flex: 1 1 180px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-cogs"></i> Services</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="Stretching.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Stretching Services</a></li>
+        <li><a href="Exposing.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Exposing Services</a></li>
+        <li><a href="Stretching_Machines.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Stretching Machines</a></li>
+        <li><a href="Exposing_Machines.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Exposing Machines</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 220px;">
+      <h4 style="margin: 0 0 15px; font-size: 17px; color: #ffb200; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-address-card"></i> Contact
+      </h4>
+      <p style="font-size: 15px; margin: 8px 0; line-height: 1.6; display: flex; align-items: flex-start; gap: 8px;">
+        <i class="fas fa-map-marker-alt" style="margin-top: 3px;"></i>
+        Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041
+      </p>
+      <p style="font-size: 15px; margin: 8px 0; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-envelope"></i> designatscreensource@gmail.com
+      </p>
+      <p style="font-size: 15px; margin: 8px 0; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-phone"></i> +91 8080941627
+      </p>
+    </div>
+
+  </div>
+
+  <hr style="margin: 40px auto 25px; border: 0; height: 1px; background: #ffffff33; width: 90%;">
+
+  <div style="text-align: center; font-size: 14px; opacity: 0.85;">
+    © 2025 <strong>Screensource</strong>. All rights reserved.
+  </div>
+  <div style="text-align: center; font-size: 13px; margin-top: 5px; color: #ffffffcc;">
+    Developed By <strong>DW INNOVATION PVT. LTD.</strong>
+  </div>
+</footer>
+
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<!-- Scroll to Top Button -->
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+  style="position:fixed; bottom:20px; right:20px; background:#FE320A; color:white; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+  <img src="images/arrow_01.webp" alt="Scroll to top" style="width:22px; height:22px;">
+</button>
+
+<!-- Floating Call Button -->
+<a href="tel:+918080941627" 
+  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color:white; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  <img src="images/call_01.png" alt="Call Us" style="width:24px; height:24px;">
+</a>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918080941627" target="_blank"
+  style="position:fixed; bottom:150px; right:20px; background:#25D366; color:white; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  <img src="images/whatsapp_01.webp" alt="Chat on WhatsApp" style="width:26px; height:26px;">
+</a>
+
+
+ <!-- ////////////////////    FOOTER END ////////////////////  -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        loader.style.transition = "all 2s ease";
+        loader.style.transform = "translateY(-100%)";
+        loader.style.opacity = "0";
+        setTimeout(() => loader.style.display = "none", 2000);
+      }, 1900);
+    });
+
+    function toggleMenu(icon) {
+      icon.classList.toggle("cross");
+      const sideMenu = document.getElementById("sideMenu");
+      sideMenu.classList.toggle("show");
+      document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+    }
+  </script>
+<!-- /////////////////////////////////    SIDE BAR ////////////////// -->
+<script>
+  function toggleMenu(icon) {
+    icon.classList.toggle("cross");
+    const sideMenu = document.getElementById("sideMenu");
+    sideMenu.classList.toggle("show");
+    document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+
+    // Animate nav items using GSAP
+    const items = document.querySelectorAll('.nav-links li');
+    if (sideMenu.classList.contains("show")) {
+      gsap.fromTo(items, {
+        opacity: 0,
+        y: 20
+      }, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        delay: 0.2
+      });
+    }
+  }
+</script>
+
+<!-- //////////////////////////////////////// SIDE BAR END ///////////// -->
+<script>
+  function scrollToProducts() {
+    window.scrollTo({
+      top: document.querySelector('#about').offsetTop,
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollToServices() {
+    window.scrollTo({
+      top: document.querySelector('#services').offsetTop,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(".about-text", 
+    { opacity: 0, y: 50 }, 
+    { 
+      opacity: 1, y: 0, duration: 1.2, ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".about-text",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+
+  gsap.fromTo(".about-image", 
+    { opacity: 0, y: 50 }, 
+    { 
+      opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.2,
+      scrollTrigger: {
+        trigger: ".about-image",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+</script>
+<!-- //////////////////////////////////// SECTION --- 3333///////////////// -->
+<!-- Swiper Initialization -->
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    speed: 4000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    freeMode: true,
+    freeModeMomentum: false,
+  });
+</script>
+
+
+<!-- Swiper Initialization -->
+<script>
+  new Swiper(".testimonial-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+  <!-- Script -->
+<!-- jQuery and Slick JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  function scrollToProducts() {
+    const target = document.getElementById("products-section");
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: "smooth"
+      });
+    }
+  }
+
+  function scrollToServices() {
+    const target = document.getElementById("services-section");
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: "smooth"
+      });
+    }
+  }
+</script>
+
+</body>
+</html>

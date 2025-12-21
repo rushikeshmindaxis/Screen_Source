@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screensource - One Stop Solution</title>
+  <link rel="icon" type="image/png" href="images/LOGO_final.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Include in <head> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body {
+ font-family: 'Myriad Pro', Arial, sans-serif;
+background: linear-gradient(135deg, #000000, #434343);
+  color: #222;
+  overflow-x: hidden;
+}
+
+
+  
+  </style>
+</head>
+<body>
+
+
+    <!-- Header -->
+<section id="navbar-section">
+<style>
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Myriad Pro', Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 11px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85); /* ✅ slightly transparent white */
+  backdrop-filter: blur(10px); /* ✅ soft glass effect */
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  z-index: 1000;
+}
+
+
+
+.navbar.scrolled {
+background: rgba(255, 255, 255, 0.7);
+
+
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #111;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 90px;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links > li > a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px 8px;
+  transition: all 0.3s ease;
+}
+.nav-links > li > a:hover {
+  color: #EC008C;
+}
+.nav-links,
+.nav-links li,
+.dropdown-menu,
+.sub-dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nav-links > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+   background: linear-gradient(to right, #00B5E2, #EC008C, #FFD200, #333);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links > li > a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown-menu,
+.sub-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 10px 0;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 999;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  overflow: visible; /* ✅ Prevents clipping of sub-menus */
+}
+
+/* Dropdown Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dropdown Links */
+.dropdown-menu a,
+.sub-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 15px;
+  color: #222;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.dropdown-menu a:hover,
+.sub-dropdown-menu a:hover {
+background: linear-gradient(90deg, #EC008C, #FFC1E3);
+
+  color: white;
+  padding-left: 20px;
+}
+
+.dropdown-menu a:not(:last-child),
+.sub-dropdown-menu a:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Sub-dropdown Positioning */
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0; /* ✅ Removed negative margin to avoid gap issues */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  min-width: 250px;
+}
+
+/* Show dropdowns on hover (Desktop) */
+.nav-links li:hover > .dropdown-menu {
+  display: block;
+}
+
+.sub-dropdown:hover > .sub-dropdown-menu {
+  display: block;
+}
+
+/* Add arrow indicators
+.nav-links li > a::after {
+  content: "";
+}
+
+.dropdown-menu > .sub-dropdown > a::after {
+  content: "›";
+  margin-left: auto;
+  font-size: 14px;
+  color: #999;
+} */
+
+/* Mobile Styles */
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Sidebar Nav */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    row-gap: 20px;
+    left: -280px;
+    height: 100vh;
+    width: 280px;
+    background: #222; /* Dark background */
+    flex-direction: column;
+    padding: 80px 0 20px;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divider line */
+  }
+
+  .nav-links > li > a {
+    display: block;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+
+  .nav-links > li > a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .dropdown-menu,
+  .sub-dropdown-menu {
+    position: static;
+    background: #222;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+  }
+
+  .dropdown-menu a,
+  .sub-dropdown-menu a {
+    color: white;
+    padding-left: 25px;
+  }
+
+  .dropdown-menu.show,
+  .sub-dropdown-menu.show {
+    display: flex !important;
+  }
+
+  .nav-links li:hover > .dropdown-menu,
+  .sub-dropdown:hover > .sub-dropdown-menu {
+    display: none;
+  }
+}
+
+/* Overlay for Mobile Menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+</style>
+<div class="navbar" id="navbar">
+  <div class="logo">
+   <img src="images/LOGO_final.png" alt="Logo" />
+  </div>
+
+  <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+<ul class="nav-links" id="navLinks">
+  <li><a href="index.html">HOME</a></li>
+  
+  <li><a href="About_US.html">ABOUT US</a></li>
+
+<li>
+  <a class="dropdown-toggle">BRANDS <span class="dropdown-arrow">▾</span></a>
+  <ul class="dropdown-menu">
+    <li><a href="MAC_DERMIDE.html">MacDermid Alpha Autotype</a></li>
+    <li><a href="Orafol.html">Orafol Adhesive</a></li>
+    <li><a href="3M.html">3M Tapes</a></li>
+    <li><a href="Polyvantis.html">Polyvantis <small>(Sabic)</small></a></li>
+    <li><a href="Nittoku.html">Nittoku</a></li>
+    <li><a href="Print_color.html">Print color</a></li>
+    <li><a href="Yessor.html">Yessor Tech</a></li>
+    <li><a href="Sansui.html">Sansui</a></li>
+    <li><a href="NittoL.html">Nitto Denko</a></li>
+    <li><a href="Avery.html">Avery Dennison</a></li>
+    <li><a href="technova.html">TechNova (NovaLife)</a></li>
+  </ul>
+</li>
+
+  <!-- ✅ New SERVICES Menu -->
+  <li>
+    <a class="dropdown-toggle">SERVICES <span class="dropdown-arrow">▾</span></a>
+<ul class="dropdown-menu">
+  <li><a href="Stretching.html">Stretching Services</a></li>
+  <li><a href="Exposing.html">Exposing Services</a></li>
+  <li><a href="MAchine_Stre.html">Stretching Machines</a></li>
+  <li><a href="Machines_EXPO.html">Exposing Machines</a></li>
+</ul>
+  </li>
+
+
+  <!-- ✅ End SERVICES Menu -->
+
+  <li><a href="Contact.html">CONTACT US</a></li>
+</ul>
+
+</div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('overlay');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('show');
+      closeAllMenus();
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const menu = toggle.nextElementSibling;
+          menu.classList.toggle('show');
+          closeOthers(menu, '.dropdown-menu');
+        }
+      });
+    });
+
+    document.querySelectorAll('.sub-dropdown > a').forEach(sub => {
+      sub.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const subMenu = sub.nextElementSibling;
+          subMenu.classList.toggle('show');
+          closeOthers(subMenu, '.sub-dropdown-menu');
+        }
+      });
+    });
+
+    function closeOthers(current, selector) {
+      document.querySelectorAll(selector).forEach(menu => {
+        if (menu !== current) menu.classList.remove('show');
+      });
+    }
+
+    function closeAllMenus() {
+      document.querySelectorAll('.dropdown-menu, .sub-dropdown-menu').forEach(menu => {
+        menu.classList.remove('show');
+      });
+    }
+
+    document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          overlay.classList.remove('show');
+          closeAllMenus();
+        }
+      });
+    });
+  </script>
+</section>
+
+<!-- NAVBAR SECTION END -->
+
+
+
+<section style="padding:180px 20px;background:linear-gradient(#1a1a1a);font-family:'Poppins',sans-serif;">
+  <h2 style="text-align:center;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;
+             background:linear-gradient(90deg,#6a8dff,#ff71c0);
+             -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+             margin-bottom:30px;">
+     Machines & Services Gallery
+  </h2>
+
+  <div style="position:relative;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 10px;">
+    <button id="leftBtn" style="background:white;border:none;font-size:1.8rem;padding:6px 14px;border-radius:50%;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:10;transition:all 0.3s ease;">&#10094;</button>
+
+    <div id="sliderContainer" style="display:flex;gap:16px;overflow-x:hidden;scroll-behavior:smooth;padding:20px 0;flex:1;">
+      <!-- Example card (repeat for all images) -->
+      <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_01.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+      <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_02.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_03.png" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_04.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_05.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_06.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_07.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_01.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_02.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_04.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_03.png" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_05.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_06.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
+        <div style="width:100%;height:200px;overflow:hidden;">
+          <img src="images/ALL_Machines_07.JPG" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+   
+      <!-- Repeat for all images -->
+    </div>
+
+    <button id="rightBtn" style="background:white;border:none;font-size:1.8rem;padding:6px 14px;border-radius:50%;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:10;transition:all 0.3s ease;">&#10095;</button>
+  </div>
+
+  <div id="dots" style="text-align:center;margin-top:15px;"></div>
+
+  <style>
+    /* Ensure only one image visible on small screens */
+    @media (max-width: 768px) {
+      #sliderContainer .card {
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+
+  <script>
+    const container = document.getElementById('sliderContainer');
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+    const dotsContainer = document.getElementById('dots');
+    const cards = container.querySelectorAll('.card');
+
+    let currentIndex = 0;
+    let cardWidth = cards[0].offsetWidth + 16;
+    const totalCards = cards.length;
+
+    // Create dots
+    for (let i = 0; i < totalCards; i++) {
+      const dot = document.createElement('span');
+      dot.style.cssText = "display:inline-block;width:10px;height:10px;background:#ccc;border-radius:50%;margin:0 4px;cursor:pointer;transition:background 0.3s ease;";
+      if (i === 0) dot.style.background = "#ff71c0";
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+    const dots = dotsContainer.querySelectorAll('span');
+
+    function updateDots(index) {
+      dots.forEach(dot => dot.style.background = "#ccc");
+      dots[index].style.background = "#ff71c0";
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      container.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+      updateDots(currentIndex);
+    }
+
+    leftBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      goToSlide(currentIndex);
+    });
+
+    rightBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalCards;
+      goToSlide(currentIndex);
+    });
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalCards;
+      goToSlide(currentIndex);
+    }, 3000);
+
+    window.addEventListener('resize', () => {
+      cardWidth = cards[0].offsetWidth + 16;
+      goToSlide(currentIndex);
+    });
+
+    // Touch swipe
+    let startX = 0;
+    container.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    container.addEventListener('touchend', e => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) rightBtn.click();
+      if (endX - startX > 50) leftBtn.click();
+    });
+  </script>
+</section>
+
+
+<section class="hero-stretching">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1 class="fade-in">Screen Stretching Service</h1>
+
+    <p class="fade-in delay-1">
+      <strong>Achieve Perfect Prints Every Time:</strong> 🎯 When precision matters, trust the power of pneumatic technology.
+      We offer state-of-the-art Pneumatic Machine Screen Stretching — a professional solution to give your screens
+      the perfect, uniform tension they need for flawless printing results every single time.
+    </p>
+
+    <h2 class="fade-in delay-2 yellow-heading">Why Choose Pneumatic Screen Stretching?</h2>
+    <ul class="fade-in delay-2">
+      <li><strong>Perfectly Even Tension:</strong> Air-powered clamps stretch mesh uniformly, eliminating inconsistencies that cause blurred prints.</li>
+      <li><strong>High-Quality Output:</strong> Ideal for multi-color projects where registration accuracy is critical.</li>
+      <li><strong>Faster Turnaround:</strong> Advanced machinery reduces preparation time without compromising quality.</li>
+      <li><strong>Durable Screens:</strong> Uniform tension reduces wear-and-tear, extending mesh life.</li>
+      <li><strong>Versatile Application:</strong> From textiles to electronics, ceramics to industrial printing – we handle it all.</li>
+    </ul>
+
+    <h2 class="fade-in delay-2 yellow-heading">Our Process – Precision in Every Step</h2>
+    <ul class="fade-in delay-2">
+      <li><strong>Frame Setup:</strong> Your frame is securely placed in our pneumatic tensioning system.</li>
+      <li><strong>Mesh Perfectly Stretched:</strong> Air-powered clamps deliver micron-level tension accuracy.</li>
+      <li><strong>Secure & Finish:</strong> The mesh is glued, trimmed, and prepared for immediate use.</li>
+      <li><strong>Quality Checked:</strong> Every screen passes our strict tension and alignment inspection.</li>
+    </ul>
+
+    <h2 class="fade-in delay-2 yellow-heading">Where Our Service Shines</h2>
+    <ul class="fade-in delay-2">
+      <li>Textile Printing (garments, banners, fabrics)</li>
+      <li>PCB & Electronics Printing</li>
+      <li>Glass & Ceramic Printing</li>
+      <li>Specialty Industrial Applications</li>
+    </ul>
+
+    <p class="fade-in delay-1">
+      Your screens are the foundation of your prints – make sure they’re stretched by experts who understand the demands of professional printing.
+      With pneumatic technology, you get uniform tension that manual stretching simply can’t match.
+    </p>
+  </div>
+</section>
+<style>
+  .hero-stretching {
+    position: relative;
+    min-height: 85vh;
+    background: linear-gradient(#1a1a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 100px 30px;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+  }
+
+  .hero-stretching .overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(252,217,50,0.15), transparent 60%),
+                radial-gradient(circle at bottom left, rgba(69,195,240,0.15), transparent 60%);
+    z-index: 1;
+  }
+
+  .hero-stretching .hero-content {
+    max-width: 900px;
+    z-index: 2;
+    color: #fff;
+    padding: 0 10px;
+  }
+
+  .hero-stretching h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 100;
+    margin-top: -5%;
+    line-height: 1.2;
+    animation: fadeInUp 1s ease-out forwards;
+    white-space: normal; /* ✅ allow wrapping on mobile */
+    word-break: break-word; /* ✅ prevent overflow */
+  }
+
+  .yellow-heading {
+    color: #ffcc33;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .hero-stretching p {
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #f0f0f0;
+  }
+
+  .hero-stretching strong {
+    background: linear-gradient(90deg, #ffcc33, #ff66cc, #33ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+  }
+
+  .hero-stretching ul {
+    padding-left: 20px;
+    list-style: none;
+  }
+
+  .hero-stretching ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 28px;
+    line-height: 1.6;
+  }
+
+  .hero-stretching ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ffcc33;
+    font-size: 1.1rem;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  .delay-1 { animation-delay: 0.4s; }
+  .delay-2 { animation-delay: 0.8s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ✅ Tablet */
+  @media (max-width: 1024px) {
+    .hero-stretching {
+      padding: 80px 20px;
+    }
+    .hero-stretching .hero-content {
+      max-width: 95%;
+    }
+  }
+
+  /* ✅ Mobile */
+  @media (max-width: 600px) {
+    .hero-stretching {
+      padding: 100px 15px 60px;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .hero-stretching h1 {
+      font-size: clamp(1.6rem, 8vw, 2.5rem);
+      margin-top: 0;
+    }
+
+    .hero-stretching p {
+      font-size: 0.95rem;
+    }
+
+    .hero-stretching ul {
+      padding-left: 0;
+    }
+    .hero-stretching ul li {
+      padding-left: 0;
+    }
+    .hero-stretching ul li::before {
+      display: none;
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ?????????????????????????  FOOTER ????????????????????????????????// -->
+
+<!-- Font Awesome -->
+<footer style="background: linear-gradient(90deg, #002855, #00509d); color: white; padding: 70px 20px; font-family: 'Poppins', sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+
+    <!-- Company Info -->
+    <div style="flex: 1 1 220px;">
+      <h3 style="font-size: 26px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #ffcc70, #ff71c0, #6a8dff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">
+        Screensource
+      </h3>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0 0 15px 0;">
+        Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.
+      </p>
+<div style="display: flex; gap: 15px; align-items: center; margin-top: 10px;">
+  <a href="https://www.facebook.com/ScreensourcePune/" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" style="width: 100%; height: auto;">
+  </a>
+
+  <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 100%; height: auto;">
+  </a>
+
+  <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="images/indiamart.png" alt="IndiaMART" style="width: 100%; height: auto;">
+  </a>
+</div>
+
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 150px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-link"></i> Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="index.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Home</a></li>
+        <li><a href="About_US.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">About Us</a></li>
+        <li><a href="Contact.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Brands -->
+    <div style="flex: 1 1 200px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-box-open"></i> Brands</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="MAC_DERMIDE.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">MacDermid Alpha Autotype</a></li>
+        <li><a href="Orafol.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Orafol Adhesive</a></li>
+        <li><a href="3M.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">3M Tapes</a></li>
+        <li><a href="Polyvantis.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Polyvantis <small>(Sabic)</small></a></li>
+        <li><a href="Nittoku.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Nittoku</a></li>
+        <li><a href="Print_color.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Print color</a></li>
+        <li><a href="Yessor.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Yessor Tech</a></li>
+        <li><a href="Sansui.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Sansui</a></li>
+        <li><a href="NittoL.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Nitto Denko</a></li>
+        <li><a href="Avery.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Avery Dennison</a></li>
+        <li><a href="technova.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">TechNova (NovaLife)</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div style="flex: 1 1 180px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-cogs"></i> Services</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="Stretching.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Stretching Services</a></li>
+        <li><a href="Exposing.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Exposing Services</a></li>
+        <li><a href="MAchine_Stre.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Stretching Machines</a></li>
+        <li><a href="Machines_EXPO.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Exposing Machines</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 220px;">
+      <h4 style="margin: 0 0 15px; font-size: 17px; color: #ffb200; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-address-card"></i> Contact
+      </h4>
+      <p style="font-size: 15px; margin: 8px 0; line-height: 1.6; display: flex; align-items: flex-start; gap: 8px;">
+        <i class="fas fa-map-marker-alt" style="margin-top: 3px;"></i>
+        Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041
+      </p>
+      <p style="font-size: 15px; margin: 8px 0; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-envelope"></i> designatscreensource@gmail.com
+      </p>
+      <p style="font-size: 15px; margin: 8px 0; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-phone"></i> +91 8080941627
+      </p>
+    </div>
+
+  </div>
+
+  <hr style="margin: 40px auto 25px; border: 0; height: 1px; background: #ffffff33; width: 90%;">
+
+  <div style="text-align: center; font-size: 14px; opacity: 0.85;">
+    © 2025 <strong>Screensource</strong>. All rights reserved.
+  </div>
+  <div style="text-align: center; font-size: 13px; margin-top: 5px; color: #ffffffcc;">
+    Developed By <strong>DW INNOVATION PVT. LTD.</strong>
+  </div>
+</footer>
+
+
+<!-- Scroll to Top Button -->
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+  style="position:fixed; bottom:20px; right:20px; background:#FE320A; color:white; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+  <img src="images/arrow_01.webp" alt="Scroll to top" style="width:22px; height:22px;">
+</button>
+
+<!-- Floating Call Button -->
+<a href="tel:+918080941627" 
+  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color:white; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  <img src="images/call_01.png" alt="Call Us" style="width:24px; height:24px;">
+</a>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918080941627" target="_blank"
+  style="position:fixed; bottom:150px; right:20px; background:#25D366; color:white; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  <img src="images/whatsapp_01.webp" alt="Chat on WhatsApp" style="width:26px; height:26px;">
+</a>
+
+
+ <!-- ////////////////////    FOOTER END ////////////////////  -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        loader.style.transition = "all 2s ease";
+        loader.style.transform = "translateY(-100%)";
+        loader.style.opacity = "0";
+        setTimeout(() => loader.style.display = "none", 2000);
+      }, 1900);
+    });
+
+    function toggleMenu(icon) {
+      icon.classList.toggle("cross");
+      const sideMenu = document.getElementById("sideMenu");
+      sideMenu.classList.toggle("show");
+      document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+    }
+  </script>
+<!-- /////////////////////////////////    SIDE BAR ////////////////// -->
+<script>
+  function toggleMenu(icon) {
+    icon.classList.toggle("cross");
+    const sideMenu = document.getElementById("sideMenu");
+    sideMenu.classList.toggle("show");
+    document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+
+    // Animate nav items using GSAP
+    const items = document.querySelectorAll('.nav-links li');
+    if (sideMenu.classList.contains("show")) {
+      gsap.fromTo(items, {
+        opacity: 0,
+        y: 20
+      }, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        delay: 0.2
+      });
+    }
+  }
+</script>
+
+<!-- //////////////////////////////////////// SIDE BAR END ///////////// -->
+<script>
+  function scrollToProducts() {
+    window.scrollTo({
+      top: document.querySelector('#about').offsetTop,
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollToServices() {
+    window.scrollTo({
+      top: document.querySelector('#services').offsetTop,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(".about-text", 
+    { opacity: 0, y: 50 }, 
+    { 
+      opacity: 1, y: 0, duration: 1.2, ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".about-text",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+
+  gsap.fromTo(".about-image", 
+    { opacity: 0, y: 50 }, 
+    { 
+      opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.2,
+      scrollTrigger: {
+        trigger: ".about-image",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+</script>
+<!-- //////////////////////////////////// SECTION --- 3333///////////////// -->
+<!-- Swiper Initialization -->
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    speed: 4000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    freeMode: true,
+    freeModeMomentum: false,
+  });
+</script>
+
+
+<!-- Swiper Initialization -->
+<script>
+  new Swiper(".testimonial-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+  <!-- Script -->
+<!-- jQuery and Slick JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  function scrollToProducts() {
+    const target = document.getElementById("products-section");
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: "smooth"
+      });
+    }
+  }
+
+  function scrollToServices() {
+    const target = document.getElementById("services-section");
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: "smooth"
+      });
+    }
+  }
+</script>
+
+</body>
+</html>

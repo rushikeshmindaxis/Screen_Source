@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screensource - One Stop Solution</title>
+  <link rel="icon" type="image/png" href="images/LOGO_final.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Include in <head> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body {
+ font-family: 'Myriad Pro', Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  overflow-x: hidden;
+}
+
+
+  
+  </style>
+</head>
+<body>
+
+
+ <!-- LOADER SECTION END --> 
+
+    <!-- Header -->
+  <!-- NAVBAR SECTION START -->
+<section id="navbar-section">
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+  background: #f9f9f9;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.55); /* Reduced from 0.95 to 0.75 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo img {
+  height: 50px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #111;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-links {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links > li > a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 14px;
+  padding: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links > li > a:hover {
+  color: #EC008C;
+}
+
+.nav-links > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, #00B5E2, #EC008C, #FFD200, #333);
+  transition: width 0.3s ease;
+}
+
+.nav-links > li > a:hover::after {
+  width: 100%;
+}
+
+/* Dropdowns */
+/* Updated Dropdowns */
+.dropdown-menu,
+.sub-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background: white;
+  padding: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 999;
+  border: 1px solid #eee;
+  list-style: none !important;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.dropdown-menu a,
+.sub-dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #222;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  list-style: none !important;
+}
+
+.dropdown-menu a:hover,
+.sub-dropdown-menu a:hover {
+  background: linear-gradient(90deg, #00B5E2, #EC008C);
+  color: white;
+}
+
+
+
+.dropdown-menu a:not(:last-child),
+.sub-dropdown-menu a:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Sub-dropdown placement */
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 4px;
+  border-radius: 12px;
+}
+
+/* Show on hover for desktop */
+.nav-links li:hover > .dropdown-menu {
+  display: flex;
+}
+
+.sub-dropdown:hover > .sub-dropdown-menu {
+  display: flex;
+}
+
+/* Arrow icons styling
+.dropdown-arrow {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #999;
+} */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  height: 100vh;
+  width: 280px; /* 🔄 Changed from 100px to 280px */
+  background: #111;
+  flex-direction: column;
+  padding: 80px 20px;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links > li > a {
+    color: white;
+    padding: 12px 0;
+  }
+
+  .dropdown-menu,
+  .sub-dropdown-menu {
+    position: static;
+    background: #222;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+  }
+
+  .dropdown-menu a,
+  .sub-dropdown-menu a {
+    color: white;
+    padding-left: 25px;
+  }
+
+  .dropdown-menu.show,
+  .sub-dropdown-menu.show {
+    display: flex !important;
+  }
+
+  /* Prevent hover dropdowns on mobile */
+  .nav-links li:hover > .dropdown-menu,
+  .sub-dropdown:hover > .sub-dropdown-menu {
+    display: none;
+  }
+}
+
+/* Overlay for mobile menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+</style>
+
+
+  <div class="navbar" id="navbar">
+    <div class="logo">
+     <img src="images/LOGO_final.png" alt="Logo" />
+    </div>
+    <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">HOME</a></li>
+      <li>
+        <a href="" class="dropdown-toggle">PRODUCTS <span class="dropdown-arrow">▾</span></a>
+        <ul class="dropdown-menu">
+  <li class="sub-dropdown">
+    <a href="#">Products & Materials <span class="dropdown-arrow">▸</span></a>
+    <ul class="sub-dropdown-menu">
+      <li><a href="#">Industrial Polyester Films</a></li>
+      <li><a href="#">Sabic Polycarbonate Films</a></li>
+      <li><a href="#">Vinyl for Industrial Printing</a></li>
+      <li><a href="#">Surface Protection Films</a></li>
+      <li><a href="#">Release Papers</a></li>
+      <li><a href="#">Velvet Films</a></li>
+      <li><a href="#">MacDermid Autotype Autotex (Fine & Velvet)</a></li>
+      <li><a href="#">MacDermid Autotype Autoflex EB</a></li>
+      <li><a href="#">Screen Printing Inks (Seiko Ink)</a></li>
+      <li><a href="#">Printing Chemicals</a></li>
+      <li><a href="#">Pre-Press Emulsions & Chemicals</a></li>
+      <li><a href="#">VIEW ALL</a></li>
+     
+    </ul>
+  </li>
+           <li class="sub-dropdown">
+    <a href="#">Frames & Mesh <span class="dropdown-arrow">▸</span></a>
+    <ul class="sub-dropdown-menu">
+      <li><a href="#">Aluminium Screen Printing Frames</a></li>
+      <li><a href="#">New Aluminium Frames</a></li>
+      <li><a href="#">Polyester Screen Printing Mesh</a></li>
+      <li><a href="#">Universal Mesh Prep</a></li>
+    </ul>
+  </li>
+  <!-- 🧽 Accessories & Tools -->
+  <li class="sub-dropdown">
+    <a href="#">Accessories & Tools <span class="dropdown-arrow">▸</span></a>
+    <ul class="sub-dropdown-menu">
+      <li><a href="#">Squeegee Rubber</a></li>
+      <li><a href="#">Squeegee Hardness Meter</a></li>
+      <li><a href="#">Tension Meter</a></li>
+      <li><a href="#">Cross Hatch Tester</a></li>
+      <li><a href="#">Pencil Hardness Tester</a></li>
+      <li><a href="#">Lint-Free Wipes</a></li>
+      <li><a href="#">Sticky Mat</a></li>
+      <li><a href="#">RAL & Pantone Formula Guide</a></li>
+    </ul>
+  </li>
+
+  <!-- 🧷 Adhesives & Tapes -->
+  <li class="sub-dropdown">
+    <a href="#">Adhesives & Tapes <span class="dropdown-arrow">▸</span></a>
+    <ul class="sub-dropdown-menu">
+      <li><a href="#">Frame Adhesive</a></li>
+      <li><a href="#">Adhesive Tapes</a></li>
+      <li><a href="#">Adhesive Transfer Tapes</a></li>
+      <li><a href="#">Tissue Tape (3M 91091)</a></li>
+      <li><a href="#">Spacer Tapes (DSM7, Membrane)</a></li>
+      <li><a href="#">Nitto 5015 Tape</a></li>
+    </ul>
+  </li>
+
+  <!-- 🛠️ Machines & Equipment -->
+  <li class="sub-dropdown">
+    <a href="#">Machines & Equipment <span class="dropdown-arrow">▸</span></a>
+    <ul class="sub-dropdown-menu">
+      <li><a href="#">Stretching Machines</a></li>
+      <li><a href="#">Exposing Machines</a></li>
+      <li><a href="#">Printing Machines</a></li>
+      <li><a href="#">Drying Machines</a></li>
+    </ul>
+  </li>
+
+  <!-- 🛎️ Services -->
+  <li class="sub-dropdown">
+    <a href="#">Services <span class="dropdown-arrow">▸</span></a>
+    <ul class="sub-dropdown-menu">
+      <li><a href="#">Screen Exposing Services</a></li>
+      <li><a href="#">Screen Stretching Services</a></li>
+    </ul>
+  </li>
+
+  <!-- View All -->
+  <li><a href="#">View All Categories</a></li>
+</ul>
+      <li><a href="About_US.html">ABOUT US</a></li>
+      <li><a href="Contact.html">CONTACT US</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('overlay');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('show');
+      closeAllMenus();
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const menu = toggle.nextElementSibling;
+          menu.classList.toggle('show');
+          closeOthers(menu, '.dropdown-menu');
+        }
+      });
+    });
+
+    document.querySelectorAll('.sub-dropdown > a').forEach(sub => {
+      sub.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const subMenu = sub.nextElementSibling;
+          subMenu.classList.toggle('show');
+          closeOthers(subMenu, '.sub-dropdown-menu');
+        }
+      });
+    });
+
+    function closeOthers(current, selector) {
+      document.querySelectorAll(selector).forEach(menu => {
+        if (menu !== current) menu.classList.remove('show');
+      });
+    }
+
+    function closeAllMenus() {
+      document.querySelectorAll('.dropdown-menu, .sub-dropdown-menu').forEach(menu => {
+        menu.classList.remove('show');
+      });
+    }
+
+    document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          overlay.classList.remove('show');
+          closeAllMenus();
+        }
+      });
+    });
+  </script>
+</section>
+
+
+
+
+
+  <style>
+    .parallax-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: url('images/ABOUT\ US\ BANNER.png') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      z-index: -2;
+    }
+    section {
+      position: relative;
+      z-index: 2;
+    }
+    .banner-text {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      
+    }
+    h2 span {
+      background: linear-gradient(90deg, #6a8dff, #ff71c0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-padding {
+      padding: 100px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    }
+    .gradient-bg {
+      background: linear-gradient(to bottom, #f5f8ff, #e2ebf7);
+    }
+  </style>
+
+
+
+
+<!-- ABOUT US SECTION -->
+<!-- AOS CSS (Ensure this is in your <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<!-- ABOUT Screensource SECTION -->
+<section class="section-padding gradient-bg" style="padding: 120px 20px; background: linear-gradient(to bottom, #f5f8ff, #e2ebf7); font-family: 'Arimo', sans-serif;">
+  <div style="max-width: 950px; margin: auto; text-align: center;" data-aos="fade-up">
+
+    <!-- Heading -->
+    <h2 style="font-size: 3rem; font-weight: 800; color: #0d2f53; margin-bottom: 20px;">
+      About <span style="color: #ff71c0;">ScreenSource</span>
+    </h2>
+    <h4 style="font-size: 1.4rem; font-weight: 600; color: #fe320a; margin-bottom: 40px;">
+      One Stop Solution for Printing Materials
+    </h4>
+
+    <!-- Description Paragraphs -->
+    <p style="font-size: 1.15rem; color: #333; line-height: 1.8; margin-bottom: 25px;">
+      Welcome to <strong>ScreenSource</strong>, one of the most innovative suppliers of screen printing materials in the industry. Located in <strong>Dhayari, Pune</strong>, we empower manufacturing and creative businesses across India with high-performance solutions that deliver precision, durability, and reliability.
+    </p>
+    <p style="font-size: 1.15rem; color: #333; line-height: 1.8; margin-bottom: 40px;">
+      Our team is passionate about <strong>customer satisfaction</strong>, <strong>technical support</strong>, and continuous <strong>innovation</strong> to meet the needs of today’s fast-paced screen printing industry.
+    </p>
+
+    <!-- Our Vision -->
+    <div style="margin-bottom: 40px;" data-aos="fade-up">
+      <h4 style="font-size: 1.3rem; color: #0d2f53; font-weight: 700; margin-bottom: 12px;">
+        🌟 Our Vision
+      </h4>
+      <p style="font-size: 1.1rem; color: #333; line-height: 1.7;">
+        To become India's go-to destination for premium screen printing solutions — built on quality, trust, and continuous innovation.
+      </p>
+    </div>
+
+    <!-- What We Offer -->
+    <div data-aos="fade-up">
+      <h4 style="font-size: 1.3rem; color: #0d2f53; font-weight: 700; margin-bottom: 15px;">
+        🛠️ What We Offer
+      </h4>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; font-size: 1.05rem; color: #333;">
+        <div style="flex: 1 1 220px; background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+          ✅ High-performance industrial films & emulsions
+        </div>
+        <div style="flex: 1 1 220px; background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+          🧪 Screen chemicals, squeegees & accessories
+        </div>
+        <div style="flex: 1 1 220px; background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+          🖼️ Screen exposing & stretching services
+        </div>
+        <div style="flex: 1 1 220px; background: #ffffff; border-radius: 12px; padding: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+          🤝 Expert consultation & custom support
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AOS JS (Place before </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- PARALLAX BACKGROUND -->
+<div class="parallax-bg"></div>
+
+<!-- HERO BANNER -->
+<section class="banner-text">
+  Empowering the Print Revolution
+</section>
+<!-- PRODUCTS SECTION -->
+<section class="section-padding gradient-bg">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 style="text-align: center; font-size: 2.8rem; font-weight: 800; color: #0d2f53; margin-bottom: 20px;" data-aos="fade-up">
+      Our <span>Products</span>
+    </h2>
+    <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 50px;" data-aos="fade-up" data-aos-delay="100">
+      Reliable materials for high-performance screen printing.
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+      <div class="card" data-aos="fade-up" data-aos-delay="0">
+        <h3 style="color:#ffb200;">Functional Films</h3>
+        <p>MacDermid, Autotex, Autoflex, Autostat – for overlays, smart devices & printed electronics.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3 style="color:#0d2f53;">Capillary Films</h3>
+        <p>Capillex 25, 18, CX – ultra-fine stencil films for precision printing.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3 style="color:#6a8dff;">Emulsions</h3>
+        <p>PLUS LAVA, PLUS 9000 – high-performance emulsions for all screen types and ink systems.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <h3 style="color:#ff71c0;">Chemicals</h3>
+        <p>Prepress & reclaim chemicals – Autostrip, Autohaze, Wash K3, and more.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="400">
+        <h3 style="color:#0d2f53;">Vinyl & Graphics</h3>
+        <p>SunSui adhesive vinyls – waterproof signage and digital printing films.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="500">
+        <h3 style="color:#ff71c0;">Squeegees</h3>
+        <p>Fimor Serilor SR1 / HR3 – precision squeegees for long-life industrial printing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="section-padding" style=" background: linear-gradient(to bottom, #e2ebf7), #f5f8ff; ">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 style="text-align: center; font-size: 2.8rem; font-weight: 800; color: #0d2f53; margin-bottom: 10px;" data-aos="fade-up">
+      Our <span>Services</span>
+    </h2>
+    <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 60px;" data-aos="fade-up" data-aos-delay="100">
+      Empowering screen printing with precision…
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px;">
+      <div class="card" data-aos="zoom-in" data-aos-delay="0">
+        <h3 style="color: #ff71c0;">Screen Stretching</h3>
+        <ul><li>Better exposure quality</li><li>Consistent tension</li></ul>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <h3 style="color: #6a8dff;">Screen Exposing</h3>
+        <ul><li>Sharp detail reproduction</li><li>Print life extended</li></ul>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <h3 style="color: #0d2f53;">Lint-Free Wipes</h3>
+        <p>For cleanroom, screen, and equipment cleaning.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <h3 style="color: #ffb200;">Anti-Static Rollers</h3>
+        <p>Minimize static for efficient production.</p>
+      </div>
+    </div>
+    <div style="margin-top: 100px;" data-aos="fade-up" data-aos-delay="200">
+   <h2 style="font-size: 2rem; color: #0d2f53; font-weight: 700; margin-bottom: 30px; text-align: center;">
+  Why Choose <span>ScreenSource?</span>
+</h2>
+
+      <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; list-style: none;">
+        <li>✅ Wide Range of Industrial Films</li>
+        <li>✅ Trusted Brands</li>
+        <li>✅ Custom Solutions</li>
+        <li>✅ One-Stop Supplier</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- ?????????????????????????  FOOTER ????????????????????????????????// -->
+
+<!-- Font Awesome -->
+<footer style="background: linear-gradient(90deg, #002855, #00509d); color: white; padding: 70px 20px; font-family: 'Poppins', sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+
+    <!-- Company Info -->
+    <div style="flex: 1 1 220px;">
+      <h3 style="font-size: 26px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #ffcc70, #ff71c0, #6a8dff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">
+        Screensource
+      </h3>
+      <p style="font-size: 15px; line-height: 1.6; margin: 0 0 15px 0;">
+        Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.
+      </p>
+<div style="display: flex; gap: 15px; align-items: center; margin-top: 10px;">
+  <a href="https://www.facebook.com/ScreensourcePune/" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" style="width: 100%; height: auto;">
+  </a>
+
+  <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 100%; height: auto;">
+  </a>
+
+  <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
+    <img src="images/indiamart.png" alt="IndiaMART" style="width: 100%; height: auto;">
+  </a>
+</div>
+
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 150px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-link"></i> Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="index.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Home</a></li>
+        <li><a href="About_US.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">About Us</a></li>
+        <li><a href="Contact.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Brands -->
+    <div style="flex: 1 1 200px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-box-open"></i> Brands</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="MAC_DERMIDE.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">MacDermid Alpha Autotype</a></li>
+        <li><a href="Orafol.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Orafol Adhesive</a></li>
+        <li><a href="3M.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">3M Tapes</a></li>
+        <li><a href="Polyvantis.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Polyvantis <small>(Sabic)</small></a></li>
+        <li><a href="Nittoku.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Nittoku</a></li>
+        <li><a href="Print_color.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Print color</a></li>
+        <li><a href="Yessor.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Yessor Tech</a></li>
+        <li><a href="Sansui.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Sansui</a></li>
+        <li><a href="NittoL.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Nitto Denko</a></li>
+        <li><a href="Avery.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Avery Dennison</a></li>
+        <li><a href="technova.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">TechNova (NovaLife)</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div style="flex: 1 1 180px;">
+      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-cogs"></i> Services</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
+        <li><a href="Stretching.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Stretching Services</a></li>
+        <li><a href="Exposing.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Exposing Services</a></li>
+        <li><a href="MAchine_Stre.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Stretching Machines</a></li>
+        <li><a href="Machines_EXPO.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Exposing Machines</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 220px;">
+      <h4 style="margin: 0 0 15px; font-size: 17px; color: #ffb200; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-address-card"></i> Contact
+      </h4>
+      <p style="font-size: 15px; margin: 8px 0; line-height: 1.6; display: flex; align-items: flex-start; gap: 8px;">
+        <i class="fas fa-map-marker-alt" style="margin-top: 3px;"></i>
+        Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041
+      </p>
+      <p style="font-size: 15px; margin: 8px 0; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-envelope"></i> designatscreensource@gmail.com
+      </p>
+      <p style="font-size: 15px; margin: 8px 0; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-phone"></i> +91 8080941627
+      </p>
+    </div>
+
+  </div>
+
+  <hr style="margin: 40px auto 25px; border: 0; height: 1px; background: #ffffff33; width: 90%;">
+
+  <div style="text-align: center; font-size: 14px; opacity: 0.85;">
+    © 2025 <strong>Screensource</strong>. All rights reserved.
+  </div>
+  <div style="text-align: center; font-size: 13px; margin-top: 5px; color: #ffffffcc;">
+    Developed By <strong>DW INNOVATION PVT. LTD.</strong>
+  </div>
+</footer>
+
+
+<!-- Scroll to Top Button -->
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+  style="position:fixed; bottom:20px; right:20px; background:#FE320A; color:white; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+  <img src="images/arrow_01.webp" alt="Scroll to top" style="width:22px; height:22px;">
+</button>
+
+<!-- Floating Call Button -->
+<a href="tel:+918080941627" 
+  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color:white; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  <img src="images/call_01.png" alt="Call Us" style="width:24px; height:24px;">
+</a>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918080941627" target="_blank"
+  style="position:fixed; bottom:150px; right:20px; background:#25D366; color:white; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  <img src="images/whatsapp_01.webp" alt="Chat on WhatsApp" style="width:26px; height:26px;">
+</a>
+
+
+ <!-- ////////////////////    FOOTER END ////////////////////  -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        loader.style.transition = "all 2s ease";
+        loader.style.transform = "translateY(-100%)";
+        loader.style.opacity = "0";
+        setTimeout(() => loader.style.display = "none", 2000);
+      }, 1900);
+    });
+
+    function toggleMenu(icon) {
+      icon.classList.toggle("cross");
+      const sideMenu = document.getElementById("sideMenu");
+      sideMenu.classList.toggle("show");
+      document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+    }
+  </script>
+<!-- /////////////////////////////////    SIDE BAR ////////////////// -->
+<script>
+  function toggleMenu(icon) {
+    icon.classList.toggle("cross");
+    const sideMenu = document.getElementById("sideMenu");
+    sideMenu.classList.toggle("show");
+    document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+
+    // Animate nav items using GSAP
+    const items = document.querySelectorAll('.nav-links li');
+    if (sideMenu.classList.contains("show")) {
+      gsap.fromTo(items, {
+        opacity: 0,
+        y: 20
+      }, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        delay: 0.2
+      });
+    }
+  }
+</script>
+
+<!-- //////////////////////////////////////// SIDE BAR END ///////////// -->
+<script>
+  function scrollToProducts() {
+    window.scrollTo({
+      top: document.querySelector('#about').offsetTop,
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollToServices() {
+    window.scrollTo({
+      top: document.querySelector('#services').offsetTop,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(".about-text", 
+    { opacity: 0, y: 50 }, 
+    { 
+      opacity: 1, y: 0, duration: 1.2, ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".about-text",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+
+  gsap.fromTo(".about-image", 
+    { opacity: 0, y: 50 }, 
+    { 
+      opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.2,
+      scrollTrigger: {
+        trigger: ".about-image",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+</script>
+<!-- //////////////////////////////////// SECTION --- 3333///////////////// -->
+<!-- Swiper Initialization -->
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    speed: 4000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    freeMode: true,
+    freeModeMomentum: false,
+  });
+</script>
+
+
+<!-- Swiper Initialization -->
+<script>
+  new Swiper(".testimonial-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+  <!-- Script -->
+<!-- jQuery and Slick JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loader = document.getElementById("loader");
+        loader.style.transition = "all 2s ease";
+        loader.style.transform = "translateY(-100%)";
+        loader.style.opacity = "0";
+        setTimeout(() => loader.style.display = "none", 2);
+      }, 3);
+    });
+
+    function toggleMenu(icon) {
+      icon.classList.toggle("cross");
+      const sideMenu = document.getElementById("sideMenu");
+      sideMenu.classList.toggle("show");
+      document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+    }
+  </script>
+<!-- /////////////////////////////////    SIDE BAR ////////////////// -->
+<script>
+  function toggleMenu(icon) {
+    icon.classList.toggle("cross");
+    const sideMenu = document.getElementById("sideMenu");
+    sideMenu.classList.toggle("show");
+    document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+
+    // Animate nav items using GSAP
+    const items = document.querySelectorAll('.nav-links li');
+    if (sideMenu.classList.contains("show")) {
+      gsap.fromTo(items, {
+        opacity: 0,
+        y: 20
+      }, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power3.out",
+        delay: 0.2
+      });
+    }
+  }
+</script>
+
+<!-- //////////////////////////////////////// SIDE BAR END ///////////// -->
+<script>
+  function scrollToProducts() {
+    window.scrollTo({
+      top: document.querySelector('#about').offsetTop,
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollToServices() {
+    window.scrollTo({
+      top: document.querySelector('#services').offsetTop,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(".about-text", 
+    { opacity: 0, y: 50 }, 
+    { 
+      opacity: 1, y: 0, duration: 1.2, ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".about-text",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+
+  gsap.fromTo(".about-image", 
+    { opacity: 0, y: 50 }, 
+    { 
+      opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.2,
+      scrollTrigger: {
+        trigger: ".about-image",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
+</script>
+
+<!-- Swiper Initialization -->
+<script>
+  new Swiper(".testimonial-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+  <!-- Script -->
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1200, once: true });
+</script>
+
+
+</body>
+</html>
