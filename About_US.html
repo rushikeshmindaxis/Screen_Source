@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -24,7 +24,7 @@
   <div class="parallax-bg"></div>
   <div class="glass-overlay"></div>
   <div class="banner-content" id="bannerContent">
-<h1 class="banner-text" data-aos="fade-up" style="color: #444;">
+<h1 class="banner-text" data-aos="fade-up">
   Empowering the <span class="highlight">Print Revolution</span>
 </h1>
 
@@ -39,27 +39,31 @@
     <h2 class="section-title">About <span>Screensource</span></h2>
     <h4 class="section-subtitle">One Stop Solution for Printing Materials</h4>
 
-    <p class="section-text">
-      Welcome to <strong>Screensource</strong>, one of the most innovative suppliers of screen printing materials in the industry.
-      Located in <strong>Narhe, Pune</strong>, we empower manufacturing and creative businesses across India
-      with high-performance solutions that deliver precision, durability, and reliability.
-    </p>
-    <p class="section-text">
-      Our team is passionate about <strong>customer satisfaction</strong>, <strong>technical support</strong>,
-      and continuous <strong>innovation</strong> to meet the needs of today’s fast-paced screen printing industry.
-    </p>
+    <div class="about-text-content">
+      <p class="section-text">
+        Welcome to <strong>Screensource</strong>, one of the most innovative suppliers of screen printing materials in the industry.
+        Located in <strong>Narhe, Pune</strong>, we empower manufacturing and creative businesses across India
+        with high-performance solutions that deliver precision, durability, and reliability.
+      </p>
+      <p class="section-text">
+        Our team is passionate about <strong>customer satisfaction</strong>, <strong>technical support</strong>,
+        and continuous <strong>innovation</strong> to meet the needs of today’s fast-paced screen printing industry.
+      </p>
+    </div>
 
     <!-- Mission & Vision -->
     <div class="mission-vision" data-aos="fade-up">
-      <div>
-        <h3 class="sub-heading">🎯 Our Mission</h3>
+      <div class="mv-card">
+        <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+        <h3 class="sub-heading">Our Mission</h3>
         <p class="section-text">
           To provide world-class screen printing materials and services that empower businesses
           to achieve unmatched quality, efficiency, and creativity.
         </p>
       </div>
-      <div>
-        <h3 class="sub-heading">🌟 Our Vision</h3>
+      <div class="mv-card">
+        <div class="mv-icon"><i class="fas fa-eye"></i></div>
+        <h3 class="sub-heading">Our Vision</h3>
         <p class="section-text">
           To be the most trusted and innovative partner for screen printing solutions across India,
           driven by quality, reliability, and customer satisfaction.
@@ -69,13 +73,29 @@
 
     <!-- Why Choose Us -->
     <div class="why-choose" data-aos="fade-up">
-      <h3 class="sub-heading">💡 Why Choose Us</h3>
-      <ul class="choose-list">
-        <li><strong>High-Quality Products:</strong> Only the best materials that meet global standards.</li>
-        <li><strong>Fast & Reliable Service:</strong> Quick delivery and dependable support when you need it.</li>
-        <li><strong>Technical Expertise:</strong> Skilled professionals guiding your printing projects.</li>
-        <li><strong>Industry Experience:</strong> Years of proven excellence in screen printing solutions.</li>
-      </ul>
+      <h3 class="sub-heading" style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;">Why Choose Us</h3>
+      <div class="choose-grid">
+        <div class="choose-card">
+          <i class="fas fa-medal"></i>
+          <h4>High-Quality Products</h4>
+          <p>Only the best materials that meet global standards.</p>
+        </div>
+        <div class="choose-card">
+          <i class="fas fa-shipping-fast"></i>
+          <h4>Fast & Reliable Service</h4>
+          <p>Quick delivery and dependable support when you need it.</p>
+        </div>
+        <div class="choose-card">
+          <i class="fas fa-tools"></i>
+          <h4>Technical Expertise</h4>
+          <p>Skilled professionals guiding your printing projects.</p>
+        </div>
+        <div class="choose-card">
+          <i class="fas fa-award"></i>
+          <h4>Industry Experience</h4>
+          <p>Years of proven excellence in screen printing solutions.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -91,8 +111,10 @@
 
   body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
     background-color: #f9f9f9;
   }
 
@@ -131,16 +153,8 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    backdrop-filter: blur(3px);
-  background: linear-gradient(
-  to bottom,
-    rgba(255,255,255,0.7),
-  rgba(255,255,255,0.1),
-    rgba(255,255,255,0.0)
-
-
-);
-
+    backdrop-filter: blur(4px);
+    background: linear-gradient(to right, rgba(13, 47, 83, 0.8), rgba(0, 181, 226, 0.4));
     z-index: -1;
   }
 
@@ -152,15 +166,15 @@
 .banner-text {
   font-size: clamp(2.5rem, 6vw, 4.2rem);
   font-weight: 900;
-  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-  color: #444; /* Force hero heading text to be white */
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #ffffff; 
 }
 
 .highlight {
-  color: #444; /* Override gradient and make highlight text white */
-  background: none;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: #444;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 
@@ -202,59 +216,112 @@
     margin-bottom: 30px;
   }
 
+  .about-text-content {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  }
+
   .sub-heading {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--dark-blue);
-    margin: 40px 0 15px;
+    margin: 0 0 15px 0;
   }
 
   .section-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #333;
-    text-align: justify;
+    color: #444;
+    text-align: center;
     margin-bottom: 15px;
   }
 
   .mission-vision {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
     justify-content: center;
-    text-align: left;
   }
 
-  .mission-vision div {
-    flex: 1 1 400px;
+  .mv-card {
+    flex: 1 1 350px;
     max-width: 500px;
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mv-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: var(--gradient-text);
+  }
+
+  .mv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+  }
+
+  .mv-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
   }
 
   .why-choose {
-    margin-top: 50px;
+    margin-top: 80px;
   }
 
-  .choose-list {
-    list-style: none;
-    padding: 0;
-    max-width: 750px;
-    margin: 20px auto 0;
-    text-align: left;
+  .choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
   }
 
-  .choose-list li {
-    font-size: 1.1rem;
-    padding-left: 30px;
-    position: relative;
+  .choose-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.02);
+  }
+
+  .choose-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 181, 226, 0.3);
+  }
+
+  .choose-card i {
+    font-size: 2.5rem;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 15px;
   }
 
-  .choose-list li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
+  .choose-card h4 {
+    font-size: 1.2rem;
     color: var(--dark-blue);
-    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .choose-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
 @media (max-width: 600px) {
