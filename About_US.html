@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -18,6 +18,248 @@
 
 
 
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="parallax-bg"></div>
+  <div class="glass-overlay"></div>
+  <div class="banner-content" id="bannerContent">
+<h1 class="banner-text" data-aos="fade-up" style="color: #444;">
+  Empowering the <span class="highlight">Print Revolution</span>
+</h1>
+
+  
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section-padding gradient-bg about-section" data-aos="fade-up">
+  <div class="container">
+    <!-- About -->
+    <h2 class="section-title">About <span>Screensource</span></h2>
+    <h4 class="section-subtitle">One Stop Solution for Printing Materials</h4>
+
+    <p class="section-text">
+      Welcome to <strong>Screensource</strong>, one of the most innovative suppliers of screen printing materials in the industry.
+      Located in <strong>Narhe, Pune</strong>, we empower manufacturing and creative businesses across India
+      with high-performance solutions that deliver precision, durability, and reliability.
+    </p>
+    <p class="section-text">
+      Our team is passionate about <strong>customer satisfaction</strong>, <strong>technical support</strong>,
+      and continuous <strong>innovation</strong> to meet the needs of today’s fast-paced screen printing industry.
+    </p>
+
+    <!-- Mission & Vision -->
+    <div class="mission-vision" data-aos="fade-up">
+      <div>
+        <h3 class="sub-heading">🎯 Our Mission</h3>
+        <p class="section-text">
+          To provide world-class screen printing materials and services that empower businesses
+          to achieve unmatched quality, efficiency, and creativity.
+        </p>
+      </div>
+      <div>
+        <h3 class="sub-heading">🌟 Our Vision</h3>
+        <p class="section-text">
+          To be the most trusted and innovative partner for screen printing solutions across India,
+          driven by quality, reliability, and customer satisfaction.
+        </p>
+      </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="why-choose" data-aos="fade-up">
+      <h3 class="sub-heading">💡 Why Choose Us</h3>
+      <ul class="choose-list">
+        <li><strong>High-Quality Products:</strong> Only the best materials that meet global standards.</li>
+        <li><strong>Fast & Reliable Service:</strong> Quick delivery and dependable support when you need it.</li>
+        <li><strong>Technical Expertise:</strong> Skilled professionals guiding your printing projects.</li>
+        <li><strong>Industry Experience:</strong> Years of proven excellence in screen printing solutions.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STYLES -->
+<style>
+  :root {
+    --primary: #00b5e2;
+    --dark-blue: #0d2f53;
+    --light-bg: #f5f8ff;
+    --gradient-text: linear-gradient(90deg, #00b5e2, #EC008C);
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  /* HERO SECTION */
+  .hero-section {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #444;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 110%;
+    width: 100%;
+    background: url('images/Avery_011.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    z-index: -2;
+    transform: scale(1.1);
+    animation: zoomIn 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+  }
+
+  .glass-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(3px);
+  background: linear-gradient(
+  to bottom,
+    rgba(255,255,255,0.7),
+  rgba(255,255,255,0.1),
+    rgba(255,255,255,0.0)
+
+
+);
+
+    z-index: -1;
+  }
+
+  .banner-content {
+    max-width: 800px;
+    margin: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+.banner-text {
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 900;
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  color: #444; /* Force hero heading text to be white */
+}
+
+.highlight {
+  color: #444; /* Override gradient and make highlight text white */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #444;
+}
+
+
+  .banner-subtext {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 500;
+    margin-top: 15px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  /* ABOUT SECTION */
+  .section-padding {
+    padding: 80px 20px;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(to bottom, var(--light-bg), #e2ebf7);
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+  }
+
+  .section-subtitle {
+    font-size: 1.6rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .sub-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin: 40px 0 15px;
+  }
+
+  .section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+
+  .mission-vision {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .mission-vision div {
+    flex: 1 1 400px;
+    max-width: 500px;
+  }
+
+  .why-choose {
+    margin-top: 50px;
+  }
+
+  .choose-list {
+    list-style: none;
+    padding: 0;
+    max-width: 750px;
+    margin: 20px auto 0;
+    text-align: left;
+  }
+
+  .choose-list li {
+    font-size: 1.1rem;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .choose-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--dark-blue);
+    font-weight: bold;
+  }
+
+@media (max-width: 600px) {
+  .hero-stretching {
+    padding: 120px 15px; /* Reduced overall padding */
     text-align: center;
   }
 
