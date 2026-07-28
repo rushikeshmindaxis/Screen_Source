@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,6 +30,10 @@
     }
 
     body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
       font-family: 'Myriad Pro', Arial, sans-serif;
       background: linear-gradient(to bottom, #f5f8ff);
       color: #222;
@@ -343,7 +347,7 @@
       overflow: hidden;
       font-family: 'Poppins', Arial, sans-serif;
     }
-    
+
     /* Background Image Layer to maintain exact ratio and full visibility */
     .hero-bg-layer {
       width: 100%;
@@ -355,7 +359,10 @@
     /* Overlay for text content */
     .hero-overlay {
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       display: flex;
       flex-direction: column;
       z-index: 5;
@@ -385,13 +392,19 @@
     .hero-right {
       flex: 1 1 420px;
       display: flex;
-      margin-left: auto; /* Push as far right as possible */
-      margin-right: -60px; /* Push it even further right, breaking out of the padding */
-      align-self: flex-start; /* Pulls the entire right section to the top */
-      align-items: flex-start; /* Align to the top */
-      justify-content: flex-end; /* Align badges to the right */
+      margin-left: auto;
+      /* Push as far right as possible */
+      margin-right: -60px;
+      /* Push it even further right, breaking out of the padding */
+      align-self: flex-start;
+      /* Pulls the entire right section to the top */
+      align-items: flex-start;
+      /* Align to the top */
+      justify-content: flex-end;
+      /* Align badges to the right */
       position: relative;
-      padding-top: 10px; /* Slight padding from top */
+      padding-top: 10px;
+      /* Slight padding from top */
     }
 
     /* Trust badges - floating on the right */
@@ -400,11 +413,11 @@
       flex-direction: column;
       gap: 20px;
       z-index: 6;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       border-radius: 24px;
       padding: 24px 32px 24px 24px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
     }
 
     .trust-badge {
@@ -418,23 +431,34 @@
       transition: transform 0.3s ease;
       line-height: 1.25;
     }
-    
+
     .trust-badge:hover {
       transform: translateX(-3px);
     }
 
     .trust-badge-icon {
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 15px;
       color: #fff;
       flex-shrink: 0;
     }
 
-    .trust-badge-icon.purple { background: #9b59b6; }
-    .trust-badge-icon.blue   { background: #00b5e2; }
-    .trust-badge-icon.orange { background: #f39c12; }
+    .trust-badge-icon.purple {
+      background: #9b59b6;
+    }
+
+    .trust-badge-icon.blue {
+      background: #00b5e2;
+    }
+
+    .trust-badge-icon.orange {
+      background: #f39c12;
+    }
 
     /* Headline styling */
     .hero-headline-dark {
@@ -465,7 +489,8 @@
       line-height: 1.05;
       letter-spacing: -0.5px;
       margin: 0 0 10px;
-      color: #EC008C; /* Solid Pink */
+      color: #EC008C;
+      /* Solid Pink */
       display: flex;
       align-items: center;
       gap: 16px;
@@ -474,8 +499,15 @@
     }
 
     @keyframes heroTextIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ISO Badge inline */
@@ -498,7 +530,8 @@
     }
 
     .iso-badge i {
-      color: #EC008C; /* Pink */
+      color: #EC008C;
+      /* Pink */
       font-size: 12px;
     }
 
@@ -517,7 +550,8 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: linear-gradient(90deg, #00b5e2, #EC008C); /* Cyan to Pink */
+      background: linear-gradient(90deg, #00b5e2, #EC008C);
+      /* Cyan to Pink */
       color: #fff;
       text-decoration: none;
       font-family: 'Poppins', sans-serif;
@@ -539,10 +573,13 @@
     }
 
     .hero-cta-btn .cta-arrow {
-      width: 24px; height: 24px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
       border: 1.5px solid #fff;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 12px;
       transition: transform 0.3s ease;
       background: transparent;
@@ -574,17 +611,32 @@
     }
 
     .hero-feature-icon {
-      width: 38px; height: 38px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 15px;
       color: #fff;
       flex-shrink: 0;
     }
-    .fi-blue   { background: linear-gradient(135deg, #00b5e2, #1a5276); }
-    .fi-purple { background: linear-gradient(135deg, #9b59b6, #6c3483); }
-    .fi-yellow { background: linear-gradient(135deg, #f39c12, #d35400); }
-    .fi-pink   { background: linear-gradient(135deg, #EC008C, #d63384); }
+
+    .fi-blue {
+      background: linear-gradient(135deg, #00b5e2, #1a5276);
+    }
+
+    .fi-purple {
+      background: linear-gradient(135deg, #9b59b6, #6c3483);
+    }
+
+    .fi-yellow {
+      background: linear-gradient(135deg, #f39c12, #d35400);
+    }
+
+    .fi-pink {
+      background: linear-gradient(135deg, #EC008C, #d63384);
+    }
 
     .hero-feature-text {
       font-size: 11.5px;
@@ -606,11 +658,17 @@
         display: flex;
         flex-direction: column;
       }
+
       .hero-bg-layer {
         position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        object-fit: cover; /* On smaller screens, allow covering to ensure text fits */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* On smaller screens, allow covering to ensure text fits */
       }
+
       .hero-overlay {
         position: relative;
         min-height: 100vh;
@@ -646,7 +704,8 @@
       }
 
       .hero-headline-gradient {
-        display: none; /* Hidden in second image */
+        display: none;
+        /* Hidden in second image */
       }
 
       .hero-features-bar {
@@ -664,11 +723,11 @@
 
       .hero-feature-text {
         color: #fff;
-        text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
       }
-      
+
       .hero-feature-text span {
-        color: rgba(255,255,255,0.9);
+        color: rgba(255, 255, 255, 0.9);
       }
     }
 
@@ -691,66 +750,68 @@
       <!-- Main content -->
       <div class="hero-main">
 
-      <!-- Left: Text -->
-      <div class="hero-left">
-        <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
-        <h2 class="hero-headline-gradient">
-          <span style="color: #00b5e2;">TOTAL</span> 
-          <span style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
-        </h2>
-        <h2 class="hero-headline-gradient-2">
-          SOLUTIONS.
-          <span class="iso-badge">
-            <i class="fas fa-shield-alt"></i>
-            ISO 9001:2015<br>CERTIFIED
-          </span>
-        </h2>
+        <!-- Left: Text -->
+        <div class="hero-left">
+          <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+          <h2 class="hero-headline-gradient">
+            <span style="color: #00b5e2;">TOTAL</span>
+            <span
+              style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+          </h2>
+          <h2 class="hero-headline-gradient-2">
+            SOLUTIONS.
+            <span class="iso-badge">
+              <i class="fas fa-shield-alt"></i>
+              ISO 9001:2015<br>CERTIFIED
+            </span>
+          </h2>
 
-        <p class="hero-sub-text">
-          One Stop Solution for Printing Material.<br>
-          An ISO 9001:2015 CERTIFIED COMPANY.
-        </p>
+          <p class="hero-sub-text">
+            One Stop Solution for Printing Material.<br>
+            An ISO 9001:2015 CERTIFIED COMPANY.
+          </p>
 
-        <a href="#about" class="hero-cta-btn">
-          Explore The Solutions Catalog
-          <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
-
-
-    </div>
-
-    <!-- Bottom Feature Bar -->
-    <div class="hero-features-bar">
-      <div class="hero-feature-item">
-        <div class="hero-feature-icon fi-blue"><i class="fas fa-medal"></i></div>
-        <div class="hero-feature-text">
-          <span>Premium</span>Quality
+          <a href="#about" class="hero-cta-btn">
+            Explore The Solutions Catalog
+            <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
         </div>
+
+
       </div>
-      <div class="hero-feature-item">
-        <div class="hero-feature-icon fi-purple"><i class="fas fa-handshake"></i></div>
-        <div class="hero-feature-text">
-          <span>Trusted</span>Brands
+
+      <!-- Bottom Feature Bar -->
+      <div class="hero-features-bar">
+        <div class="hero-feature-item">
+          <div class="hero-feature-icon fi-blue"><i class="fas fa-medal"></i></div>
+          <div class="hero-feature-text">
+            <span>Premium</span>Quality
+          </div>
         </div>
-      </div>
-      <div class="hero-feature-item">
-        <div class="hero-feature-icon fi-yellow"><i class="fas fa-shield-alt"></i></div>
-        <div class="hero-feature-text">
-          <span>Complete</span>Solutions
+        <div class="hero-feature-item">
+          <div class="hero-feature-icon fi-purple"><i class="fas fa-handshake"></i></div>
+          <div class="hero-feature-text">
+            <span>Trusted</span>Brands
+          </div>
         </div>
-      </div>
-      <div class="hero-feature-item">
-        <div class="hero-feature-icon fi-pink"><i class="fas fa-headset"></i></div>
-        <div class="hero-feature-text">
-          <span>Expert</span>Support
+        <div class="hero-feature-item">
+          <div class="hero-feature-icon fi-yellow"><i class="fas fa-shield-alt"></i></div>
+          <div class="hero-feature-text">
+            <span>Complete</span>Solutions
+          </div>
+        </div>
+        <div class="hero-feature-item">
+          <div class="hero-feature-icon fi-pink"><i class="fas fa-headset"></i></div>
+          <div class="hero-feature-text">
+            <span>Expert</span>Support
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- HERO SECTION END -->
 
-    <!-- About Section --><!-- About Section -->
+  <!-- About Section --><!-- About Section -->
   <!-- Add this in your <head> for fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap"
@@ -1724,120 +1785,309 @@
     </script>
   </section>
 
-
-
-
-
-
-  <!-- Testimonial Slider Section -->
   <!-- Testimonial Slider Section -->
   <section id="testimonials"
-    style="background: linear-gradient(to bottom,#e2ebf7,#f5f8ff); color:#333; font-family:'Poppins', sans-serif; padding:100px 20px; position:relative;">
-    <div style="max-width:1300px; margin:auto;">
-      <h2
-        style="text-align:center; font-size:3rem; background:linear-gradient(90deg,#6a8dff,#ff71c0); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:60px;">
+    style="background: linear-gradient(to bottom, #e2ebf7, #f5f8ff); color:#333; font-family:'Poppins', sans-serif; padding:100px 20px; position:relative; overflow:hidden;">
+    
+    <!-- Custom Styles for Modern Testimonials -->
+    <style>
+      .testimonial-card {
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 40px 30px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        border: 1px solid rgba(0,0,0,0.03);
+      }
+      .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      }
+      .quote-icon {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 3.5rem;
+        color: rgba(0, 181, 226, 0.1); /* Light cyan */
+      }
+      .stars {
+        color: #FFD700;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
+      .testimonial-text {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #555;
+        font-style: italic;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2;
+      }
+      .client-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: auto;
+      }
+      .client-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #00b5e2, #EC008C);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 10px rgba(236, 0, 140, 0.2);
+      }
+      .client-details h4 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #0d2f53;
+      }
+      .client-details span {
+        font-size: 0.9rem;
+        color: #888;
+      }
+      /* Swiper container adjustments */
+      .testimonial-swiper {
+        padding: 20px 20px 80px 20px; /* Space for shadow and pagination */
+      }
+      .swiper-slide {
+        height: auto; /* To allow cards to stretch to the same height */
+      }
+      .swiper-pagination-bullet {
+        background: #00b5e2;
+        opacity: 0.5;
+      }
+      .swiper-pagination-bullet-active {
+        background: #EC008C;
+        opacity: 1;
+      }
+    </style>
+
+    <div style="max-width:1300px; margin:auto; position: relative;">
+      <h2 style="text-align:center; font-size:3rem; font-weight:800; background:linear-gradient(90deg,#00b5e2,#EC008C); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:10px;">
         What Our Clients Say
       </h2>
+      <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 50px;">
+        Hear from our trusted partners in the printing industry.
+      </p>
 
       <!-- Swiper -->
-      <div class="swiper testimonial-swiper" style="padding-bottom: 60px;">
+      <div class="swiper testimonial-swiper">
         <div class="swiper-wrapper">
 
           <!-- Slide 1 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Ramesh K. â€“ Textile Printer<br>
-              "Screensource is my go-to place for everything related to screen printing. From frames and mesh to
-              specialty inks, they have it all. What I really appreciate is their deep technical knowledge â€” theyâ€™ve
-              guided me on mesh tension and ink compatibility, which has improved my print quality significantly. Highly
-              recommended!"</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Screensource is my go-to place for everything related to screen printing. From frames and mesh to specialty inks, they have it all. What I really appreciate is their deep technical knowledge - they've guided me on mesh tension and ink compatibility, which has improved my print quality significantly. Highly recommended!"
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">R</div>
+                <div class="client-details">
+                  <h4>Ramesh K.</h4>
+                  <span>Textile Printer</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 2 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Anjali P. â€“ Startup Entrepreneur<br>
-              "As someone new to screen printing, I was overwhelmed with the technical details. The Screensource team
-              patiently explained the process, suggested the right mesh counts. Itâ€™s rare to find a supplier who is also
-              a teacher. They truly live up to their reputation as a one-stop solution."</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "As someone new to screen printing, I was overwhelmed with the technical details. The Screensource team patiently explained the process, suggested the right mesh counts. It's rare to find a supplier who is also a teacher. They truly live up to their reputation as a one-stop solution."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">A</div>
+                <div class="client-details">
+                  <h4>Anjali P.</h4>
+                  <span>Startup Entrepreneur</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 3 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Imran S. â€“ Industrial Printing Solutions<br>
-              "In our line of work, precision is everything. Screensource not only supplies high-quality materials but
-              also backs them up with industry-level expertise. Their advice on optimizing our screen stretching has
-              saved us time and reduced waste. Exceptional service and knowledgeable staff."</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "In our line of work, precision is everything. Screensource not only supplies high-quality materials but also backs them up with industry-level expertise. Their advice on optimizing our screen stretching has saved us time and reduced waste. Exceptional service and knowledgeable staff."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">I</div>
+                <div class="client-details">
+                  <h4>Imran S.</h4>
+                  <span>Industrial Printing Solutions</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 4 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Priya M. â€“ Graphic Printing Studio<br>
-              "What sets Screensource apart is their ability to solve problems. I once had an urgent, complex order and
-              needed the right emulsion and stencil prep guidance. They walked me through the process and we met the
-              client deadline without issues. That kind of technical backing is priceless."</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "What sets Screensource apart is their ability to solve problems. I once had an urgent, complex order and needed the right emulsion and stencil prep guidance. They walked me through the process and we met the client deadline without issues. That kind of technical backing is priceless."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">P</div>
+                <div class="client-details">
+                  <h4>Priya M.</h4>
+                  <span>Graphic Printing Studio</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 5 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Vikram T. â€“ Printing Press Owner<br>
-              "The convenience of finding everything under one roof is unmatched. Screensource comes from their
-              technical know-how â€” theyâ€™ve helped me troubleshoot print defects and improve production efficiency.Screen
-              printers of any size can benefit from their expertise."</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "The convenience of finding everything under one roof is unmatched. Screensource comes from their technical know-how - they've helped me troubleshoot print defects and improve production efficiency. Screen printers of any size can benefit from their expertise."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">V</div>
+                <div class="client-details">
+                  <h4>Vikram T.</h4>
+                  <span>Printing Press Owner</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 6 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Amit P. â€“ Professional Screen Printer<br>
-              "Screensource has completely streamlined my work. I get all my frames, mesh, inks, and chemicals from one
-              place, and the teamâ€™s technical suggestions have improved my print consistency a lot. Theyâ€™re more than
-              just suppliers â€” theyâ€™re true printing partners."</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Screensource has completely streamlined my work. I get all my frames, mesh, inks, and chemicals from one place, and the team's technical suggestions have improved my print consistency a lot. They're more than just suppliers - they're true printing partners."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">A</div>
+                <div class="client-details">
+                  <h4>Amit P.</h4>
+                  <span>Professional Screen Printer</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 7 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Neha R. â€“ Custom Apparel Business Owner<br>
-              "Iâ€™ve been sourcing my screen printing materials from Screensource. They not only have everything I need,
-              but their staff always explains which products will work best for my jobs. The right advice has saved me
-              from costly mistakes."<br>
-              They makes every project smoother.</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "I've been sourcing my screen printing materials from Screensource. They not only have everything I need, but their staff always explains which products will work best for my jobs. The right advice has saved me from costly mistakes. They make every project smoother."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">N</div>
+                <div class="client-details">
+                  <h4>Neha R.</h4>
+                  <span>Custom Apparel Business Owner</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 8 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Sandeep V. â€“ Industrial Printing Unit<br>
-              "We require precise tension and perfect registration for our orders. Screensourceâ€™s technical knowledge
-              and supply quality have exceeded our expectations. Their guidance on mesh counts and emulsions has
-              improved our output significantly."<br>
-              True partners in production excellence.</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "We require precise tension and perfect registration for our orders. Screensource's technical knowledge and supply quality have exceeded our expectations. Their guidance on mesh counts and emulsions has improved our output significantly. True partners in production excellence."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">S</div>
+                <div class="client-details">
+                  <h4>Sandeep V.</h4>
+                  <span>Industrial Printing Unit</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 9 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Priyanka S. â€“ Printing Startup Founder<br>
-              "Starting a printing business is overwhelming, but Screensource made it easy. They helped me choose the
-              right equipment, taught me how to use it properly, and now I feel confident taking on any order. Their
-              expertise is priceless."<br>
-              Theyâ€™ve set me up for long-term success.</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Starting a printing business is overwhelming, but Screensource made it easy. They helped me choose the right equipment, taught me how to use it properly, and now I feel confident taking on any order. Their expertise is priceless. They've set me up for long-term success."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">P</div>
+                <div class="client-details">
+                  <h4>Priyanka S.</h4>
+                  <span>Printing Startup Founder</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Slide 10 -->
-          <div class="swiper-slide"
-            style="background: rgba(255,255,255,0.9); border-radius: 20px; padding: 30px; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
-            <p style="font-size:1rem; line-height:1.8;">â­â­â­â­â­ Mohit K. â€“ Graphic Designer & Printer<br>
-              "With Screensource, I donâ€™t just get materials â€” I get solutions. Their technical team knows the printing
-              process inside out and always helps me troubleshoot issues quickly. That customer focus keeps me coming
-              back."<br>
-              Reliable support every time.</p>
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-right quote-icon"></i>
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "With Screensource, I don't just get materials - I get solutions. Their technical team knows the printing process inside out and always helps me troubleshoot issues quickly. That customer focus keeps me coming back. Reliable support every time."
+              </p>
+              <div class="client-info">
+                <div class="client-avatar">M</div>
+                <div class="client-details">
+                  <h4>Mohit K.</h4>
+                  <span>Graphic Designer & Printer</span>
+                </div>
+              </div>
+            </div>
           </div>
-
 
         </div>
 
@@ -1853,187 +2103,207 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
-  .modern-footer {
-    background-color: #0B0E14;
-    color: #e0e0e0;
-    padding: 80px 20px 40px;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    border-top: 3px solid transparent;
-    border-image: linear-gradient(90deg, #00b5e2, #9b59b6, #EC008C) 1;
-  }
-  .modern-footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
-  }
-  .modern-footer .brand-title {
-    font-size: 28px;
-    font-weight: 800;
-    margin: 0 0 15px 0;
-    letter-spacing: 0.5px;
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .modern-footer p {
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 0 0 20px 0;
-    color: #a0aab2;
-  }
-  .modern-footer h4 {
-    margin-bottom: 25px;
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  .modern-footer h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    background: #EC008C;
-    border-radius: 2px;
-  }
-  .modern-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .modern-footer ul li {
-    margin-bottom: 12px;
-  }
-  .modern-footer ul li a {
-    color: #a0aab2;
-    text-decoration: none;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .modern-footer ul li a:hover {
-    color: #00b5e2;
-    transform: translateX(5px);
-  }
-  .footer-socials {
-    display: flex;
-    gap: 15px;
-  }
-  .footer-socials a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,0.05);
-    color: #ffffff;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 18px;
-  }
-  .footer-socials a:hover {
-    background: linear-gradient(135deg, #00b5e2, #EC008C);
-    transform: translateY(-3px);
-  }
-  .footer-contact-item {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    color: #a0aab2;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-  .footer-contact-item i {
-    color: #00b5e2;
-    font-size: 18px;
-    margin-top: 3px;
-  }
-  .footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    margin-top: 50px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #707a82;
-    font-size: 14px;
-  }
-  .footer-bottom strong {
-    color: #a0aab2;
-  }
-</style>
+    .modern-footer {
+      background-color: #0B0E14;
+      color: #e0e0e0;
+      padding: 80px 20px 40px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      border-top: 3px solid transparent;
+      border-image: linear-gradient(90deg, #00b5e2, #9b59b6, #EC008C) 1;
+    }
 
-<footer class="modern-footer">
-  <div class="modern-footer-container">
-    
-    <!-- Company Info -->
-    <div style="flex: 1 1 250px;">
-      <h3 class="brand-title">Screensource</h3>
-      <p>
-        Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.
-      </p>
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><i class="fas fa-shopping-bag"></i></a>
+    .modern-footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .modern-footer .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0 0 15px 0;
+      letter-spacing: 0.5px;
+      background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .modern-footer p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 0 20px 0;
+      color: #a0aab2;
+    }
+
+    .modern-footer h4 {
+      margin-bottom: 25px;
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .modern-footer h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      background: #EC008C;
+      border-radius: 2px;
+    }
+
+    .modern-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .modern-footer ul li {
+      margin-bottom: 12px;
+    }
+
+    .modern-footer ul li a {
+      color: #a0aab2;
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modern-footer ul li a:hover {
+      color: #00b5e2;
+      transform: translateX(5px);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 18px;
+    }
+
+    .footer-socials a:hover {
+      background: linear-gradient(135deg, #00b5e2, #EC008C);
+      transform: translateY(-3px);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      color: #a0aab2;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .footer-contact-item i {
+      color: #00b5e2;
+      font-size: 18px;
+      margin-top: 3px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #707a82;
+      font-size: 14px;
+    }
+
+    .footer-bottom strong {
+      color: #a0aab2;
+    }
+  </style>
+
+  <footer class="modern-footer">
+    <div class="modern-footer-container">
+
+      <!-- Company Info -->
+      <div style="flex: 1 1 250px;">
+        <h3 class="brand-title">Screensource</h3>
+        <p>
+          Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing
+          materials with reliable prepress services across Pune and beyond.
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><i
+              class="fas fa-shopping-bag"></i></a>
+        </div>
       </div>
-    </div>
 
-    <!-- Quick Links -->
-    <div style="flex: 1 1 150px;">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Home</a></li>
-        <li><a href="About_US.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> About Us</a></li>
-        <li><a href="Contact.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Contact Us</a></li>
-        <li><a href="product.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> All Products</a></li>
-      </ul>
-    </div>
-
-    <!-- Brands -->
-    <div style="flex: 1 1 200px;">
-      <h4>Top Brands</h4>
-      <ul>
-        <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
-        <li><a href="Orafol.html">Orafol Adhesive</a></li>
-        <li><a href="3M.html">3M Tapes</a></li>
-        <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
-        <li><a href="Nittoku.html">Nittoku</a></li>
-        <li><a href="Avery.html">Avery Dennison</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div style="flex: 1 1 250px;">
-      <h4>Contact Us</h4>
-      <div class="footer-contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041</span>
+      <!-- Quick Links -->
+      <div style="flex: 1 1 150px;">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Home</a></li>
+          <li><a href="About_US.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> About Us</a></li>
+          <li><a href="Contact.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Contact Us</a></li>
+          <li><a href="product.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> All Products</a></li>
+        </ul>
       </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-envelope"></i>
-        <span>designatscreensource@gmail.com</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-phone-alt"></i>
-        <span>+91 8080941627</span>
-      </div>
-    </div>
 
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 <strong>Screensource</strong>. All rights reserved.
-  </div>
-</footer>
+      <!-- Brands -->
+      <div style="flex: 1 1 200px;">
+        <h4>Top Brands</h4>
+        <ul>
+          <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
+          <li><a href="Orafol.html">Orafol Adhesive</a></li>
+          <li><a href="3M.html">3M Tapes</a></li>
+          <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
+          <li><a href="Nittoku.html">Nittoku</a></li>
+          <li><a href="Avery.html">Avery Dennison</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div style="flex: 1 1 250px;">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji
+            Nagar, Narhe, Pune, Maharashtra 411041</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>designatscreensource@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 8080941627</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <strong>Screensource</strong>. All rights reserved.
+    </div>
+  </footer>
 
 
   <!-- Font Awesome Icons -->

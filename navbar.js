@@ -384,7 +384,6 @@ const navbarHTML = `
             </ul>
           </li>
           
-          <li><a href="#">Products</a></li>
 
           <li>
             <a href="#" class="dropdown-toggle">Services <span class="dd-arrow">▾</span></a>
@@ -427,7 +426,6 @@ const navbarHTML = `
       <li><a href="Avery.html" class="mob-sub-link">Avery Dennison</a></li>
       <li><a href="technova.html" class="mob-sub-link">TechNova (NovaLife)</a></li>
 
-      <li><a href="#">Products</a></li>
 
       <li><a href="#" class="mob-header-link">Services</a></li>
       <li><a href="Stretching.html" class="mob-sub-link">Stretching Services</a></li>
