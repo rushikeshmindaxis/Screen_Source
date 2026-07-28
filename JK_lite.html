@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -27,7 +27,7 @@
     }
 body {
  font-family: 'Myriad Pro', Arial, sans-serif;
-background: linear-gradient(135deg, #000000, #434343);
+background: #f9f9f9;
   color: #222;
   overflow-x: hidden;
 }
@@ -41,417 +41,7 @@ background: linear-gradient(135deg, #000000, #434343);
 
     <!-- Header -->
   <!-- NAVBAR SECTION START -->
-<section id="navbar-section">
-<style>
-/* Base Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Myriad Pro', Arial, sans-serif;
-  background: #f9f9f9;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 11px 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
-  z-index: 1000;
-}
-
-
-.navbar.scrolled {
-background: rgba(0, 0, 0, 0.7);
-
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-/* Logo */
-.logo img {
-  height: 50px;
-}
-
-/* Menu Toggle (Mobile) */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  color: #111;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-/* Nav Links */
-.nav-links {
-  display: flex;
-  gap: 90px;
-  align-items: center;
-  list-style: none;
-}
-
-.nav-links li {
-  position: relative;
-}
-
-.nav-links > li > a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  padding: 5px 8px;
-  transition: all 0.3s ease;
-}
-.nav-links > li > a:hover {
-  color: #EC008C;
-}
-.nav-links,
-.nav-links li,
-.dropdown-menu,
-.sub-dropdown-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-.nav-links > li > a::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0%;
-  height: 3px;
-   background: linear-gradient(to right, #00B5E2, #EC008C, #FFD200, #333);
-  border-radius: 4px;
-  transition: width 0.3s ease;
-}
-
-.nav-links > li > a:hover::after {
-  width: 100%;
-}
-
-/* Dropdown Styles */
-.dropdown-menu,
-.sub-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 250px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  padding: 10px 0;
-  border-radius: 14px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  animation: fadeIn 0.3s ease-in-out;
-  z-index: 999;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  overflow: visible; /* ✅ Prevents clipping of sub-menus */
-}
-
-/* Dropdown Fade Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Dropdown Links */
-.dropdown-menu a,
-.sub-dropdown-menu a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 15px;
-  color: #222;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.4s ease;
-}
-
-.dropdown-menu a:hover,
-.sub-dropdown-menu a:hover {
-background: linear-gradient(90deg, #EC008C, #FFC1E3);
-
-  color: white;
-  padding-left: 20px;
-}
-
-.dropdown-menu a:not(:last-child),
-.sub-dropdown-menu a:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* Sub-dropdown Positioning */
-.sub-dropdown {
-  position: relative;
-}
-
-.sub-dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: 0; /* ✅ Removed negative margin to avoid gap issues */
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  min-width: 250px;
-}
-
-/* Show dropdowns on hover (Desktop) */
-.nav-links li:hover > .dropdown-menu {
-  display: block;
-}
-
-.sub-dropdown:hover > .sub-dropdown-menu {
-  display: block;
-}
-
-/* Add arrow indicators
-.nav-links li > a::after {
-  content: "";
-}
-
-.dropdown-menu > .sub-dropdown > a::after {
-  content: "›";
-  margin-left: auto;
-  font-size: 14px;
-  color: #999;
-} */
-
-/* Mobile Styles */
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.95);
-  }
-
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  /* Sidebar Nav */
-  .nav-links {
-    position: fixed;
-    top: 0;
-    row-gap: 20px;
-    left: -280px;
-    height: 100vh;
-    width: 280px;
-    background: #222; /* Dark background */
-    flex-direction: column;
-    padding: 80px 0 20px;
-    transition: left 0.3s ease;
-    overflow-y: auto;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    left: 0;
-  }
-
-  .nav-links li {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divider line */
-  }
-
-  .nav-links > li > a {
-    display: block;
-    color: #fff;
-    padding: 15px 20px;
-    font-size: 16px;
-    transition: background 0.3s ease;
-  }
-
-  .nav-links > li > a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  /* Close Button */
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1001;
-  }
-  .dropdown-menu,
-  .sub-dropdown-menu {
-    position: static;
-    background: #222;
-    box-shadow: none;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-  }
-
-  .dropdown-menu a,
-  .sub-dropdown-menu a {
-    color: white;
-    padding-left: 25px;
-  }
-
-  .dropdown-menu.show,
-  .sub-dropdown-menu.show {
-    display: flex !important;
-  }
-
-  .nav-links li:hover > .dropdown-menu,
-  .sub-dropdown:hover > .sub-dropdown-menu {
-    display: none;
-  }
-}
-
-/* Overlay for Mobile Menu */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 998;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-
-.overlay.show {
-  display: block;
-}
-
-</style>
-<div class="navbar" id="navbar">
-  <div class="logo">
-   <img src="images/LOGO_final.png" alt="Logo" />
-  </div>
-
-  <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
-<ul class="nav-links" id="navLinks">
-  <li><a href="index.html">HOME</a></li>
-  
-    <li><a href="About_US.html">ABOUT US</a></li>
-
-<li>
-  <a class="dropdown-toggle">BRANDS <span class="dropdown-arrow">▾</span></a>
-  <ul class="dropdown-menu">
-    <li><a href="MAC_DERMIDE.html">MacDermid Alpha Autotype</a></li>
-    <li><a href="Orafol.html">Orafol Adhesive</a></li>
-    <li><a href="3M.html">3M Tapes</a></li>
-    <li><a href="Polyvantis.html">Polyvantis <small>(Sabic)</small></a></li>
-    <li><a href="Nittoku.html">Nittoku</a></li>
-    <li><a href="Print_color.html">Print color</a></li>
-    <li><a href="Yessor.html">Yessor Tech</a></li>
-    <li><a href="Sansui.html">Sansui</a></li>
-    <li><a href="NittoL.html">Nitto Denko</a></li>
-    <li><a href="Avery.html">Avery Dennison</a></li>
-    <li><a href="technova.html">TechNova (NovaLife)</a></li>
-  </ul>
-</li>
-
-  <!-- ✅ New SERVICES Menu -->
-  <li>
-    <a class="dropdown-toggle">SERVICES <span class="dropdown-arrow">▾</span></a>
-<ul class="dropdown-menu">
-  <li><a href="Stretching.html">Stretching Services</a></li>
-  <li><a href="Exposing.html">Exposing Services</a></li>
-  <li><a href="MAchine_Stre.html">Stretching Machines</a></li>
-  <li><a href="Machines_EXPO.html">Exposing Machines</a></li>
-</ul>
-  </li>
-
-
-  <!-- ✅ End SERVICES Menu -->
-
-  <li><a href="Contact.html">CONTACT US</a></li>
-</ul>
-
-</div>
-
-  <div class="overlay" id="overlay"></div>
-
-  <script>
-    const navbar = document.getElementById('navbar');
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const overlay = document.getElementById('overlay');
-
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      overlay.classList.toggle('show');
-    });
-
-    overlay.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      overlay.classList.remove('show');
-      closeAllMenus();
-    });
-
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const menu = toggle.nextElementSibling;
-          menu.classList.toggle('show');
-          closeOthers(menu, '.dropdown-menu');
-        }
-      });
-    });
-
-    document.querySelectorAll('.sub-dropdown > a').forEach(sub => {
-      sub.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const subMenu = sub.nextElementSibling;
-          subMenu.classList.toggle('show');
-          closeOthers(subMenu, '.sub-dropdown-menu');
-        }
-      });
-    });
-
-    function closeOthers(current, selector) {
-      document.querySelectorAll(selector).forEach(menu => {
-        if (menu !== current) menu.classList.remove('show');
-      });
-    }
-
-    function closeAllMenus() {
-      document.querySelectorAll('.dropdown-menu, .sub-dropdown-menu').forEach(menu => {
-        menu.classList.remove('show');
-      });
-    }
-
-    document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-          navLinks.classList.remove('active');
-          overlay.classList.remove('show');
-          closeAllMenus();
-        }
-      });
-    });
-  </script>
-</section>
+<script src="navbar.js"></script>
 
 
 <!-- NAVBAR SECTION END -->
@@ -472,7 +62,7 @@ background: linear-gradient(90deg, #EC008C, #FFC1E3);
 <style>
   .hero-films {
     height: 50vh;
-background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
+background: #f9f9f9;
 
 
 
@@ -494,7 +84,7 @@ background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
 
   .hero-films h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
-    background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0);
+    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top:150px;
@@ -503,7 +93,7 @@ background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
 
 .hero-films p {
   font-size: 1.1rem;
-  background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0);
+  background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
   -webkit-background-clip: text;   /* For Chrome & Safari */
   -webkit-text-fill-color: transparent;
   background-clip: text;           /* For other browsers */
@@ -519,7 +109,7 @@ background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background: linear-gradient(to right, #fcd932, #f94c9c, #45c3f0);
+    background: linear-gradient(to right, #3498db, #9b59b6, #EC008C);
     border: none;
     border-radius: 30px;
     text-decoration: none;
@@ -550,7 +140,7 @@ background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
 
 <section style="padding:60px 20px;background:linear-gradient(#434343,#1a1a1a,#000);font-family:'Poppins',sans-serif;">
   <h2 style="text-align:center;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;
-             background:linear-gradient(90deg,#6a8dff,#ff71c0);
+             background:linear-gradient(90deg,#00b5e2,#EC008C);
              -webkit-background-clip:text;-webkit-text-fill-color:transparent;
              margin-bottom:30px;">
     Product Gallery
@@ -669,7 +259,7 @@ background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
     for (let i = 0; i < totalCards; i++) {
       const dot = document.createElement('span');
       dot.style.cssText = "display:inline-block;width:10px;height:10px;background:#ccc;border-radius:50%;margin:0 4px;cursor:pointer;transition:background 0.3s ease;";
-      if (i === 0) dot.style.background = "#ff71c0";
+      if (i === 0) dot.style.background = "#EC008C";
       dot.addEventListener('click', () => goToSlide(i));
       dotsContainer.appendChild(dot);
     }
@@ -677,7 +267,7 @@ background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
 
     function updateDots(index) {
       dots.forEach(dot => dot.style.background = "#ccc");
-      dots[index].style.background = "#ff71c0";
+      dots[index].style.background = "#EC008C";
     }
 
     function goToSlide(index) {
@@ -738,120 +328,206 @@ background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
 <!-- ?????????????????????????  FOOTER ????????????????????????????????// -->
 
 <!-- Font Awesome -->
-<footer style="background: linear-gradient(90deg, #002855, #00509d); color: white; padding: 70px 20px; font-family: 'Poppins', sans-serif;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+<style>
+  .modern-footer {
+    background-color: #0B0E14;
+    color: #e0e0e0;
+    padding: 80px 20px 40px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #00b5e2, #9b59b6, #EC008C) 1;
+  }
+  .modern-footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .modern-footer .brand-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .modern-footer p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 20px 0;
+    color: #a0aab2;
+  }
+  .modern-footer h4 {
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .modern-footer h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: #EC008C;
+    border-radius: 2px;
+  }
+  .modern-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .modern-footer ul li {
+    margin-bottom: 12px;
+  }
+  .modern-footer ul li a {
+    color: #a0aab2;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .modern-footer ul li a:hover {
+    color: #00b5e2;
+    transform: translateX(5px);
+  }
+  .footer-socials {
+    display: flex;
+    gap: 15px;
+  }
+  .footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.05);
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
+  .footer-socials a:hover {
+    background: linear-gradient(135deg, #00b5e2, #EC008C);
+    transform: translateY(-3px);
+  }
+  .footer-contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #a0aab2;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .footer-contact-item i {
+    color: #00b5e2;
+    font-size: 18px;
+    margin-top: 3px;
+  }
+  .footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #707a82;
+    font-size: 14px;
+  }
+  .footer-bottom strong {
+    color: #a0aab2;
+  }
+</style>
 
+<footer class="modern-footer">
+  <div class="modern-footer-container">
+    
     <!-- Company Info -->
-    <div style="flex: 1 1 220px;">
-      <h3 style="font-size: 26px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: 0.5px;
-        background: linear-gradient(135deg, #ffcc70, #ff71c0, #6a8dff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;">
-        Screensource
-      </h3>
-      <p style="font-size: 15px; line-height: 1.6; margin: 0 0 15px 0;">
+    <div style="flex: 1 1 250px;">
+      <h3 class="brand-title">Screensource</h3>
+      <p>
         Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.
       </p>
-<div style="display: flex; gap: 15px; align-items: center; margin-top: 10px;">
-  <a href="https://www.facebook.com/ScreensourcePune/" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" style="width: 100%; height: auto;">
-  </a>
-
-  <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 100%; height: auto;">
-  </a>
-
-  <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank" style="display: inline-block; width: 30px; height: 30px;">
-    <img src="images/indiamart.png" alt="IndiaMART" style="width: 100%; height: auto;">
-  </a>
-</div>
-
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><i class="fas fa-shopping-bag"></i></a>
+      </div>
     </div>
 
     <!-- Quick Links -->
     <div style="flex: 1 1 150px;">
-      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-link"></i> Quick Links</h4>
-      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
-        <li><a href="index.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Home</a></li>
-        <li><a href="About_US.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">About Us</a></li>
-        <li><a href="Contact.html" style="color: white; text-decoration: none;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Contact</a></li>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Home</a></li>
+        <li><a href="About_US.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> About Us</a></li>
+        <li><a href="Contact.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Contact Us</a></li>
+        <li><a href="product.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> All Products</a></li>
       </ul>
     </div>
 
     <!-- Brands -->
     <div style="flex: 1 1 200px;">
-      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-box-open"></i> Brands</h4>
-      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
-        <li><a href="MAC_DERMIDE.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">MacDermid Alpha Autotype</a></li>
-        <li><a href="Orafol.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Orafol Adhesive</a></li>
-        <li><a href="3M.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">3M Tapes</a></li>
-        <li><a href="Polyvantis.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Polyvantis <small>(Sabic)</small></a></li>
-        <li><a href="Nittoku.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Nittoku</a></li>
-        <li><a href="Print_color.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Print color</a></li>
-        <li><a href="Yessor.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Yessor Tech</a></li>
-        <li><a href="Sansui.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Sansui</a></li>
-        <li><a href="NittoL.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Nitto Denko</a></li>
-        <li><a href="Avery.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Avery Dennison</a></li>
-        <li><a href="technova.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">TechNova (NovaLife)</a></li>
-      </ul>
-    </div>
-
-    <!-- Services -->
-    <div style="flex: 1 1 180px;">
-      <h4 style="margin-bottom: 20px; font-size: 17px; color: #ffb200;"><i class="fas fa-cogs"></i> Services</h4>
-      <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 2;">
-        <li><a href="Stretching.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Stretching Services</a></li>
-        <li><a href="Exposing.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Exposing Services</a></li>
-        <li><a href="MAchine_Stre.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Stretching Machines</a></li>
-        <li><a href="Machines_EXPO.html" style="color: white;" onmouseover="this.style.color='#ffb200'" onmouseout="this.style.color='white'">Exposing Machines</a></li>
+      <h4>Top Brands</h4>
+      <ul>
+        <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
+        <li><a href="Orafol.html">Orafol Adhesive</a></li>
+        <li><a href="3M.html">3M Tapes</a></li>
+        <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
+        <li><a href="Nittoku.html">Nittoku</a></li>
+        <li><a href="Avery.html">Avery Dennison</a></li>
       </ul>
     </div>
 
     <!-- Contact -->
-    <div style="flex: 1 1 220px;">
-      <h4 style="margin: 0 0 15px; font-size: 17px; color: #ffb200; display: flex; align-items: center; gap: 8px;">
-        <i class="fas fa-address-card"></i> Contact
-      </h4>
-      <p style="font-size: 15px; margin: 8px 0; line-height: 1.6; display: flex; align-items: flex-start; gap: 8px;">
-        <i class="fas fa-map-marker-alt" style="margin-top: 3px;"></i>
-        Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041
-      </p>
-      <p style="font-size: 15px; margin: 8px 0; display: flex; align-items: center; gap: 8px;">
-        <i class="fas fa-envelope"></i> designatscreensource@gmail.com
-      </p>
-      <p style="font-size: 15px; margin: 8px 0; display: flex; align-items: center; gap: 8px;">
-        <i class="fas fa-phone"></i> +91 8080941627
-      </p>
+    <div style="flex: 1 1 250px;">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>designatscreensource@gmail.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>+91 8080941627</span>
+      </div>
     </div>
 
   </div>
-
-  <hr style="margin: 40px auto 25px; border: 0; height: 1px; background: #ffffff33; width: 90%;">
-
-  <div style="text-align: center; font-size: 14px; opacity: 0.85;">
-    © 2025 <strong>Screensource</strong>. All rights reserved.
-  </div>
-  <div style="text-align: center; font-size: 13px; margin-top: 5px; color: #ffffffcc;">
-    Developed By <strong>DW INNOVATION PVT. LTD.</strong>
+  <div class="footer-bottom">
+    &copy; 2026 <strong>Screensource</strong>. All rights reserved.
   </div>
 </footer>
 
 
+
 <!-- Scroll to Top Button -->
 <button onclick="window.scrollTo({top:0, behavior:'smooth'})"
-  style="position:fixed; bottom:20px; right:20px; background:#FE320A; color:white; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+  style="position:fixed; bottom:20px; right:20px; background:#00b5e2; color: #444; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
   <img src="images/arrow_01.webp" alt="Scroll to top" style="width:22px; height:22px;">
 </button>
 
 <!-- Floating Call Button -->
 <a href="tel:+918080941627" 
-  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color:white; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
   <img src="images/call_01.png" alt="Call Us" style="width:24px; height:24px;">
 </a>
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/918080941627" target="_blank"
-  style="position:fixed; bottom:150px; right:20px; background:#25D366; color:white; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
+  style="position:fixed; bottom:150px; right:20px; background:#25D366; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
   <img src="images/whatsapp_01.webp" alt="Chat on WhatsApp" style="width:26px; height:26px;">
 </a>
 
@@ -1023,3 +699,7 @@ background: linear-gradient(#000000 0%, #1a1a1a 50%, #434343 100%);
 
 </body>
 </html>
+
+
+
+
