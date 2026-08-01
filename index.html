@@ -346,14 +346,82 @@
       width: 100%;
       overflow: hidden;
       font-family: 'Poppins', Arial, sans-serif;
+      aspect-ratio: 1940 / 811;
+    }
+
+    /* Hero Swiper custom styling */
+    .hero-swiper {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .hero-swiper .swiper-slide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
 
     /* Background Image Layer to maintain exact ratio and full visibility */
     .hero-bg-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
-      object-fit: contain;
+      object-fit: cover;
+      object-position: right center;
+    }
+
+    .hero-next, .hero-prev {
+      color: #fff !important;
+      background: rgba(0, 0, 0, 0.3);
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 50%;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+      z-index: 12;
+    }
+
+    .hero-next::after, .hero-prev::after {
+      font-size: 16px !important;
+      font-weight: bold;
+    }
+
+    .hero-next {
+      right: 20px !important;
+    }
+
+    .hero-prev {
+      left: 20px !important;
+    }
+
+    .hero-next:hover, .hero-prev:hover {
+      background: linear-gradient(90deg, #00b5e2, #EC008C);
+      transform: scale(1.1);
+    }
+    
+    .hero-pagination {
+      bottom: 25px !important;
+      z-index: 12 !important;
+    }
+
+    .hero-pagination .swiper-pagination-bullet {
+      background: #fff !important;
+      opacity: 0.6;
+      width: 10px;
+      height: 10px;
+      margin: 0 6px !important;
+      transition: all 0.3s ease;
+    }
+
+    .hero-pagination .swiper-pagination-bullet-active {
+      background: #EC008C !important;
+      opacity: 1;
+      width: 24px;
+      border-radius: 5px;
     }
 
     /* Overlay for text content */
@@ -406,6 +474,8 @@
       padding-top: 10px;
       /* Slight padding from top */
     }
+
+
 
     /* Trust badges - floating on the right */
     .hero-trust-badges {
@@ -657,6 +727,7 @@
       #hero-section {
         display: flex;
         flex-direction: column;
+        aspect-ratio: auto;
       }
 
       .hero-bg-layer {
@@ -739,49 +810,325 @@
   </style>
 
   <section id="hero-section">
-    <!-- Background image layer for exact aspect ratio. Uses picture tag for mobile swap -->
-    <picture>
-      <source media="(max-width: 960px)" srcset="images/hero_new-2026_mobile-view.png">
-      <img src="images/hero_new-2026.png" class="hero-bg-layer" alt="Background">
-    </picture>
+    <!-- Swiper Container -->
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper">
 
-    <!-- Overlay content -->
-    <div class="hero-overlay">
-      <!-- Main content -->
-      <div class="hero-main">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <picture>
+            <source media="(max-width: 960px)" srcset="images/hero_new-2026_mobile-view.png">
+            <img src="images/hero_new-2026.png" class="hero-bg-layer" alt="Background">
+          </picture>
 
-        <!-- Left: Text -->
-        <div class="hero-left">
-          <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
-          <h2 class="hero-headline-gradient">
-            <span style="color: #00b5e2;">TOTAL</span>
-            <span
-              style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
-          </h2>
-          <h2 class="hero-headline-gradient-2">
-            SOLUTIONS.
-            <span class="iso-badge">
-              <i class="fas fa-shield-alt"></i>
-              ISO 9001:2015<br>CERTIFIED
-            </span>
-          </h2>
-
-          <p class="hero-sub-text">
-            One Stop Solution for Printing Material.<br>
-            An ISO 9001:2015 CERTIFIED COMPANY.
-          </p>
-
-          <a href="#about" class="hero-cta-btn">
-            Explore The Solutions Catalog
-            <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
-          </a>
+          <!-- Overlay content -->
+          <div class="hero-overlay">
+            <div class="hero-main">
+              <!-- Left: Text -->
+              <div class="hero-left">
+                <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+                <h2 class="hero-headline-gradient">
+                  <span style="color: #00b5e2;">TOTAL</span>
+                  <span
+                    style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+                </h2>
+                <h2 class="hero-headline-gradient-2">
+                  SOLUTIONS.
+                  <span class="iso-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    ISO 9001:2015<br>CERTIFIED
+                  </span>
+                </h2>
+                <p class="hero-sub-text">
+                  One Stop Solution for Printing Material.<br>
+                  An ISO 9001:2015 CERTIFIED COMPANY.
+                </p>
+                <a href="#about" class="hero-cta-btn">
+                  Explore The Solutions Catalog
+                  <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <!-- Slide 2 -->
+        <div class="swiper-slide" style="background-color: #ffffff;">
+          <picture>
+            <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image.png">
+            <img src="images/Hero_Section_Image/image.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
+          </picture>
+
+          <!-- Overlay content -->
+          <div class="hero-overlay">
+            <div class="hero-main">
+              <!-- Left: Text -->
+              <div class="hero-left">
+                <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+                <h2 class="hero-headline-gradient">
+                  <span style="color: #00b5e2;">TOTAL</span>
+                  <span
+                    style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+                </h2>
+                <h2 class="hero-headline-gradient-2">
+                  SOLUTIONS.
+                  <span class="iso-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    ISO 9001:2015<br>CERTIFIED
+                  </span>
+                </h2>
+                <p class="hero-sub-text">
+                  One Stop Solution for Printing Material.<br>
+                  An ISO 9001:2015 CERTIFIED COMPANY.
+                </p>
+                <a href="#about" class="hero-cta-btn">
+                  Explore The Solutions Catalog
+                  <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide" style="background-color: #ffffff;">
+          <picture>
+            <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy.png">
+            <img src="images/Hero_Section_Image/image copy.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
+          </picture>
+
+          <!-- Overlay content -->
+          <div class="hero-overlay">
+            <div class="hero-main">
+              <!-- Left: Text -->
+              <div class="hero-left">
+                <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+                <h2 class="hero-headline-gradient">
+                  <span style="color: #00b5e2;">TOTAL</span>
+                  <span
+                    style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+                </h2>
+                <h2 class="hero-headline-gradient-2">
+                  SOLUTIONS.
+                  <span class="iso-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    ISO 9001:2015<br>CERTIFIED
+                  </span>
+                </h2>
+                <p class="hero-sub-text">
+                  One Stop Solution for Printing Material.<br>
+                  An ISO 9001:2015 CERTIFIED COMPANY.
+                </p>
+                <a href="#about" class="hero-cta-btn">
+                  Explore The Solutions Catalog
+                  <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide" style="background-color: #ffffff;">
+          <picture>
+            <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 2.png">
+            <img src="images/Hero_Section_Image/image copy 2.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
+          </picture>
+
+          <!-- Overlay content -->
+          <div class="hero-overlay">
+            <div class="hero-main">
+              <!-- Left: Text -->
+              <div class="hero-left">
+                <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+                <h2 class="hero-headline-gradient">
+                  <span style="color: #00b5e2;">TOTAL</span>
+                  <span
+                    style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+                </h2>
+                <h2 class="hero-headline-gradient-2">
+                  SOLUTIONS.
+                  <span class="iso-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    ISO 9001:2015<br>CERTIFIED
+                  </span>
+                </h2>
+                <p class="hero-sub-text">
+                  One Stop Solution for Printing Material.<br>
+                  An ISO 9001:2015 CERTIFIED COMPANY.
+                </p>
+                <a href="#about" class="hero-cta-btn">
+                  Explore The Solutions Catalog
+                  <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide" style="background-color: #ffffff;">
+          <picture>
+            <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 3.png">
+            <img src="images/Hero_Section_Image/image copy 3.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
+          </picture>
+
+          <!-- Overlay content -->
+          <div class="hero-overlay">
+            <div class="hero-main">
+              <!-- Left: Text -->
+              <div class="hero-left">
+                <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+                <h2 class="hero-headline-gradient">
+                  <span style="color: #00b5e2;">TOTAL</span>
+                  <span
+                    style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+                </h2>
+                <h2 class="hero-headline-gradient-2">
+                  SOLUTIONS.
+                  <span class="iso-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    ISO 9001:2015<br>CERTIFIED
+                  </span>
+                </h2>
+                <p class="hero-sub-text">
+                  One Stop Solution for Printing Material.<br>
+                  An ISO 9001:2015 CERTIFIED COMPANY.
+                </p>
+                <a href="#about" class="hero-cta-btn">
+                  Explore The Solutions Catalog
+                  <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide" style="background-color: #ffffff;">
+          <picture>
+            <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 4.png">
+            <img src="images/Hero_Section_Image/image copy 4.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
+          </picture>
+
+          <!-- Overlay content -->
+          <div class="hero-overlay">
+            <div class="hero-main">
+              <!-- Left: Text -->
+              <div class="hero-left">
+                <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+                <h2 class="hero-headline-gradient">
+                  <span style="color: #00b5e2;">TOTAL</span>
+                  <span
+                    style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+                </h2>
+                <h2 class="hero-headline-gradient-2">
+                  SOLUTIONS.
+                  <span class="iso-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    ISO 9001:2015<br>CERTIFIED
+                  </span>
+                </h2>
+                <p class="hero-sub-text">
+                  One Stop Solution for Printing Material.<br>
+                  An ISO 9001:2015 CERTIFIED COMPANY.
+                </p>
+                <a href="#about" class="hero-cta-btn">
+                  Explore The Solutions Catalog
+                  <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide" style="background-color: #ffffff;">
+          <picture>
+            <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 5.png">
+            <img src="images/Hero_Section_Image/image copy 5.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
+          </picture>
+
+          <!-- Overlay content -->
+          <div class="hero-overlay">
+            <div class="hero-main">
+              <!-- Left: Text -->
+              <div class="hero-left">
+                <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+                <h2 class="hero-headline-gradient">
+                  <span style="color: #00b5e2;">TOTAL</span>
+                  <span
+                    style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+                </h2>
+                <h2 class="hero-headline-gradient-2">
+                  SOLUTIONS.
+                  <span class="iso-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    ISO 9001:2015<br>CERTIFIED
+                  </span>
+                </h2>
+                <p class="hero-sub-text">
+                  One Stop Solution for Printing Material.<br>
+                  An ISO 9001:2015 CERTIFIED COMPANY.
+                </p>
+                <a href="#about" class="hero-cta-btn">
+                  Explore The Solutions Catalog
+                  <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="swiper-slide" style="background-color: #ffffff;">
+          <picture>
+            <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 6.png">
+            <img src="images/Hero_Section_Image/image copy 6.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
+          </picture>
+
+          <!-- Overlay content -->
+          <div class="hero-overlay">
+            <div class="hero-main">
+              <!-- Left: Text -->
+              <div class="hero-left">
+                <h1 class="hero-headline-dark">PREMIUM PRINTING<br>MATERIALS.</h1>
+                <h2 class="hero-headline-gradient">
+                  <span style="color: #00b5e2;">TOTAL</span>
+                  <span
+                    style="background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WORKFLOW</span>
+                </h2>
+                <h2 class="hero-headline-gradient-2">
+                  SOLUTIONS.
+                  <span class="iso-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    ISO 9001:2015<br>CERTIFIED
+                  </span>
+                </h2>
+                <p class="hero-sub-text">
+                  One Stop Solution for Printing Material.<br>
+                  An ISO 9001:2015 CERTIFIED COMPANY.
+                </p>
+                <a href="#about" class="hero-cta-btn">
+                  Explore The Solutions Catalog
+                  <span class="cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
-      <!-- Bottom Feature Bar -->
-      <div class="hero-features-bar">
+      <!-- Pagination & Navigation -->
+      <div class="swiper-pagination hero-pagination"></div>
+      <div class="swiper-button-next hero-next"></div>
+      <div class="swiper-button-prev hero-prev"></div>
+    </div>
+
+    <!-- Bottom Feature Bar (Absolute overlay over active slide) -->
+    <div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 10; pointer-events: none;">
+      <div class="hero-features-bar" style="pointer-events: auto;">
         <div class="hero-feature-item">
           <div class="hero-feature-icon fi-blue"><i class="fas fa-medal"></i></div>
           <div class="hero-feature-text">
@@ -843,7 +1190,6 @@
     }
 
     .about-text h2 {
-      font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
       font-weight: 700;
       color: #0d2f53;
@@ -895,7 +1241,7 @@
 
     /* Custom bullet icon */
     .about-text ul li::before {
-      content: "âœ“";
+      content: "\2714"; /* Unicode checkmark */
       position: absolute;
       left: 0;
       top: 0;
@@ -917,8 +1263,12 @@
     .about-image img {
       width: 100%;
       max-width: 500px;
+      max-height: 500px;
+      object-fit: contain;
+      background-color: #f8fbff;
       border-radius: 25px;
       box-shadow: 0 20px 45px rgba(106, 141, 255, 0.25);
+      padding: 10px;
     }
 
     /* Responsive */
@@ -941,33 +1291,179 @@
 
 
   <section id="about">
-    <div class="about-wrapper"
-      style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+    <div class="swiper product-slider">
+      <div class="swiper-wrapper">
+        
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="about-wrapper"
+            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+            <!-- Text Content -->
+            <div class="about-text" style="flex: 1;">
+              <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
+                Premium <span style="color: #6a8dff;">Aluminum Frames</span>
+              </h2>
+              <p style="margin-bottom: 20px; font-size: 1.1rem; color: #555;">
+                Our high-quality aluminum screen printing frames provide the perfect balance of lightweight maneuverability and rigid durability for flawless prints.
+              </p>
+              <ul style="list-style: disc; padding-left: 20px; font-size: 1rem; color: #444; line-height: 1.6;">
+                <li>Lightweight & Durable: Built to withstand heavy use without warping.</li>
+                <li>Optimal Tension: Welded construction ensures consistent mesh tension.</li>
+                <li>Water-Tight Seals: Prevents ink and chemical leakage during printing.</li>
+                <li>Multiple Sizes: Available in various dimensions to suit any project.</li>
+                <li>Corrosion Resistant: Long-lasting performance even after repeated washing.</li>
+              </ul>
+            </div>
+            <!-- Image -->
+            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+              <img src="images/Hero_Section_Image/section1/image.png" alt="Screen Printing Materials" loading="eager"
+                style="max-width: 100%; height: auto; display: block;" />
+            </div>
+          </div>
+        </div>
 
-      <!-- Text Content -->
-      <div class="about-text" style="flex: 1;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #222;">
-          Our Comprehensive <span style="color: #6a8dff;">Product Range</span>
-        </h2>
-        <p style="margin-bottom: 20px; font-size: 1.1rem; color: #555;">
-          We offer a complete range of essential screen printing products, including:
-        </p>
-        <ul style="list-style: disc; padding-left: 20px; font-size: 1rem; color: #444; line-height: 1.6;">
-          <li>Inks: A wide variety of high-performance inks for any application.</li>
-          <li>Adhesives: Reliable adhesives for secure screen and film mounting.</li>
-          <li>Frames: Durable frames to provide a stable foundation for your work.</li>
-          <li>Meshes: High-quality meshes for achieving sharp, precise detail.</li>
-          <li>Films: A full range of films for creating perfect stencils.</li>
-        </ul>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="about-wrapper"
+            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+            <!-- Text Content -->
+            <div class="about-text" style="flex: 1;">
+              <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
+                MacDermid <span style="color: #6a8dff;">Alpha</span>
+              </h2>
+              <p style="margin-bottom: 20px; font-size: 1.1rem; color: #555;">
+                Industry-leading screen printing chemicals and inks offering unparalleled consistency, performance, and vibrant results for all your professional applications.
+              </p>
+              <ul style="list-style: disc; padding-left: 20px; font-size: 1rem; color: #444; line-height: 1.6;">
+                <li>High Performance: Formulated for exceptional print clarity and edge definition.</li>
+                <li>Consistent Viscosity: Ensures smooth application and reliable production runs.</li>
+                <li>Fast Curing: Optimized for quick drying times to increase efficiency.</li>
+                <li>Vibrant Colors: Delivers outstanding color accuracy and opacity.</li>
+                <li>Eco-Friendly Options: Available in low-VOC formulations for safer workspaces.</li>
+              </ul>
+            </div>
+            <!-- Image -->
+            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+              <img src="images/Hero_Section_Image/section1/image copy.png" alt="MacDermid Alpha Products" loading="eager"
+                style="max-width: 100%; height: auto; display: block;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="about-wrapper"
+            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+            <!-- Text Content -->
+            <div class="about-text" style="flex: 1;">
+              <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
+                Premium <span style="color: #6a8dff;">Inktec Inks</span>
+              </h2>
+              <p style="margin-bottom: 20px; font-size: 1.1rem; color: #555;">
+                Experience unparalleled color vibrancy and lasting durability with our top-of-the-line Inktec screen printing inks, perfect for vivid, high-resolution graphic outputs.
+              </p>
+              <ul style="list-style: disc; padding-left: 20px; font-size: 1rem; color: #444; line-height: 1.6;">
+                <li>Exceptional Color Gamut: Achieve bright, vivid colors that truly stand out.</li>
+                <li>Excellent Adhesion: Bonds firmly to a wide variety of substrates.</li>
+                <li>Fade Resistant: Formulated to withstand UV exposure without losing vibrancy.</li>
+                <li>Smooth Consistency: Flows flawlessly through fine meshes for precise detailing.</li>
+                <li>Versatile Application: Ideal for both commercial and fine art screen printing.</li>
+              </ul>
+            </div>
+            <!-- Image -->
+            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+              <img src="images/Hero_Section_Image/section1/image copy 2.png" alt="Inktec Inks" loading="eager"
+                style="max-width: 100%; height: auto; display: block;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="about-wrapper"
+            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+            <!-- Text Content -->
+            <div class="about-text" style="flex: 1;">
+              <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
+                Premium <span style="color: #6a8dff;">Lamination Films</span>
+              </h2>
+              <p style="margin-bottom: 20px; font-size: 1.1rem; color: #555;">
+                Protect and enhance your printed materials with our high-grade lamination films. Engineered for superior clarity, durability, and a flawless finish.
+              </p>
+              <ul style="list-style: disc; padding-left: 20px; font-size: 1rem; color: #444; line-height: 1.6;">
+                <li>Crystal Clear Finish: Enhances color depth and contrast of underlying prints.</li>
+                <li>Scratch Resistant: Provides a robust barrier against daily wear and tear.</li>
+                <li>Moisture Protection: Seals out water and humidity to prolong print life.</li>
+                <li>Easy Application: Designed for smooth, bubble-free adhesion.</li>
+                <li>Multiple Finishes: Available in gloss, matte, and soft-touch textures.</li>
+              </ul>
+            </div>
+            <!-- Image -->
+            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+              <img src="images/Hero_Section_Image/section1/image copy 3.png" alt="Lamination Films" loading="eager"
+                style="max-width: 100%; height: auto; display: block;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="about-wrapper"
+            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+            <!-- Text Content -->
+            <div class="about-text" style="flex: 1;">
+              <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
+                Premium <span style="color: #6a8dff;">Polyester Films</span>
+              </h2>
+              <p style="margin-bottom: 20px; font-size: 1.1rem; color: #555;">
+                Achieve the highest quality screen positives with our premium polyester films, engineered for optimal ink adhesion and exceptional dimensional stability.
+              </p>
+              <ul style="list-style: disc; padding-left: 20px; font-size: 1rem; color: #444; line-height: 1.6;">
+                <li>High Density: Guarantees deep, opaque blacks for perfect UV blocking.</li>
+                <li>Fast Drying: Specially coated to absorb ink rapidly without smudging.</li>
+                <li>Dimensional Stability: Will not warp or shrink, ensuring perfect registration.</li>
+                <li>Excellent Clarity: Highly transparent base for precise stencil creation.</li>
+                <li>Universal Compatibility: Works perfectly with most inkjet printers and inks.</li>
+              </ul>
+            </div>
+            <!-- Image -->
+            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+              <img src="images/Hero_Section_Image/section1/image copy 4.png" alt="Polyester Films" loading="eager"
+                style="max-width: 100%; height: auto; display: block;" />
+            </div>
+          </div>
+        </div>
+        
       </div>
-
-      <!-- Image -->
-      <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
-        <img src="images/HOME_ABOUT_IMAGE.webp" alt="Screen Printing Materials" loading="eager"
-          style="max-width: 100%; height: auto; display: block;" />
-      </div>
-
+      
+      <!-- Pagination -->
+      <div class="swiper-pagination product-pagination" style="position: relative; margin-top: 20px;"></div>
+      
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-next product-next" style="color: #6a8dff;"></div>
+      <div class="swiper-button-prev product-prev" style="color: #6a8dff;"></div>
     </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        new Swiper(".product-slider", {
+          loop: true,
+          speed: 800,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".product-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".product-next",
+            prevEl: ".product-prev",
+          }
+        });
+      });
+    </script>
   </section>
 
 
@@ -999,7 +1495,7 @@
     font-size: clamp(1.8rem, 2.5vw, 2.8rem);
     font-weight: 800;
     margin-bottom: 15px;
-    background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0);
+    background: linear-gradient(90deg, #000000, #dc2626, #1e3a8a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -1014,9 +1510,8 @@
       transform: translateX(-50%);
       width: 80px;
       height: 5px;
-      background: linear-gradient(90deg, #f94c9c, #45c3f0);
+      background: linear-gradient(90deg, #000000, #dc2626, #1e3a8a);
       border-radius: 3px;
-      animation: glowLine 2s infinite alternate;
     "></span>
     </h2>
 
@@ -1026,55 +1521,38 @@
       reliability.
     </p>
 
-    <!-- Three Column Layout -->
+    <!-- Simple Three Column Layout -->
     <div class="distributor-wrapper">
 
-      <!-- Divider Lines -->
-      <div class="divider left-divider"></div>
-      <div class="divider right-divider"></div>
-
-      <!-- Left Column - MacDermid Alpha -->
-      <div class="distributor left">
-        <div class="logo-title">
-          <div class="logo-container">
-            <img src="images/----------------222222-removebg-preview.png" alt="MacDermid Alpha">
-          </div>
-          <h3>MacDermid Alpha</h3>
+      <!-- Column 1 - MacDermid Alpha -->
+      <div class="distributor-card">
+        <div class="logo-container">
+          <img src="images/----------------222222-removebg-preview.png" alt="MacDermid Alpha">
         </div>
         <p>
-          Screen Chemicals and Polyester Films â€” a comprehensive range for your pre-press needs, delivering top-tier
+          Screen Chemicals and Polyester Films — a comprehensive range for your pre-press needs, delivering top-tier
           quality and reliability.
         </p>
       </div>
 
-      <!-- Center Column - TechNova -->
-      <!-- Center Column - TechNova -->
-      <div class="distributor center">
-        <div class="logo-title center-logo-title">
-          <div class="logo-container">
-            <img src="images/tech_nova.jpg" alt="TechNova">
-          </div>
-          <h3>TechNova</h3>
+      <!-- Column 2 - Orafol -->
+      <div class="distributor-card">
+        <div class="logo-container">
+          <img src="images/COMPANY_LOGO_08.png" alt="Orafol">
         </div>
         <p>
-          TechNova is one of the world's largest suppliers of print solutions and India's most trusted partner for
-          offset, digital and flexo printing. With 50+ years of innovation, we empower businesses across industries with
-          world-class solutions, eco-friendly technologies and a deep commitment to ethics, excellence and
-          customer-first partnerships.
+          Adhesive Tapes and Vinyls — high-performance solutions ideal for both graphic and industrial applications.
         </p>
       </div>
 
-
-      <!-- Right Column - Orafol -->
-      <div class="distributor right">
-        <div class="logo-title">
-          <div class="logo-container">
-            <img src="images/COMPANY_LOGO_08.png" alt="Orafol">
-          </div>
-          <h3>Orafol</h3>
+      <!-- Column 3 - TechNova -->
+      <div class="distributor-card">
+        <div class="logo-container">
+          <img src="images/Hero_Section_Image/section1/image copy 5.png" alt="TechNova">
         </div>
         <p>
-          Adhesive Tapes and Vinyls â€” high-performance solutions ideal for both graphic and industrial applications.
+          TechNova is one of the world's largest suppliers of print solutions and India's most trusted partner for
+          offset, digital and flexo printing.
         </p>
       </div>
 
@@ -1083,65 +1561,8 @@
 
   <style>
     @keyframes glowLine {
-      0% {
-        box-shadow: 0 0 10px rgba(249, 76, 156, 0.6);
-      }
-
-      100% {
-        box-shadow: 0 0 20px rgba(69, 195, 240, 0.8);
-      }
-    }
-
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes fadeInCenter {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translateX(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    /* Center Column - Stack logo and heading vertically */
-    .center-logo-title {
-      flex-direction: column;
-      /* vertical stack */
-      align-items: center;
-      /* center horizontally */
-      gap: 15px;
-      /* space between logo and heading */
-    }
-
-    .center-logo-title h3 {
-      margin-top: 0;
-      /* remove any extra margin */
-      text-align: center;
+      0% { box-shadow: 0 0 10px rgba(249, 76, 156, 0.6); }
+      100% { box-shadow: 0 0 20px rgba(69, 195, 240, 0.8); }
     }
 
     /* Layout Styling */
@@ -1149,91 +1570,51 @@
       display: flex;
       justify-content: center;
       align-items: stretch;
-      gap: 40px;
-      max-width: 1300px;
-      margin: auto;
-      padding: 40px 20px;
-      position: relative;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    /* Divider Lines */
-    .divider {
-      position: absolute;
-      top: 5%;
-      bottom: 5%;
-      width: 3px;
-      background: linear-gradient(180deg, #f94c9c, #45c3f0);
-      animation: glowLine 2s infinite alternate;
-      border-radius: 2px;
-    }
-
-    .left-divider {
-      left: 33.3%;
-    }
-
-    .right-divider {
-      left: 66.6%;
-    }
-
-    /* Distributor Columns */
-    .distributor {
+    /* Uniform Distributor Card */
+    .distributor-card {
       flex: 1;
-      max-width: 400px;
+      min-width: 300px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
       gap: 20px;
     }
 
-    .distributor.left {
-      text-align: right;
-      animation: fadeInLeft 0.8s ease forwards;
+    .distributor-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(106, 141, 255, 0.15);
     }
 
-    .distributor.center {
-      text-align: center;
-      animation: fadeInCenter 0.8s ease forwards;
-    }
-
-    .distributor.right {
-      text-align: left;
-      animation: fadeInRight 0.8s ease forwards;
-    }
-
-    /* Logo + Title Row */
-    .logo-title {
+    .distributor-card .logo-container {
+      width: 100%;
+      height: 180px;
       display: flex;
       align-items: center;
-      gap: 15px;
-    }
-
-    .distributor.left .logo-title {
-      flex-direction: row-reverse;
-    }
-
-    .logo-container {
-      background: linear-gradient(135deg, #ffffff, #f2faff);
-      border-radius: 12px;
-      padding: 15px;
-      display: inline-flex;
-      align-items: center;
       justify-content: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 15px;
     }
 
-    .logo-container img {
-      width: 180px;
-      height: auto;
+    .distributor-card .logo-container img {
+      width: 100%;
+      height: 100%;
       object-fit: contain;
     }
 
-    .logo-container:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .distributor h3 {
-      font-size: 1.8rem;
+    .distributor-card h3 {
+      font-size: 1.6rem;
       background: linear-gradient(90deg, #fcd932, #f94c9c, #45c3f0);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1241,45 +1622,21 @@
       margin: 0;
     }
 
-    .distributor p {
-      color: #555;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-top: 12px;
-      max-width: 95%;
+    .distributor-card p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 960px) {
       .distributor-wrapper {
         flex-direction: column;
-        gap: 50px;
         align-items: center;
       }
-
-      .divider {
-        display: none;
-      }
-
-      .distributor.left,
-      .distributor.center,
-      .distributor.right {
-        text-align: center;
-      }
-
-      .logo-title {
-        flex-direction: column;
-      }
-
-      .distributor p {
-        margin: 0 auto;
-      }
-
-      .distributor h3 {
-        font-size: 1.6rem;
-      }
-
-      .distributor p {
-        font-size: 1rem;
+      .distributor-card {
+        width: 100%;
+        max-width: 500px;
       }
     }
   </style>
@@ -1339,7 +1696,6 @@
             <img src="images/----------------222222-removebg-preview.png" alt="Client 1">
           </a>
 
-          <img src="images/COMPANY_LOGO_02.png" alt="Client 2">
 
 
           <a href="3M.html" target="">
@@ -1616,7 +1972,9 @@
       .card img {
         width: 100%;
         height: 180px;
-        object-fit: cover;
+        object-fit: contain;
+        padding: 10px;
+        background-color: #fff;
       }
 
       .card-content {
@@ -1667,85 +2025,85 @@
       const services = [
         {
           title: "MacDermid Alpha",
-          image: "images/MACD_15.JPG",
+          image: "images/Screen Printing Products/MacDermid Alpha HP.png",
           link: "MAC_DERMIDE.html",
           description: "High-performance polyester films tailored for industrial screen printing applications."
         },
         {
           title: "Orafol (Adhesive Tapes ) ",
-          image: "images/Orafol-1375.webp",
+          image: "images/Screen Printing Products/oracal_transparent_.png",
           link: "Orafol.html",
           description: "Durable polycarbonate films offering excellent clarity and chemical resistance."
         },
         {
           title: "3M",
-          image: "images/3M_03.JPG",
+          image: "images/Screen Printing Products/3M.png",
           link: "3M.html",
           description: "Versatile vinyl films designed for durable and vibrant industrial prints."
         },
         {
           title: "Sabic Polycaronate films",
-          image: "images/SABIC_02.jpg",
+          image: "images/Screen Printing Products/SABIC_02-.png",
           link: "Sabic.html",
           description: "Protective films that guard surfaces from scratches and damage during manufacturing."
         },
         {
           title: "Screen Stretching Services ",
-          image: "images/ALL_Machines_05.JPG",
+          image: "images/Screen Printing Products/screen_stretching_attractive.png",
           link: "Stretching.html",
           description: "Premium quality release papers designed for smooth, reliable transfer during printing processes."
         },
         {
           title: "Screen Exposing Services ",
-          image: "images/ALL_Machines_04.JPG",
+          image: "images/Screen Printing Products/Screen_Exposing_Services-.png",
           link: "Exposing.html",
           description: "Expertly crafted velvet films that deliver distinctive texture and exceptional finish to your printed materials."
         },
         {
           title: "Screen Stretching Machine ",
-          image: "images/screen-stretching.jpg",
+          image: "images/Screen Printing Products/Screen Stretching Machine.jpg",
           link: "MAchine_Stre.html",
           description: "Quality release papers that ensure easy and reliable transfer in printing processes."
         },
         {
           title: "Screen Exposing machines ",
-          image: "images/ALL_Machines_02.JPG",
+          image: "images/Screen Printing Products/Screen_Exposing_machines3.png",
           link: "Machines_EXPO.html",
           description: "Specialized velvet films providing a unique texture and finish to prints."
         },
         {
           title: "Nittoku Mesh",
-          image: "images/Nittoku_mesh (2).jpg",
+          image: "images/Screen Printing Products/Nittoku Mesh.jpg",
           link: "Nittoku.html",
           description: "Fine and velvet textured films offering exceptional print fidelity and feel."
         },
         {
           title: "Printcolor",
-          image: "images/PRINT_COLOR.JPG",
+          image: "images/Screen Printing Products/Printcolor-.png",
           link: "Print_color.html",
           description: "Flexible films optimized for high-speed screen printing and durability."
         },
         {
           title: "Yessor Wipes ",
-          image: "images/Yessor.jpg",
+          image: "images/Screen Printing Products/Yessor Wipes.jpg",
           link: "Yessor.html",
           description: "High-quality inks formulated for vibrant colors and consistent coverage."
         },
         {
           title: "Sunsui ",
-          image: "images/sunsui.jpg",
+          image: "images/Screen Printing Products/sunsui-.png",
           link: "Sansui.html",
           description: "Essential chemicals to support and enhance your screen printing process."
         },
         {
           title: "Nitto",
-          image: "images/nitto_808.png",
+          image: "images/Screen Printing Products/Nitto (2).png",
           link: "NittoL.html",
           description: "Reliable emulsions and chemicals for precise stencil preparation."
         },
         {
           title: "Avery ",
-          image: "images/Avery_011.jpg",
+          image: "images/Screen Printing Products/Avery-.png",
           link: "Avery.html",
           description: "Durable and lightweight aluminium frames for stable and long-lasting screens."
         }
@@ -2424,6 +2782,30 @@
       }
     );
   </script>
+  <!-- Hero Swiper Initialization -->
+  <script>
+    new Swiper(".hero-swiper", {
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      },
+      loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".hero-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".hero-next",
+        prevEl: ".hero-prev",
+      },
+    });
+  </script>
+
   <!-- //////////////////////////////////// SECTION --- 3333///////////////// -->
   <!-- Swiper Initialization -->
   <script>
