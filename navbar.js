@@ -254,7 +254,7 @@ const navbarHTML = `
         }
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 960px) {
         .nav-links-mobile {
           position: fixed;
           top: 0; left: -100%;

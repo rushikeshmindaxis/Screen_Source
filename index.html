@@ -659,6 +659,15 @@
       transform: translateX(4px);
     }
 
+    .hero-features-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      pointer-events: none;
+    }
+
     /* Bottom feature bar */
     .hero-features-bar {
       width: 100%;
@@ -730,14 +739,48 @@
         aspect-ratio: auto;
       }
 
-      .hero-bg-layer {
-        position: absolute;
+      .swiper-slide {
+        height: 100% !important;
+      }
+
+      /* Slide 1 background image positioning */
+      .hero-slide-main .hero-bg-layer {
+        position: absolute !important;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* On smaller screens, allow covering to ensure text fits */
+        object-position: 75% 65%;
+        z-index: 1;
+      }
+      
+      .hero-slide-main .hero-overlay {
+        position: relative;
+        min-height: 100vh;
+        z-index: 2;
+      }
+
+      /* Product Slides (Slides 2 to 8) background image positioning below text */
+      .hero-slide-product .hero-overlay {
+        position: relative;
+        min-height: 100vh;
+        z-index: 2;
+        width: 100%;
+      }
+
+      .hero-slide-product .hero-bg-layer {
+        position: absolute !important;
+        width: 90% !important;
+        height: 52% !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        top: auto !important;
+        bottom: 60px !important;
+        object-fit: contain !important;
+        object-position: center bottom !important;
+        z-index: 1;
       }
 
       .hero-overlay {
@@ -748,7 +791,7 @@
       .hero-main {
         flex-direction: column;
         align-items: flex-start;
-        padding: 120px 24px 10px;
+        padding: 100px 20px 10px;
         text-align: left;
       }
 
@@ -779,6 +822,16 @@
         /* Hidden in second image */
       }
 
+      .hero-features-container {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        background: linear-gradient(135deg, #0d2f53, #153c66);
+        padding-top: 10px;
+        pointer-events: auto;
+      }
+
       .hero-features-bar {
         justify-content: center;
         padding: 16px 24px 28px;
@@ -800,11 +853,42 @@
       .hero-feature-text span {
         color: rgba(255, 255, 255, 0.9);
       }
+
+      .hero-prev, .hero-next {
+        display: none !important;
+      }
     }
 
     @media (max-width: 600px) {
       .hero-main {
-        padding: 140px 16px 10px;
+        padding: 95px 16px 0px;
+      }
+
+      .hero-headline-dark,
+      .hero-headline-gradient,
+      .hero-headline-gradient-2 {
+        font-size: 1.55rem !important;
+        margin-bottom: 6px !important;
+      }
+
+      .hero-headline-gradient-2 {
+        gap: 10px !important;
+      }
+
+      .hero-sub-text {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+      }
+
+      .hero-cta-btn {
+        font-size: 12px !important;
+        padding: 10px 18px !important;
+      }
+
+      .iso-badge {
+        font-size: 8px !important;
+        padding: 3px 6px !important;
       }
     }
   </style>
@@ -815,7 +899,7 @@
       <div class="swiper-wrapper">
 
         <!-- Slide 1 -->
-        <div class="swiper-slide">
+        <div class="swiper-slide hero-slide-main">
           <picture>
             <source media="(max-width: 960px)" srcset="images/hero_new-2026_mobile-view.png">
             <img src="images/hero_new-2026.png" class="hero-bg-layer" alt="Background">
@@ -853,7 +937,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="swiper-slide" style="background-color: #ffffff;">
+        <div class="swiper-slide hero-slide-product" style="background-color: #ffffff;">
           <picture>
             <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image.png">
             <img src="images/Hero_Section_Image/image.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
@@ -891,7 +975,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="swiper-slide" style="background-color: #ffffff;">
+        <div class="swiper-slide hero-slide-product" style="background-color: #ffffff;">
           <picture>
             <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy.png">
             <img src="images/Hero_Section_Image/image copy.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
@@ -929,7 +1013,7 @@
         </div>
 
         <!-- Slide 4 -->
-        <div class="swiper-slide" style="background-color: #ffffff;">
+        <div class="swiper-slide hero-slide-product" style="background-color: #ffffff;">
           <picture>
             <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 2.png">
             <img src="images/Hero_Section_Image/image copy 2.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
@@ -967,7 +1051,7 @@
         </div>
 
         <!-- Slide 5 -->
-        <div class="swiper-slide" style="background-color: #ffffff;">
+        <div class="swiper-slide hero-slide-product" style="background-color: #ffffff;">
           <picture>
             <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 3.png">
             <img src="images/Hero_Section_Image/image copy 3.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
@@ -1005,7 +1089,7 @@
         </div>
 
         <!-- Slide 6 -->
-        <div class="swiper-slide" style="background-color: #ffffff;">
+        <div class="swiper-slide hero-slide-product" style="background-color: #ffffff;">
           <picture>
             <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 4.png">
             <img src="images/Hero_Section_Image/image copy 4.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
@@ -1043,7 +1127,7 @@
         </div>
 
         <!-- Slide 7 -->
-        <div class="swiper-slide" style="background-color: #ffffff;">
+        <div class="swiper-slide hero-slide-product" style="background-color: #ffffff;">
           <picture>
             <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 5.png">
             <img src="images/Hero_Section_Image/image copy 5.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
@@ -1081,7 +1165,7 @@
         </div>
 
         <!-- Slide 8 -->
-        <div class="swiper-slide" style="background-color: #ffffff;">
+        <div class="swiper-slide hero-slide-product" style="background-color: #ffffff;">
           <picture>
             <source media="(max-width: 960px)" srcset="images/Hero_Section_Image/image copy 6.png">
             <img src="images/Hero_Section_Image/image copy 6.png" class="hero-bg-layer" alt="Background" style="object-fit: contain; object-position: right center; width: 55%; left: auto; right: 0; top: 60px; height: calc(100% - 60px);">
@@ -1127,7 +1211,7 @@
     </div>
 
     <!-- Bottom Feature Bar (Absolute overlay over active slide) -->
-    <div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 10; pointer-events: none;">
+    <div class="hero-features-container">
       <div class="hero-features-bar" style="pointer-events: auto;">
         <div class="hero-feature-item">
           <div class="hero-feature-icon fi-blue"><i class="fas fa-medal"></i></div>
@@ -1175,9 +1259,11 @@
       max-width: 1200px;
       margin: auto;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      gap: 50px;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 60px 20px;
+      font-family: 'Poppins', sans-serif;
     }
 
     .about-text {
@@ -1258,24 +1344,53 @@
       opacity: 1;
       /* Always visible */
       transform: none;
+      display: flex;
+      justify-content: center;
     }
 
     .about-image img {
-      width: 100%;
-      max-width: 500px;
-      max-height: 500px;
-      object-fit: contain;
+      width: 100% !important;
+      max-width: 450px !important;
+      height: 320px !important;
+      object-fit: contain !important;
       background-color: #f8fbff;
       border-radius: 25px;
       box-shadow: 0 20px 45px rgba(106, 141, 255, 0.25);
-      padding: 10px;
+      padding: 20px;
+      display: block !important;
+      margin: 0 auto !important;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
+      #about {
+        padding: 40px 20px !important;
+      }
+
+      #distributors {
+        padding: 35px 20px !important;
+      }
+
       .about-wrapper {
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 30px;
+        padding: 30px 15px !important;
+      }
+
+      .about-text {
+        min-width: unset !important;
+        width: 100% !important;
+      }
+
+      .about-image {
+        min-width: unset !important;
+        width: 100% !important;
+      }
+
+      .about-image img {
+        height: 240px !important;
+        max-width: 320px !important;
+        padding: 15px !important;
       }
 
       .about-text h2 {
@@ -1296,10 +1411,9 @@
         
         <!-- Slide 1 -->
         <div class="swiper-slide">
-          <div class="about-wrapper"
-            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+          <div class="about-wrapper">
             <!-- Text Content -->
-            <div class="about-text" style="flex: 1;">
+            <div class="about-text">
               <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
                 Premium <span style="color: #6a8dff;">Aluminum Frames</span>
               </h2>
@@ -1315,7 +1429,7 @@
               </ul>
             </div>
             <!-- Image -->
-            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+            <div class="about-image">
               <img src="images/Hero_Section_Image/section1/image.png" alt="Screen Printing Materials" loading="eager"
                 style="max-width: 100%; height: auto; display: block;" />
             </div>
@@ -1324,10 +1438,9 @@
 
         <!-- Slide 2 -->
         <div class="swiper-slide">
-          <div class="about-wrapper"
-            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+          <div class="about-wrapper">
             <!-- Text Content -->
-            <div class="about-text" style="flex: 1;">
+            <div class="about-text">
               <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
                 MacDermid <span style="color: #6a8dff;">Alpha</span>
               </h2>
@@ -1343,7 +1456,7 @@
               </ul>
             </div>
             <!-- Image -->
-            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+            <div class="about-image">
               <img src="images/Hero_Section_Image/section1/image copy.png" alt="MacDermid Alpha Products" loading="eager"
                 style="max-width: 100%; height: auto; display: block;" />
             </div>
@@ -1352,10 +1465,9 @@
 
         <!-- Slide 3 -->
         <div class="swiper-slide">
-          <div class="about-wrapper"
-            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+          <div class="about-wrapper">
             <!-- Text Content -->
-            <div class="about-text" style="flex: 1;">
+            <div class="about-text">
               <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
                 Premium <span style="color: #6a8dff;">Inktec Inks</span>
               </h2>
@@ -1371,7 +1483,7 @@
               </ul>
             </div>
             <!-- Image -->
-            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+            <div class="about-image">
               <img src="images/Hero_Section_Image/section1/image copy 2.png" alt="Inktec Inks" loading="eager"
                 style="max-width: 100%; height: auto; display: block;" />
             </div>
@@ -1380,10 +1492,9 @@
 
         <!-- Slide 4 -->
         <div class="swiper-slide">
-          <div class="about-wrapper"
-            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+          <div class="about-wrapper">
             <!-- Text Content -->
-            <div class="about-text" style="flex: 1;">
+            <div class="about-text">
               <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
                 Premium <span style="color: #6a8dff;">Lamination Films</span>
               </h2>
@@ -1399,7 +1510,7 @@
               </ul>
             </div>
             <!-- Image -->
-            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+            <div class="about-image">
               <img src="images/Hero_Section_Image/section1/image copy 3.png" alt="Lamination Films" loading="eager"
                 style="max-width: 100%; height: auto; display: block;" />
             </div>
@@ -1408,10 +1519,9 @@
 
         <!-- Slide 5 -->
         <div class="swiper-slide">
-          <div class="about-wrapper"
-            style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+          <div class="about-wrapper">
             <!-- Text Content -->
-            <div class="about-text" style="flex: 1;">
+            <div class="about-text">
               <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #222;">
                 Premium <span style="color: #6a8dff;">Polyester Films</span>
               </h2>
@@ -1427,7 +1537,7 @@
               </ul>
             </div>
             <!-- Image -->
-            <div class="about-image" style="flex: 1; display: flex; justify-content: center;">
+            <div class="about-image">
               <img src="images/Hero_Section_Image/section1/image copy 4.png" alt="Polyester Films" loading="eager"
                 style="max-width: 100%; height: auto; display: block;" />
             </div>
@@ -1487,7 +1597,7 @@
 </script> -->
 
 
-  <section
+  <section id="distributors"
     style="padding: 60px 20px;  background: linear-gradient(to bottom, #e2ebf7, #f5f8ff); font-family: 'Poppins', sans-serif; text-align: center; position: relative; overflow: hidden;">
 
     <!-- Heading -->
@@ -1633,10 +1743,12 @@
       .distributor-wrapper {
         flex-direction: column;
         align-items: center;
+        padding: 10px !important;
       }
       .distributor-card {
         width: 100%;
         max-width: 500px;
+        min-width: unset !important;
       }
     }
   </style>
@@ -1804,7 +1916,7 @@
         }
 
         /* Center heading for mobile */
-        h2 {
+        #clientsWrapper h2 {
           font-size: 2.2rem !important;
           text-align: center;
           padding-left: 0 !important;
@@ -1813,7 +1925,7 @@
         }
 
         /* Remove the colored bar in mobile */
-        h2 span {
+        #clientsWrapper h2 span {
           display: none !important;
         }
       }
@@ -2014,9 +2126,23 @@
         bottom: 0;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
+        .services-section {
+          padding: 40px 10px !important;
+        }
+        .services-container {
+          padding: 5px !important;
+          gap: 15px !important;
+        }
+        .card-wrapper {
+          min-width: 265px !important;
+          max-width: 285px !important;
+        }
+        .card {
+          height: 360px !important;
+        }
         .scroll-btn {
-          display: none;
+          display: none !important;
         }
       }
     </style>
@@ -2790,9 +2916,9 @@
         crossFade: true
       },
       loop: true,
-      speed: 1000,
+      speed: 800,
       autoplay: {
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false,
       },
       pagination: {
