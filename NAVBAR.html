@@ -39,7 +39,7 @@ body {
 <body>
 
 
- <!-- LOADER SECTION END --> 
+  
 
     <!-- Header -->
   <!-- NAVBAR SECTION START -->
@@ -476,16 +476,6 @@ body {
 
   <!-- JavaScript -->
   <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const loader = document.getElementById("loader");
-        loader.style.transition = "all 2s ease";
-        loader.style.transform = "translateY(-100%)";
-        loader.style.opacity = "0";
-        setTimeout(() => loader.style.display = "none", 2000);
-      }, 1900);
-    });
-
     function toggleMenu(icon) {
       icon.classList.toggle("cross");
       const sideMenu = document.getElementById("sideMenu");
@@ -614,16 +604,6 @@ body {
 
   <!-- JavaScript -->
   <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const loader = document.getElementById("loader");
-        loader.style.transition = "all 2s ease";
-        loader.style.transform = "translateY(-100%)";
-        loader.style.opacity = "0";
-        setTimeout(() => loader.style.display = "none", 2);
-      }, 3);
-    });
-
     function toggleMenu(icon) {
       icon.classList.toggle("cross");
       const sideMenu = document.getElementById("sideMenu");
