@@ -50,7 +50,7 @@ const navbarHTML = `
       }
 
       .nav-logo-icon {
-        height: 48px;
+        height: 65px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -341,6 +341,28 @@ const navbarHTML = `
         .mob-overlay.active { display: block; }
       }
 
+      /* Global Heading & Paragraph Style Overrides for Plain Black Theme */
+      h1, h2, h3, h4, h5, h6,
+      [class*="title"], 
+      [class*="heading"],
+      h1[style*="linear-gradient"],
+      h2[style*="linear-gradient"],
+      h3[style*="linear-gradient"] {
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        -webkit-text-fill-color: #000000 !important;
+        background-clip: initial !important;
+        color: #000000 !important;
+      }
+      .hero-films p,
+      .hero-content p,
+      .hero-films span,
+      .hero-content span {
+        background: none !important;
+        -webkit-text-fill-color: initial !important;
+        color: #333333 !important;
+      }
+
       /* Dropdown arrow */
       .dd-arrow {
         font-size: 9px;
@@ -350,60 +372,217 @@ const navbarHTML = `
       .nav-center li:hover .dd-arrow {
         transform: rotate(180deg);
       }
+
+      .navbar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.4s ease;
+      }
+
+      .top-bar {
+        background: #00AEEF; /* Light Sky Blue */
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13.5px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 8px 24px;
+        border-bottom: none;
+        transition: all 0.4s ease;
+        overflow: hidden;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        border-radius: 30px;
+        max-width: 1280px;
+        margin: 10px auto 0 auto;
+      }
+
+      .navbar-wrapper.scrolled .top-bar {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        opacity: 0;
+      }
+
+      .top-bar-container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .top-bar-contact {
+        display: flex;
+        align-items: center;
+      }
+
+      .top-bar-contact a {
+        color: #000000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: opacity 0.3s ease;
+      }
+
+      .top-bar-contact a:hover {
+        opacity: 0.8;
+      }
+
+      .top-bar-contact .separator {
+        color: rgba(0, 0, 0, 0.4);
+        margin: 0 15px;
+      }
+
+      .top-bar-socials {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .top-bar-socials a {
+        color: #000000;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+      }
+
+      .top-bar-socials a:hover {
+        opacity: 0.8;
+      }
+
+      .navbar-container {
+        padding: 12px 24px;
+        transition: padding 0.4s ease;
+      }
+
+      .navbar-wrapper.scrolled .navbar-container {
+        padding: 6px 24px;
+      }
+
+      .navbar {
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 50px;
+        padding: 10px 20px 10px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        box-shadow: 0 4px 28px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0,0,0,0.06);
+        transition: all 0.4s ease;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .navbar-wrapper.scrolled .navbar {
+        box-shadow: 0 8px 40px rgba(0,0,0,0.14);
+        padding: 8px 20px 8px 16px;
+      }
+
+      /* ---- Logo ---- */
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        flex-shrink: 0;
+      }
+
+      .nav-logo-icon {
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .nav-logo-icon img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
     </style>
 
     <!-- Navbar HTML -->
     <div class="navbar-wrapper" id="navbarWrapper">
-      <nav class="navbar" id="navbar">
-        <!-- Logo -->
-        <a class="nav-logo" href="index.html">
-          <div class="nav-logo-icon">
-            <img src="images/LOGO_final.png" alt="Screensource Logo" />
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="top-bar-container">
+          <div class="top-bar-contact">
+            <a href="mailto:designatscreensource@gmail.com"><i class="fas fa-envelope"></i> designatscreensource@gmail.com</a>
+            <span class="separator">|</span>
+            <a href="tel:+918080941627" style="display: flex; align-items: center; gap: 4px;"><img src="images/call_01.png" alt="Call" style="width: 16px; height: 16px; object-fit: contain;"> +91 8080941627</a>
           </div>
-        </a>
-
-        <!-- Center Nav Links (Desktop) -->
-        <ul class="nav-center" id="navCenter">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="About_US.html">About</a></li>
-
-          <li>
-            <a href="#" class="dropdown-toggle">Brands <span class="dd-arrow">▾</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="MAC_DERMIDE.html">MacDermid Alpha Autotype</a></li>
-              <li><a href="Orafol.html">Orafol Adhesive</a></li>
-              <li><a href="3M.html">3M Tapes</a></li>
-              <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
-              <li><a href="Nittoku.html">Nittoku</a></li>
-              <li><a href="Print_color.html">Print Color</a></li>
-              <li><a href="Yessor.html">Yessor Tech</a></li>
-              <li><a href="Sansui.html">Sansui</a></li>
-              <li><a href="NittoL.html">Nitto Denko</a></li>
-              <li><a href="Avery.html">Avery Dennison</a></li>
-              <li><a href="technova.html">TechNova (NovaLife)</a></li>
-            </ul>
-          </li>
-          
-
-          <li>
-            <a href="#" class="dropdown-toggle">Services <span class="dd-arrow">▾</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="Stretching.html">Stretching Services</a></li>
-              <li><a href="Exposing.html">Exposing Services</a></li>
-              <li><a href="MAchine_Stre.html">Stretching Machines</a></li>
-              <li><a href="Machines_EXPO.html">Exposing Machines</a></li>
-            </ul>
-          </li>
-          <li><a href="Contact.html">Contact Us</a></li>
-        </ul>
-
-        <!-- Right Icons -->
-        <div class="nav-right">
-          <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-            <i class="fas fa-bars"></i>
-          </button>
+          <div class="top-bar-socials">
+            <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; overflow: hidden; background: white;"><img src="images/indiamart.png" alt="IndiaMart" style="width: 100%; height: 100%; object-fit: cover;"></a>
+          </div>
         </div>
-      </nav>
+      </div>
+      <div class="navbar-container">
+        <nav class="navbar" id="navbar">
+          <!-- Logo -->
+          <a class="nav-logo" href="index.html">
+            <div class="nav-logo-icon">
+              <img src="images/LOGO_final.png" alt="Screensource Logo" />
+            </div>
+          </a>
+
+          <!-- Center Nav Links (Desktop) -->
+          <ul class="nav-center" id="navCenter">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About_US.html">About</a></li>
+
+            <li>
+              <a href="#" class="dropdown-toggle">Brands <span class="dd-arrow">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="MAC_DERMIDE.html">MacDermid Alpha Autotype</a></li>
+                <li><a href="Orafol.html">Orafol Adhesive</a></li>
+                <li><a href="3M.html">3M Tapes</a></li>
+                <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
+                <li><a href="Nittoku.html">Nittoku</a></li>
+                <li><a href="Print_color.html">Print Color</a></li>
+                <li><a href="Yessor.html">Yessor Tech</a></li>
+                <li><a href="Sansui.html">Sansui</a></li>
+                <li><a href="NittoL.html">Nitto Denko</a></li>
+                <li><a href="Avery.html">Avery Dennison</a></li>
+                <li><a href="technova.html">TechNova (NovaLife)</a></li>
+              </ul>
+            </li>
+            
+
+            <li>
+              <a href="#" class="dropdown-toggle">Services <span class="dd-arrow">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Stretching.html">Stretching Services</a></li>
+                <li><a href="Exposing.html">Exposing Services</a></li>
+                <li><a href="MAchine_Stre.html">Stretching Machines</a></li>
+                <li><a href="Machines_EXPO.html">Exposing Machines</a></li>
+              </ul>
+            </li>
+            <li><a href="Contact.html">Contact Us</a></li>
+          </ul>
+
+          <!-- Right Icons -->
+          <div class="nav-right">
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
     </div>
 
     <!-- Mobile Nav -->
