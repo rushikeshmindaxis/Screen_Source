@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -170,8 +170,8 @@
   <!-- Popup message -->
   <div id="popupMessage" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
   background:#fff; padding:20px 30px; border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.2); z-index:9999; text-align:center;">
-    <h3 style="color:#0d2f53; margin-bottom:10px;">✅ Message Sent</h3>
-    <p style="color:#555;">Thank you for contacting us. We’ll get back to you soon!</p>
+    <h3 style="color:#0d2f53; margin-bottom:10px;">? Message Sent</h3>
+    <p style="color:#555;">Thank you for contacting us. We�ll get back to you soon!</p>
     <button onclick="document.getElementById('popupMessage').style.display='none'"
       style="margin-top:10px; background:#00b5e2; color: #444; padding:8px 15px; border:none; border-radius:6px; cursor:pointer;">
       Close
@@ -239,8 +239,8 @@
     padding: 80px 20px 40px;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    border-top: 3px solid transparent;
-    border-image: linear-gradient(90deg, #00b5e2, #9b59b6, #EC008C) 1;
+    border-top: none;
+    
   }
   .modern-footer-container {
     max-width: 1200px;
@@ -364,7 +364,7 @@
       <div class="footer-socials">
         <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><i class="fas fa-shopping-bag"></i></a>
+        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><img src="images/indiamart.png" alt="IndiaMart" style="width: 22px; height: 22px; object-fit: contain; border-radius: 50%;"></a>
       </div>
     </div>
 
@@ -404,14 +404,14 @@
         <span>designatscreensource@gmail.com</span>
       </div>
       <div class="footer-contact-item">
-        <i class="fas fa-phone-alt"></i>
+        <img src="images/call_01.png" alt="Call" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 8px;">
         <span>+91 8080941627</span>
       </div>
     </div>
 
   </div>
   <div class="footer-bottom">
-    &copy; 2026 <strong>Screensource</strong>. All rights reserved.
+    &copy; 2026 <strong>Screensource</strong>. All rights reserved. | Developed by <a href="https://mindaxisinnovation.com/" target="_blank" style="color: #00b5e2; text-decoration: none; font-weight: 600; transition: color 0.3s ease;">MindAxis Innovation Pvt Ltd</a>
   </div>
 </footer>
 
@@ -529,10 +529,6 @@
     spaceBetween: 30,
     loop: true,
     speed: 4000,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
     grabCursor: true,
     freeMode: true,
     freeModeMomentum: false,
@@ -547,10 +543,6 @@
     spaceBetween: 30,
     loop: true,
     grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -657,10 +649,6 @@
     spaceBetween: 30,
     loop: true,
     grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

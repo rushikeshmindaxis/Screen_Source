@@ -1,23 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Screensource - One Stop Solution</title>
+  <title>Precision Screen Exposing Service | Screensource</title>
+  <meta name="description" content="Professional UV screen exposing services designed to deliver sharp, accurate and consistent stencils for industrial and precision printing applications." />
   <link rel="icon" type="image/png" href="images/LOGO_final.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-  <!-- Include in <head> -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
-
 
   <style>
     * {
@@ -25,751 +17,1165 @@
       padding: 0;
       box-sizing: border-box;
     }
-body {
- font-family: 'Myriad Pro', Arial, sans-serif;
-background: #f9f9f9;
-  color: #222;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+    }
 
+    /* Core Utility Classes */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section-padding {
+      padding: 70px 20px;
+    }
+    .bg-white {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .bg-light {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .bg-soft-tint {
+      background: linear-gradient(180deg, #fff5f5 0%, #ffffff 100%);
+      border-bottom: 1px solid #fee2e2;
+    }
+    .text-center {
+      text-align: center;
+    }
 
-  
+    /* Heading Styles */
+    .section-subtitle {
+      color: #ed1607;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 18px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(237, 22, 7, 0.06);
+    }
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      margin-bottom: 18px;
+      line-height: 1.25;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: #ed1607;
+      border-radius: 3px;
+    }
+    .brand-red-text {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      background: none !important;
+    }
+    .section-desc {
+      font-size: 1.05rem;
+      color: #475569;
+      max-width: 800px;
+      margin: 16px auto 40px;
+    }
+
+    /* Primary Red CTA Buttons */
+    .btn-red {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #ed1607;
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 28px;
+      border-radius: 50px;
+      box-shadow: 0 6px 18px rgba(237, 22, 7, 0.25);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-red:hover {
+      background: #c81205;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(237, 22, 7, 0.35);
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #25D366;
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 28px;
+      border-radius: 50px;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-whatsapp:hover {
+      background: #20ba59;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #0f172a;
+      color: #ffffff !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-outline:hover {
+      background: #1e293b;
+      transform: translateY(-2px);
+    }
+
+    /* 1. HERO SECTION */
+    .hero-exposing-compact {
+      padding: 150px 20px 50px;
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      text-align: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .hero-exposing-compact h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-exposing-compact p {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: #475569;
+      max-width: 820px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* 2. INTRODUCTION SECTION */
+    .intro-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px 35px;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      max-width: 950px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .intro-card p {
+      font-size: 1.05rem;
+      color: #334155;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    .intro-card p:last-child {
+      margin-bottom: 0;
+    }
+    .intro-highlight {
+      background: #fff5f5;
+      border-left: 4px solid #ed1607;
+      padding: 16px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #991b1b;
+      margin-top: 20px;
+    }
+
+    /* 3. WHY CHOOSE SCREENSOURCE */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .feature-card {
+      background: #ffffff;
+      padding: 30px 24px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      border-top: 3px solid #ed1607;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      transition: all 0.3s ease;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(237, 22, 7, 0.12);
+      border-color: #ed1607;
+    }
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: #fef2f2;
+      color: #ed1607;
+      border: 1px solid #fee2e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .feature-info h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+    .feature-info p {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* 4. OUR SCREEN EXPOSING PROCESS (3 PER ROW) */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+      max-width: 1050px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 992px) {
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .process-step-card {
+      background: #ffffff;
+      padding: 28px 22px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      border-top: 3px solid #ed1607;
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .process-step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(237, 22, 7, 0.14);
+      border-color: #ed1607;
+    }
+    .step-badge {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #ed1607;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 14px;
+      transition: transform 0.3s ease;
+    }
+    .process-step-card:hover .step-badge {
+      transform: scale(1.1);
+    }
+    .process-step-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .process-step-card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* 5. TECHNICAL SECTION */
+    .tech-factors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .factor-item {
+      background: #ffffff;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #ed1607;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .factor-item i {
+      color: #ed1607;
+      font-size: 1.1rem;
+    }
+    .factor-item:hover {
+      border-color: #ed1607;
+      background: #fff5f5;
+      transform: translateX(4px);
+    }
+
+    /* 6. MESH + EMULSION + EXPOSURE EXPERTISE */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .expertise-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 32px 26px;
+      border: 1px solid #e2e8f0;
+      border-top: 3px solid #ed1607;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      text-align: center;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .expertise-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(237, 22, 7, 0.14);
+      border-color: #ed1607;
+    }
+    .expertise-icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #fef2f2;
+      color: #ed1607;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 18px;
+      transition: transform 0.3s ease;
+    }
+    .expertise-card:hover .expertise-icon-box {
+      transform: scale(1.12);
+      background: #ed1607;
+      color: #ffffff;
+    }
+    .expertise-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .expertise-card p {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.6;
+    }
+    .expertise-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 14px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .expertise-banner p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f8fafc;
+    }
+
+    /* 7. APPLICATIONS SECTION */
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .app-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 22px 20px;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #ed1607;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.35s ease;
+    }
+    .app-card i {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #fef2f2;
+      color: #ed1607;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .app-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(237, 22, 7, 0.12);
+      border-color: #ed1607;
+    }
+    .app-card:hover i {
+      transform: scale(1.12);
+      background: #ed1607;
+      color: #ffffff;
+    }
+    .app-card h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    /* 8. MACHINES & SERVICES GALLERY GRID (3 PER ROW) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+      max-width: 1050px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 992px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-card {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      border-top: 3px solid #ed1607;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(237, 22, 7, 0.15);
+      border-color: #ed1607;
+    }
+    .gallery-card-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-card:hover .gallery-card-img img {
+      transform: scale(1.08);
+    }
+    .gallery-card-body {
+      padding: 16px 18px;
+      text-align: center;
+    }
+    .gallery-card-body p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* 9. QUALITY INSPECTION CHECKLIST */
+    .inspection-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      max-width: 900px;
+      margin: 30px auto 0;
+    }
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e293b;
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid #f1f5f9;
+    }
+    .check-item i {
+      color: #16a34a; /* Green checkmark */
+      font-size: 1.2rem;
+    }
+
+    /* 10. FAQ SECTION ACCORDION */
+    .faq-wrapper {
+      max-width: 850px;
+      margin: 30px auto 0;
+    }
+    .faq-item {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 14px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-item.active {
+      border-left: 4px solid #ed1607;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    }
+    .faq-question {
+      padding: 20px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+    .faq-question i {
+      transition: transform 0.3s ease;
+      color: #ed1607;
+    }
+    .faq-answer {
+      padding: 0 24px 20px;
+      font-size: 0.98rem;
+      color: #475569;
+      line-height: 1.7;
+      display: none;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    /* 11. FINAL CTA */
+    .final-cta-section {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+    .final-cta-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .final-cta-section p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto 35px;
+    }
+
+    /* Responsive Mobile Tweak */
+    @media (max-width: 768px) {
+      .hero-exposing-compact {
+        padding: 130px 15px 40px;
+      }
+      .gallery-card {
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
+      .expertise-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .checklist-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header Navigation -->
+  <script src="navbar.js"></script>
 
-    <!-- Header -->
-  <!-- NAVBAR SECTION START -->
-<script src="navbar.js"></script>
-
-<!-- NAVBAR SECTION END -->
-
-
-
-
-<section style="padding:180px 20px;background: #f9f9f9;font-family:'Poppins',sans-serif;">
-  <h2 style="text-align:center;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;
-             background:linear-gradient(90deg,#00b5e2,#EC008C);
-             -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-             margin-bottom:20px;">
-     Machines & Services Gallery
-  </h2>
-
-  <div style="position:relative;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 10px;">
-    <button id="leftBtn" style="background:white;border:none;font-size:1.8rem;padding:6px 14px;border-radius:50%;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:10;transition:all 0.3s ease;">&#10094;</button>
-
-    <div id="sliderContainer" style="display:flex;gap:16px;overflow-x:hidden;scroll-behavior:smooth;padding:20px 0;flex:1;">
-      <!-- Example card (repeat for all images) -->
-      <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_01.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
+  <!-- 1. HERO SECTION -->
+  <section class="hero-exposing-compact">
+    <div class="container">
+      <span class="section-subtitle">Screensource Pre-Press Services</span>
+      <h1>Precision Screen Exposing for <span class="brand-red-text">High-Quality Printing</span></h1>
+      <p>Professional UV screen exposing services designed to deliver sharp, accurate and consistent stencils for industrial and precision printing applications.</p>
+      <div class="hero-buttons">
+        <a href="Contact.html" class="btn-red"><i class="fas fa-paper-plane"></i> REQUEST A QUOTE</a>
+        <a href="https://wa.me/918080941627" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP US</a>
       </div>
-      <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_02.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_03.png" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_04.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_05.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_06.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_07.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_01.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_02.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_04.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_03.png" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_05.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_06.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_07.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-   
-      <!-- Repeat for all images -->
     </div>
+  </section>
 
-    <button id="rightBtn" style="background:white;border:none;font-size:1.8rem;padding:6px 14px;border-radius:50%;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:10;transition:all 0.3s ease;">&#10095;</button>
-  </div>
+  <!-- 2. MACHINES & SERVICES GALLERY GRID (BELOW HERO) -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Our Equipment</span>
+        <h2 class="section-title">Our Screen Exposing <span class="brand-red-text">Equipment & Services</span></h2>
+        <p class="section-desc">View our professional pre-press machinery and screen exposing facilities in action.</p>
+      </div>
 
-  <div id="dots" style="text-align:center;margin-top:15px;"></div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-card-img"><img src="images/ALL_Machines_01.JPG" alt="UV Screen Exposing Unit"></div>
+          <div class="gallery-card-body"><p>UV Screen Exposing Unit</p></div>
+        </div>
 
+        <div class="gallery-card">
+          <div class="gallery-card-img"><img src="images/ALL_Machines_04.JPG" alt="Screen Preparation"></div>
+          <div class="gallery-card-body"><p>Screen Preparation</p></div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img"><img src="images/ALL_Machines_05.JPG" alt="Industrial Screen Processing"></div>
+          <div class="gallery-card-body"><p>Industrial Screen Processing</p></div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img"><img src="images/ALL_Machines_06.JPG" alt="Screen Exposing Setup"></div>
+          <div class="gallery-card-body"><p>Screen Exposing Setup</p></div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-card-img"><img src="images/ALL_Machines_07.JPG" alt="Finished Screen"></div>
+          <div class="gallery-card-body"><p>Finished Screen</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROFESSIONAL SCREEN EXPOSING INTRODUCTION -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Technical Capability</span>
+        <h2 class="section-title">Professional Screen Exposing <span class="brand-red-text">Service</span></h2>
+      </div>
+      <div class="intro-card">
+        <p><strong>Screensource</strong> provides professional screen exposing services for customers requiring accurate and consistent stencil preparation.</p>
+        <p>Using controlled UV exposure equipment and carefully prepared artwork/films, we help achieve sharp image reproduction, clean stencil definition and reliable screen performance.</p>
+        <p>Our service is suitable for both standard and precision industrial printing applications where consistency and registration accuracy are important.</p>
+        <div class="intro-highlight">
+          <i class="fas fa-shield-alt"></i> Our controlled exposure process is designed to deliver sharp, consistent and durable stencil quality across all print runs.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WHY CHOOSE SCREENSOURCE -->
+  <section class="section-padding bg-soft-tint">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Our Advantages</span>
+        <h2 class="section-title">Why Choose Screensource for <span class="brand-red-text">Screen Exposing?</span></h2>
+        <p class="section-desc">We combine industry expertise, controlled prepress equipment, and meticulous process control.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-microscope"></i></div>
+          <div class="feature-info">
+            <h3>Sharp Image Reproduction</h3>
+            <p>Clean and well-defined stencil images down to micro-details.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-sliders-h"></i></div>
+          <div class="feature-info">
+            <h3>Consistent Exposure</h3>
+            <p>Controlled exposure parameters for repeatable, high-yield results.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-crosshairs"></i></div>
+          <div class="feature-info">
+            <h3>Accurate Registration</h3>
+            <p>Suitable for tight-tolerance applications where alignment is critical.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-user-cog"></i></div>
+          <div class="feature-info">
+            <h3>Professional Pre-Press Process</h3>
+            <p>Careful inspection and preparation before the screen reaches production.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+          <div class="feature-info">
+            <h3>Reduced Rework</h3>
+            <p>Consistent screen preparation helps minimize avoidable corrections and downtime.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-industry"></i></div>
+          <div class="feature-info">
+            <h3>Industrial Applications</h3>
+            <p>Suitable for electronics, automotive, membrane switches, and specialty printing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. OUR SCREEN EXPOSING PROCESS -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Workflow</span>
+        <h2 class="section-title">Our Screen Exposing <span class="brand-red-text">Process</span></h2>
+        <p class="section-desc">A structured 5-step prepress workflow engineered for maximum accuracy.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step-card">
+          <span class="step-badge">STEP 01</span>
+          <h3>Artwork Preparation</h3>
+          <p>Review and prepare the printing artwork and positive film for optical density.</p>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-badge">STEP 02</span>
+          <h3>Screen Preparation</h3>
+          <p>Ensure the emulsion-coated screen is clean, dry, and properly degreased.</p>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-badge">STEP 03</span>
+          <h3>UV Exposure</h3>
+          <p>Expose the screen using controlled UV exposure units under optimal vacuum drawdown.</p>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-badge">STEP 04</span>
+          <h3>Washing & Development</h3>
+          <p>Wash out unexposed emulsion with precision water spray to reveal the required stencil.</p>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-badge">STEP 05</span>
+          <h3>Inspection & Finishing</h3>
+          <p>Inspect the stencil for edge definition, pinholes, and overall finish before delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. TECHNICAL FACTORS SECTION -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Process Control</span>
+        <h2 class="section-title">Precision Matters in <span class="brand-red-text">Screen Exposing</span></h2>
+        <p class="section-desc">The quality of a screen depends not only on the emulsion and mesh, but also on correct exposure parameters, artwork quality and process control.</p>
+      </div>
+
+      <div style="max-width: 900px; margin: auto;">
+        <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:700; color:#0f172a; margin-bottom:16px; text-align:center;">Key Factors We Consider:</h3>
+        <div class="tech-factors-grid">
+          <div class="factor-item"><i class="fas fa-check-circle"></i> Mesh specification</div>
+          <div class="factor-item"><i class="fas fa-check-circle"></i> Emulsion type</div>
+          <div class="factor-item"><i class="fas fa-check-circle"></i> Emulsion thickness</div>
+          <div class="factor-item"><i class="fas fa-check-circle"></i> Artwork/film quality</div>
+          <div class="factor-item"><i class="fas fa-check-circle"></i> Exposure requirements</div>
+          <div class="factor-item"><i class="fas fa-check-circle"></i> Screen condition</div>
+          <div class="factor-item"><i class="fas fa-check-circle"></i> Image resolution</div>
+          <div class="factor-item"><i class="fas fa-check-circle"></i> Application requirements</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MESH + EMULSION + EXPOSURE EXPERTISE -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Technical Synergies</span>
+        <h2 class="section-title">The Right Combination of Mesh, Emulsion & <span class="brand-red-text">Exposure</span></h2>
+        <p class="section-desc">Screen performance depends on selecting the right combination of mesh, emulsion and exposure parameters for the application.</p>
+      </div>
+
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <div class="expertise-icon-box"><i class="fas fa-border-all"></i></div>
+          <h3>Mesh</h3>
+          <p>Selection based on application requirements, ink system, line count, and desired deposit thickness.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon-box"><i class="fas fa-fill-drip"></i></div>
+          <h3>Emulsion</h3>
+          <p>Selection based on ink chemistry (solvent, UV, water-based), stencil durability, and RZ roughness targets.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon-box"><i class="fas fa-sun"></i></div>
+          <h3>Exposure</h3>
+          <p>Controlled UV exposure timing to achieve optimal cross-linking, sharp edges, and maximum stencil life.</p>
+        </div>
+      </div>
+
+      <div class="expertise-banner">
+        <p><i class="fas fa-lightbulb" style="color: #facc15; margin-right: 8px;"></i> Need help selecting the right combination for your job?</p>
+        <a href="Contact.html" class="btn-red"><i class="fas fa-comments"></i> Talk to Our Technical Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. APPLICATIONS WE SERVE -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Industries Served</span>
+        <h2 class="section-title">Applications <span class="brand-red-text">We Serve</span></h2>
+        <p class="section-desc">Delivering reliable exposed screens across diverse industrial printing sectors.</p>
+      </div>
+
+      <div class="app-grid">
+        <div class="app-card"><i class="fas fa-microchip"></i> <h4>Membrane Switches & HMI</h4></div>
+        <div class="app-card"><i class="fas fa-tachometer-alt"></i> <h4>Control Panels</h4></div>
+        <div class="app-card"><i class="fas fa-laptop-code"></i> <h4>PCB & Electronics</h4></div>
+        <div class="app-card"><i class="fas fa-car"></i> <h4>Automotive Components</h4></div>
+        <div class="app-card"><i class="fas fa-layer-group"></i> <h4>Industrial Graphics</h4></div>
+        <div class="app-card"><i class="fas fa-wine-glass-alt"></i> <h4>Glass & Ceramic Printing</h4></div>
+        <div class="app-card"><i class="fas fa-cogs"></i> <h4>Specialty Industrial Printing</h4></div>
+        <div class="app-card"><i class="fas fa-bullhorn"></i> <h4>Signage & Other Applications</h4></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 9. QUALITY INSPECTION -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Quality Assurance</span>
+        <h2 class="section-title">Screen Quality <span class="brand-red-text">Inspection</span></h2>
+        <p class="section-desc">Every screen is visually inspected after exposing and developing to identify potential issues before it reaches production.</p>
+      </div>
+
+      <div class="inspection-box">
+        <h3 style="font-family:'Montserrat',sans-serif; font-size:1.15rem; font-weight:700; color:#0f172a; margin-bottom:16px;">Inspection Checklist:</h3>
+        <div class="checklist-grid">
+          <div class="check-item"><i class="fas fa-check"></i> Image definition</div>
+          <div class="check-item"><i class="fas fa-check"></i> Stencil integrity</div>
+          <div class="check-item"><i class="fas fa-check"></i> Pinholes</div>
+          <div class="check-item"><i class="fas fa-check"></i> Unwanted exposed areas</div>
+          <div class="check-item"><i class="fas fa-check"></i> Image alignment</div>
+          <div class="check-item"><i class="fas fa-check"></i> Screen cleanliness</div>
+          <div class="check-item"><i class="fas fa-check"></i> Overall finishing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FREQUENTLY ASKED QUESTIONS (FAQ) -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-subtitle">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked <span class="brand-red-text">Questions</span></h2>
+        <p class="section-desc">Find quick answers regarding our professional screen exposing services.</p>
+      </div>
+
+      <div class="faq-wrapper">
+        <div class="faq-item">
+          <div class="faq-question">What is screen exposing? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">Screen exposing transfers the required artwork onto the photo-sensitive emulsion coated on a printing screen using UV light.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Why is correct exposure important? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">Correct exposure helps achieve good stencil definition, durability and consistent printing performance across long print runs.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can you expose screens for industrial printing? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">Yes. Screensource provides screen exposing services for industrial and specialty printing applications including membrane switches, automotive, and electronics.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can you help with emulsion selection? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">Yes. We can recommend suitable emulsion options based on the mesh count, ink system and specific application requirements.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do you provide screen stretching and exposing together? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-answer">Yes. Screensource can provide both screen stretching and exposing services as part of an integrated pre-press process.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FINAL CTA -->
+  <section class="final-cta-section">
+    <div class="container">
+      <h2 style="font-family:'Poppins',sans-serif; color:#ffffff !important; -webkit-text-fill-color:#ffffff !important;">Need a Professionally <span class="brand-red-text">Exposed Screen?</span></h2>
+      <p>Share your screen size, mesh specification, emulsion details and artwork requirements with our team.</p>
+      <div class="hero-buttons">
+        <a href="Contact.html" class="btn-red"><i class="fas fa-file-invoice"></i> REQUEST A QUOTE</a>
+        <a href="https://wa.me/918080941627" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WHATSAPP US</a>
+        <a href="tel:+918080941627" class="btn-outline"><i class="fas fa-phone"></i> CALL OUR TEAM</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Dark Footer -->
   <style>
-    /* Ensure only one image visible on small screens */
-    @media (max-width: 768px) {
-      #sliderContainer .card {
-        min-width: 100% !important;
-        max-width: 100% !important;
-      }
+    .modern-footer {
+      background-color: #0B0E14;
+      color: #e0e0e0;
+      padding: 80px 20px 40px;
+      font-family: 'Poppins', sans-serif;
+      border-top: 3px solid #ed1607;
+    }
+    .modern-footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .modern-footer .brand-title {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+    .modern-footer p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #a0aab2;
+    }
+    .modern-footer h4 {
+      margin-bottom: 20px;
+      font-size: 17px;
+      color: #ffffff;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 8px;
+    }
+    .modern-footer h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 35px;
+      height: 3px;
+      background: #ed1607;
+      border-radius: 2px;
+    }
+    .modern-footer ul {
+      list-style: none;
+    }
+    .modern-footer ul li {
+      margin-bottom: 10px;
+    }
+    .modern-footer ul li a {
+      color: #a0aab2;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    .modern-footer ul li a:hover {
+      color: #ed1607;
+      padding-left: 5px;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
+    }
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.08);
+      color: #ffffff;
+      border-radius: 50%;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .footer-socials a:hover {
+      background: #ed1607;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 25px;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #707a82;
+      font-size: 13px;
     }
   </style>
 
+  <footer class="modern-footer">
+    <div class="modern-footer-container">
+      <div style="flex: 1 1 250px;">
+        <h3 class="brand-title">Screensource</h3>
+        <p>Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><img src="images/indiamart.png" alt="IndiaMart" style="width: 20px; height: 20px; object-fit: contain;"></a>
+        </div>
+      </div>
+
+      <div style="flex: 1 1 150px;">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+          <li><a href="About_US.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+          <li><a href="Stretching.html"><i class="fas fa-angle-right"></i> Screen Stretching</a></li>
+          <li><a href="Exposing.html"><i class="fas fa-angle-right"></i> Screen Exposing</a></li>
+          <li><a href="Contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div style="flex: 1 1 180px;">
+        <h4>Top Brands</h4>
+        <ul>
+          <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
+          <li><a href="Orafol.html">Orafol Adhesive</a></li>
+          <li><a href="3M.html">3M Tapes</a></li>
+          <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
+          <li><a href="Nittoku.html">Nittoku Mesh</a></li>
+        </ul>
+      </div>
+
+      <div style="flex: 1 1 240px;">
+        <h4>Contact Us</h4>
+        <p style="margin-bottom: 8px;"><i class="fas fa-map-marker-alt" style="color:#ed1607; margin-right:8px;"></i> Manaji Nagar, Narhe, Pune 411041</p>
+        <p style="margin-bottom: 8px;"><i class="fas fa-envelope" style="color:#ed1607; margin-right:8px;"></i> designatscreensource@gmail.com</p>
+        <p><i class="fas fa-phone" style="color:#ed1607; margin-right:8px;"></i> +91 8080941627</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <strong>Screensource</strong>. All rights reserved. | Developed by <a href="https://mindaxisinnovation.com/" target="_blank" style="color: #ed1607;">MindAxis Innovation Pvt Ltd</a>
+    </div>
+  </footer>
+
+  <!-- Scroll & Contact Floating Buttons -->
+  <button onclick="window.scrollTo({top:0, behavior:'smooth'})" style="position:fixed; bottom:20px; right:20px; background:#ed1607; color:#fff; border:none; border-radius:50%; width:44px; height:44px; cursor:pointer; font-size:16px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <a href="https://wa.me/918080941627" target="_blank" style="position:fixed; bottom:75px; right:20px; background:#25D366; color:#fff; border:none; border-radius:50%; width:44px; height:44px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.2); z-index:999;">
+    <i class="fab fa-whatsapp" style="font-size:22px;"></i>
+  </a>
+
+  <!-- Interactive Scripts -->
   <script>
-    const container = document.getElementById('sliderContainer');
-    const leftBtn = document.getElementById('leftBtn');
-    const rightBtn = document.getElementById('rightBtn');
-    const dotsContainer = document.getElementById('dots');
-    const cards = container.querySelectorAll('.card');
-
-    let currentIndex = 0;
-    let cardWidth = cards[0].offsetWidth + 16;
-    const totalCards = cards.length;
-
-    // Create dots
-    for (let i = 0; i < totalCards; i++) {
-      const dot = document.createElement('span');
-      dot.style.cssText = "display:inline-block;width:10px;height:10px;background:#ccc;border-radius:50%;margin:0 4px;cursor:pointer;transition:background 0.3s ease;";
-      if (i === 0) dot.style.background = "#EC008C";
-      dot.addEventListener('click', () => goToSlide(i));
-      dotsContainer.appendChild(dot);
-    }
-    const dots = dotsContainer.querySelectorAll('span');
-
-    function updateDots(index) {
-      dots.forEach(dot => dot.style.background = "#ccc");
-      dots[index].style.background = "#EC008C";
-    }
-
-    function goToSlide(index) {
-      currentIndex = index;
-      container.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
-      updateDots(currentIndex);
-    }
-
-    leftBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-      goToSlide(currentIndex);
-    });
-
-    rightBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % totalCards;
-      goToSlide(currentIndex);
-    });
-
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalCards;
-      goToSlide(currentIndex);
-    }, 3000);
-
-    window.addEventListener('resize', () => {
-      cardWidth = cards[0].offsetWidth + 16;
-      goToSlide(currentIndex);
-    });
-
-    // Touch swipe
-    let startX = 0;
-    container.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-    container.addEventListener('touchend', e => {
-      let endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) rightBtn.click();
-      if (endX - startX > 50) leftBtn.click();
+    // FAQ Accordion Script
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isOpen) {
+          item.classList.add('active');
+        }
+      });
     });
   </script>
-</section>
-
-
-
-<section class="hero-exposing">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1 class="fade-in">Screen Exposing Service</h1>
-
-    <p class="fade-in delay-1">
-      Tired of dealing with pinholes, blurry images, and inconsistent stencil quality? 
-      Our <strong>Screen Exposing Service</strong> at Screensource provides a professional solution 
-      to perfect your pre-press process.
-    </p>
-
-    <p class="fade-in delay-1">
-      Using a state-of-the-art <strong>UV exposure unit</strong>, we guarantee a flawless and durable stencil 
-      every time. Our precise process eliminates issues like light bleed and under-exposed areas, 
-      ensuring a crisp, high-resolution image on your screen.
-    </p>
-
-    <p class="fade-in delay-1">
-      From simple one-color designs to intricate multi-color jobs, we deliver ready-to-print screens 
-      that save you time and reduce waste — letting you focus on printing with full confidence.
-    </p>
-
-    <h2 class="fade-in delay-2 yellow-heading">Key Benefits</h2>
-    <ul class="fade-in delay-2">
-      <li><strong>Perfect Detail:</strong> Razor-sharp images and text with no blurry edges.</li>
-      <li><strong>Consistent Results:</strong> Every screen exposed with the same precision.</li>
-      <li><strong>Time & Cost Savings:</strong> No more manual touch-ups or re-burns.</li>
-      <li><strong>Durability:</strong> Long-lasting stencils with strong mesh adhesion.</li>
-    </ul>
-  </div>
-</section>
-<style>
-  .hero-exposing {
-    position: relative;
-    min-height: 85vh;
-    background: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-     margin-top: -80px; /* adjust value as needed */
-    padding: 100px 30px;
-    font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
-  }
-
-  .hero-exposing .overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top right, rgba(252,217,50,0.15), transparent 60%),
-                radial-gradient(circle at bottom left, rgba(69,195,240,0.15), transparent 60%);
-    z-index: 1;
-  }
-
-  .hero-exposing .hero-content {
-    max-width: 900px;
-    z-index: 2;
-    color: #444;
-    padding: 0 10px;
-  }
-
-  .hero-exposing h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2rem, 6vw, 4rem);
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 100;
-    margin-top: -5%;
-    line-height: 1.2;
-    animation: fadeInUp 1s ease-out forwards;
-    white-space: normal;   /* ✅ allow wrapping */
-    word-break: break-word; /* ✅ prevent overflow */
-    text-align: inherit;
-  }
-
-  .yellow-heading {
-    color: #EC008C;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .hero-exposing p {
-    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-    line-height: 1.7;
-    margin-bottom: 18px;
-    color: #444;
-  }
-
-  .hero-exposing strong {
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-  }
-
-  .hero-exposing ul {
-    padding-left: 20px;
-    list-style: none;
-  }
-
-  .hero-exposing ul li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 28px;
-    line-height: 1.6;
-  }
-
-  .hero-exposing ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #EC008C;
-    font-size: 1.1rem;
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  .delay-1 { animation-delay: 0.4s; }
-  .delay-2 { animation-delay: 0.8s; }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Tablet */
-  @media (max-width: 1024px) {
-    .hero-exposing {
-      padding: 80px 20px;
-    }
-    .hero-exposing .hero-content {
-      max-width: 95%;
-    }
-  }
-
-  /* Mobile */
-  @media (max-width: 600px) {
-    .hero-exposing {
-      padding: 100px 15px 60px;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    .hero-exposing h1 {
-      font-size: clamp(1.6rem, 8vw, 2.5rem);
-      margin-top: 0;
-    }
-
-    .hero-exposing p {
-      font-size: 0.95rem;
-    }
-
-    .hero-exposing ul {
-      padding-left: 0;
-    }
-    .hero-exposing ul li {
-      padding-left: 0;
-    }
-    .hero-exposing ul li::before {
-      display: none; /* ✅ hide checkmarks on small screens */
-    }
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ?????????????????????????  FOOTER ????????????????????????????????// -->
-
-<!-- Font Awesome -->
-<style>
-  .modern-footer {
-    background-color: #0B0E14;
-    color: #e0e0e0;
-    padding: 80px 20px 40px;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    border-top: 3px solid transparent;
-    border-image: linear-gradient(90deg, #00b5e2, #9b59b6, #EC008C) 1;
-  }
-  .modern-footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
-  }
-  .modern-footer .brand-title {
-    font-size: 28px;
-    font-weight: 800;
-    margin: 0 0 15px 0;
-    letter-spacing: 0.5px;
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .modern-footer p {
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 0 0 20px 0;
-    color: #a0aab2;
-  }
-  .modern-footer h4 {
-    margin-bottom: 25px;
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  .modern-footer h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    background: #EC008C;
-    border-radius: 2px;
-  }
-  .modern-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .modern-footer ul li {
-    margin-bottom: 12px;
-  }
-  .modern-footer ul li a {
-    color: #a0aab2;
-    text-decoration: none;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .modern-footer ul li a:hover {
-    color: #00b5e2;
-    transform: translateX(5px);
-  }
-  .footer-socials {
-    display: flex;
-    gap: 15px;
-  }
-  .footer-socials a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,0.05);
-    color: #ffffff;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 18px;
-  }
-  .footer-socials a:hover {
-    background: linear-gradient(135deg, #00b5e2, #EC008C);
-    transform: translateY(-3px);
-  }
-  .footer-contact-item {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    color: #a0aab2;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-  .footer-contact-item i {
-    color: #00b5e2;
-    font-size: 18px;
-    margin-top: 3px;
-  }
-  .footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    margin-top: 50px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #707a82;
-    font-size: 14px;
-  }
-  .footer-bottom strong {
-    color: #a0aab2;
-  }
-</style>
-
-<footer class="modern-footer">
-  <div class="modern-footer-container">
-    
-    <!-- Company Info -->
-    <div style="flex: 1 1 250px;">
-      <h3 class="brand-title">Screensource</h3>
-      <p>
-        Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.
-      </p>
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><i class="fas fa-shopping-bag"></i></a>
-      </div>
-    </div>
-
-    <!-- Quick Links -->
-    <div style="flex: 1 1 150px;">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Home</a></li>
-        <li><a href="About_US.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> About Us</a></li>
-        <li><a href="Contact.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Contact Us</a></li>
-        <li><a href="product.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> All Products</a></li>
-      </ul>
-    </div>
-
-    <!-- Brands -->
-    <div style="flex: 1 1 200px;">
-      <h4>Top Brands</h4>
-      <ul>
-        <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
-        <li><a href="Orafol.html">Orafol Adhesive</a></li>
-        <li><a href="3M.html">3M Tapes</a></li>
-        <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
-        <li><a href="Nittoku.html">Nittoku</a></li>
-        <li><a href="Avery.html">Avery Dennison</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div style="flex: 1 1 250px;">
-      <h4>Contact Us</h4>
-      <div class="footer-contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-envelope"></i>
-        <span>designatscreensource@gmail.com</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-phone-alt"></i>
-        <span>+91 8080941627</span>
-      </div>
-    </div>
-
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 <strong>Screensource</strong>. All rights reserved.
-  </div>
-</footer>
-
-
-
-<!-- Scroll to Top Button -->
-<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
-  style="position:fixed; bottom:20px; right:20px; background:#00b5e2; color: #444; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
-  <img src="images/arrow_01.webp" alt="Scroll to top" style="width:22px; height:22px;">
-</button>
-
-<!-- Floating Call Button -->
-<a href="tel:+918080941627" 
-  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
-  <img src="images/call_01.png" alt="Call Us" style="width:24px; height:24px;">
-</a>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/918080941627" target="_blank"
-  style="position:fixed; bottom:150px; right:20px; background:#25D366; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
-  <img src="images/whatsapp_01.webp" alt="Chat on WhatsApp" style="width:26px; height:26px;">
-</a>
-
-
- <!-- ////////////////////    FOOTER END ////////////////////  -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-
-  <!-- JavaScript -->
-  <script>
-    function toggleMenu(icon) {
-      icon.classList.toggle("cross");
-      const sideMenu = document.getElementById("sideMenu");
-      sideMenu.classList.toggle("show");
-      document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
-    }
-  </script>
-<!-- /////////////////////////////////    SIDE BAR ////////////////// -->
-<script>
-  function toggleMenu(icon) {
-    icon.classList.toggle("cross");
-    const sideMenu = document.getElementById("sideMenu");
-    sideMenu.classList.toggle("show");
-    document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
-
-    // Animate nav items using GSAP
-    const items = document.querySelectorAll('.nav-links li');
-    if (sideMenu.classList.contains("show")) {
-      gsap.fromTo(items, {
-        opacity: 0,
-        y: 20
-      }, {
-        opacity: 1,
-        y: 0,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: "power3.out",
-        delay: 0.2
-      });
-    }
-  }
-</script>
-
-<!-- //////////////////////////////////////// SIDE BAR END ///////////// -->
-<script>
-  function scrollToProducts() {
-    window.scrollTo({
-      top: document.querySelector('#about').offsetTop,
-      behavior: 'smooth'
-    });
-  }
-
-  function scrollToServices() {
-    window.scrollTo({
-      top: document.querySelector('#services').offsetTop,
-      behavior: 'smooth'
-    });
-  }
-</script>
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.fromTo(".about-text", 
-    { opacity: 0, y: 50 }, 
-    { 
-      opacity: 1, y: 0, duration: 1.2, ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-text",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    }
-  );
-
-  gsap.fromTo(".about-image", 
-    { opacity: 0, y: 50 }, 
-    { 
-      opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.2,
-      scrollTrigger: {
-        trigger: ".about-image",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    }
-  );
-</script>
-<!-- //////////////////////////////////// SECTION --- 3333///////////////// -->
-<!-- Swiper Initialization -->
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    loop: true,
-    speed: 4000,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    grabCursor: true,
-    freeMode: true,
-    freeModeMomentum: false,
-  });
-</script>
-
-
-<!-- Swiper Initialization -->
-<script>
-  new Swiper(".testimonial-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-</script>
-  <!-- Script -->
-<!-- jQuery and Slick JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-  function scrollToProducts() {
-    const target = document.getElementById("products-section");
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  }
-
-  function scrollToServices() {
-    const target = document.getElementById("services-section");
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  }
-</script>
 
 </body>
 </html>
-
-
-
-

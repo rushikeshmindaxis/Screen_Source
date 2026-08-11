@@ -3,21 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Screensource - One Stop Solution</title>
+  <title>Nitto Denko Industrial Tapes & Surface Protection Films - Screensource</title>
   <link rel="icon" type="image/png" href="images/LOGO_final.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-  <!-- Include in <head> -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
-
 
   <style>
     * {
@@ -25,644 +14,675 @@
       padding: 0;
       box-sizing: border-box;
     }
-body {
- font-family: 'Myriad Pro', Arial, sans-serif;
-background: #f9f9f9;
-  color: #222;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
 
+    .section-padding {
+      padding: 70px 24px;
+    }
+    .bg-white {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .bg-light {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
 
-  
+    .section-subtitle-badge {
+      color: #ed1607;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 18px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(237, 22, 7, 0.06);
+    }
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      text-align: center;
+      margin-bottom: 16px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: #ed1607;
+      border-radius: 3px;
+    }
+    .brand-red-text {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      background: none !important;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: #64748b !important;
+      -webkit-text-fill-color: #64748b !important;
+      text-align: center;
+      max-width: 780px;
+      margin: 14px auto 44px;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .nitto-hero {
+      padding-top: 140px !important;
+      padding-bottom: 40px;
+      background: linear-gradient(135deg, #0b0e14 0%, #1e293b 100%);
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 0 20px 20px;
+    }
+    .nitto-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      margin-bottom: 14px;
+    }
+    .nitto-hero p {
+      font-size: 1.05rem;
+      color: #cbd5e1 !important;
+      -webkit-text-fill-color: #cbd5e1 !important;
+      max-width: 820px;
+      margin: 0 auto 24px;
+      line-height: 1.65;
+    }
+
+    /* Nitto Slider Section */
+    .nitto-slider-section {
+      padding: 60px 24px;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .slider-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .slider-container {
+      display: flex;
+      gap: 16px;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      padding: 20px 0;
+      flex: 1;
+    }
+    .slider-card {
+      background: #ffffff;
+      border-radius: 20px;
+      min-width: 340px;
+      max-width: 380px;
+      height: 340px;
+      flex-shrink: 0;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+    }
+    .slider-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(237,22,7,0.18);
+      border-color: #ed1607;
+    }
+    .slider-img-wrapper {
+      width: 100%;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: #ffffff;
+    }
+    .slider-img-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .slider-card:hover .slider-img-wrapper img {
+      transform: scale(1.08);
+    }
+    .slider-card-caption {
+      padding: 14px 16px;
+      background: #f8fafc;
+      border-top: 1px solid #f1f5f9;
+      text-align: center;
+      margin-top: auto;
+    }
+    .slider-card-caption p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      margin: 0;
+    }
+    .nav-btn {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: #0f172a;
+      font-size: 1.6rem;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      z-index: 10;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .nav-btn:hover {
+      background: #ed1607;
+      color: #ffffff;
+      border-color: #ed1607;
+    }
+    .dots-container {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .dots-container span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #cbd5e1;
+      border-radius: 50%;
+      margin: 0 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .dots-container span.active {
+      background: #ed1607;
+      width: 22px;
+      border-radius: 10px;
+    }
+
+    /* Nitto Product Range Section Cards */
+    .nitto-range-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    .nitto-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .nitto-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(237, 22, 7, 0.14);
+      border-color: #ed1607;
+    }
+    .nitto-card-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .nitto-card:hover .nitto-card-icon {
+      transform: scale(1.12);
+      background: #ed1607;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+    }
+    .nitto-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      margin-bottom: 12px;
+    }
+    .nitto-card p {
+      font-size: 0.96rem;
+      color: #475569 !important;
+      -webkit-text-fill-color: #475569 !important;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .nitto-item-list {
+      list-style: none;
+      padding: 0;
+      margin-top: auto;
+    }
+    .nitto-item-list li {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #ed1607;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #334155 !important;
+      -webkit-text-fill-color: #334155 !important;
+      transition: all 0.25s ease;
+    }
+    .nitto-item-list li:hover {
+      background: #fff5f5;
+      transform: translateX(4px);
+    }
+    .nitto-item-list li strong {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .slider-card {
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
+      .nitto-hero {
+        padding-top: 130px !important;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header Navigation -->
+  <script src="navbar.js"></script>
 
-    <!-- Header -->
-<script src="navbar.js"></script>
-
-<!-- NAVBAR SECTION END -->
-
-
-<section style="padding:150px 20px;background: #f9f9f9;font-family:'Poppins',sans-serif;">
-  <h1 class="fade-in" style="
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2.2rem, 6vw, 4.5rem);
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    animation: fadeInUp 1s ease-out forwards;
-    white-space: nowrap;
-    text-align: center;
-  ">
-    Nitto Screen Printing Mesh
-  </h1>
-
-  <h2 style="text-align:center;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;
-             background:linear-gradient(90deg,#00b5e2,#EC008C);
-             -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-             margin-bottom:30px;">
-    Product Gallery
-  </h2>
-
-  <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
-    <!-- Card 1 -->
-    <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;">
-      <div style="width:100%;height:200px;overflow:hidden;">
-        <img src="images/Nitto/image.png" style="width:100%;height:100%;object-fit:contain;padding:10px;background-color:#fff;box-sizing:border-box;">
+  <!-- 1. HERO SECTION -->
+  <section class="nitto-hero">
+    <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+      <div style="text-align: center;">
+        <span class="section-subtitle-badge" style="background: rgba(237,22,7,0.15); border-color: rgba(237,22,7,0.4); color: #ff4d4d; -webkit-text-fill-color: #ff4d4d;">Japanese Precision Adhesives</span>
       </div>
+      <h1>Nitto Denko <span class="brand-red-text">Industrial Tapes & Protection Films</span></h1>
+      <p>Pioneering over 100 years of Japanese adhesive innovation with high-tack double-coated tapes, residue-free surface protection films, and specialized industrial bonding solutions.</p>
+    </div>
+  </section>
+
+  <!-- 2. NITTO PRODUCT SLIDER SECTION -->
+  <section class="nitto-slider-section">
+    <div style="text-align: center;">
+      <span class="section-subtitle-badge">Visual Catalog</span>
+    </div>
+    <h2 class="section-title">Nitto <span class="brand-red-text">Product Gallery</span></h2>
+    <p class="section-subtitle">Explore our stocked range of authentic Nitto Denko industrial tape products.</p>
+
+    <div class="slider-wrapper">
+      <button id="leftBtn" class="nav-btn">&#10094;</button>
+
+      <div id="sliderContainer" class="slider-container">
+        <div class="slider-card">
+          <div class="slider-img-wrapper"><img src="images/Nitto/image.png" alt="Nitto Double-Coated Industrial Tape"></div>
+          <div class="slider-card-caption"><p>Nitto Double-Coated Industrial Tape</p></div>
+        </div>
+
+        <div class="slider-card">
+          <div class="slider-img-wrapper"><img src="images/Nitto/image copy.png" alt="Nitto High-Temperature Surface Protection Film"></div>
+          <div class="slider-card-caption"><p>Nitto High-Temperature Surface Protection Film</p></div>
+        </div>
+
+        <div class="slider-card">
+          <div class="slider-img-wrapper"><img src="images/nitto-tape.jpg" alt="Nitto 5015 High-Tack Adhesive Roll"></div>
+          <div class="slider-card-caption"><p>Nitto 5015 High-Tack Adhesive Roll</p></div>
+        </div>
+      </div>
+
+      <button id="rightBtn" class="nav-btn">&#10095;</button>
     </div>
 
-    <!-- Card 2 -->
-    <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;">
-      <div style="width:100%;height:200px;overflow:hidden;">
-        <img src="images/Nitto/image copy.png" style="width:100%;height:100%;object-fit:contain;padding:10px;background-color:#fff;box-sizing:border-box;">
+    <div id="dots" class="dots-container"></div>
+  </section>
+
+  <!-- 3. ATTRACTIVE & WELL-FORMATTED NITTO PRODUCT RANGE SECTION -->
+  <section class="section-padding bg-light">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center;">
+        <span class="section-subtitle-badge">Technical Specifications</span>
+      </div>
+      <h2 class="section-title">Nitto <span class="brand-red-text">Product Range</span></h2>
+      <p class="section-subtitle">Advanced Japanese tape formulations providing reliable bonding, clean surface peelability, and long-term thermal endurance.</p>
+
+      <div class="nitto-range-grid">
+        <!-- Card 1: High-Strength Double-Coated Tapes -->
+        <div class="nitto-card">
+          <div class="nitto-card-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Double-Coated Industrial Tapes</h3>
+          <p>High-shear double-sided tapes including Nitto 5015 engineered for mounting nameplates, graphic overlays, and industrial trims.</p>
+          <ul class="nitto-item-list">
+            <li><strong>High Bond Strength:</strong> Secures raw metals, polycarbonate sheets, glass, and engineered plastics reliably.</li>
+            <li><strong>Non-Woven & Tissue Carriers:</strong> Provides flexibility and conformability on irregular or curved substrate surfaces.</li>
+            <li><strong>Solvent & Moisture Resistance:</strong> Maintains adhesive grip even in high-humidity and solvent-exposed press rooms.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Surface Protection Films -->
+        <div class="nitto-card">
+          <div class="nitto-card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Residue-Free Protection Films</h3>
+          <p>Specialized protective PE and Polyolefin films designed to shield optical sheets, metal panels, and printed overlays during processing.</p>
+          <ul class="nitto-item-list">
+            <li><strong>Clean Peel Removal:</strong> Easily removes without ghosting or leaving adhesive residue on glossy or textured surfaces.</li>
+            <li><strong>Scratch & Abrasion Guard:</strong> Protects high-value optical screens and stainless steel from handling scratches.</li>
+            <li><strong>UV & Outdoor Stability:</strong> Weather-resistant formulations suitable for extended storage and transit.</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Key Advantages & Industrial Applications -->
+        <div class="nitto-card">
+          <div class="nitto-card-icon"><i class="fas fa-award"></i></div>
+          <h3>Key Advantages & Applications</h3>
+          <p>Engineered for high-precision manufacturing, electronics assembly, automotive trim bonding, and industrial screen prepress.</p>
+          <ul class="nitto-item-list">
+            <li><strong>Automotive & Electronics:</strong> Preferred for interior trim lamination, display bonding, and membrane keypad assembly.</li>
+            <li><strong>Screen Printing & Graphics:</strong> Mounts graphic overlays, seals frame borders, and holds substrates firmly.</li>
+            <li><strong>Eco-Friendly Formulations:</strong> Low-VOC and solvent-free adhesive options supporting green manufacturing initiatives.</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- Modern Dark Footer -->
   <style>
-    /* Fade in keyframes */
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .modern-footer {
+      background-color: #0B0E14;
+      color: #e0e0e0;
+      padding: 80px 20px 40px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      border-top: none;
     }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease-out forwards;
+    .modern-footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
     }
-
-    /* Mobile: stack images full width and adjust padding */
-    @media (max-width: 768px) {
-      section {
-        padding: 80px 15px !important;
-      }
-      .card {
-        min-width: 100% !important;
-        max-width: 100% !important;
-      }
+    .modern-footer .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0 0 15px 0;
+      letter-spacing: 0.5px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
     }
-
-    /* Small mobile: reduce font sizes */
-    @media (max-width: 480px) {
-      h1.fade-in {
-        font-size: 1.8rem !important;
-        white-space: normal !important;
-      }
-      h2 {
-        font-size: 1.4rem !important;
-      }
+    .modern-footer p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 0 20px 0;
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+    }
+    .modern-footer h4 {
+      margin-bottom: 25px;
+      font-size: 18px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .modern-footer h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      background: #ed1607;
+      border-radius: 2px;
+    }
+    .modern-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .modern-footer ul li {
+      margin-bottom: 12px;
+    }
+    .modern-footer ul li a {
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .modern-footer ul li a:hover {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      transform: translateX(5px);
+    }
+    .footer-socials {
+      display: flex;
+      gap: 15px;
+    }
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.05);
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 18px;
+    }
+    .footer-socials a:hover {
+      background: #ed1607;
+      transform: translateY(-3px);
+    }
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .footer-contact-item i {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      font-size: 18px;
+      margin-top: 3px;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #707a82 !important;
+      -webkit-text-fill-color: #707a82 !important;
+      font-size: 14px;
+    }
+    .footer-bottom strong {
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
     }
   </style>
-</section>
 
-<section class="hero-stretching">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1 class="fade-in">Nitto Industrial  Tapes</h1>
+  <footer class="modern-footer">
+    <div class="modern-footer-container">
+      <div style="flex: 1 1 250px;">
+        <h3 class="brand-title">Screensource</h3>
+        <p>Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><img src="images/indiamart.png" alt="IndiaMart" style="width: 22px; height: 22px; object-fit: contain; border-radius: 50%;"></a>
+        </div>
+      </div>
 
-    <p class="fade-in delay-1">
-      <strong>Innovating Adhesion for a Better Tomorrow:</strong> From precision manufacturing to everyday
-      applications, Nitto leads the way in high-performance tape solutions. With a legacy of Japanese innovation
-      spanning over 100 years, Nitto’s adhesive technologies are trusted worldwide to deliver durability, safety,
-      and efficiency in the most demanding environments.
-    </p>
+      <div style="flex: 1 1 150px;">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Home</a></li>
+          <li><a href="About_US.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> About Us</a></li>
+          <li><a href="Contact.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Contact Us</a></li>
+          <li><a href="product.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> All Products</a></li>
+        </ul>
+      </div>
 
-    <h2 class="fade-in delay-2 yellow-heading">Why Choose Nitto Tapes?</h2>
-    <ul class="fade-in delay-2">
-      <li><strong>Unmatched Adhesion Strength:</strong> Engineered to bond securely to metals, plastics, glass, and
-          composites—even under extreme conditions.</li>
-      <li><strong>Temperature & Weather Resistance:</strong> Performs flawlessly from freezing cold to scorching heat,
-          ensuring reliability year-round.</li>
-      <li><strong>Specialized Applications:</strong> Solutions for automotive, electronics, construction, packaging,
-          and more.</li>
-      <li><strong>Clean Removal & Residue-Free:</strong> Designed for easy application and removal without damaging
-          surfaces.</li>
-      <li><strong>Eco-Friendly Options:</strong> Innovative low-VOC, recyclable, and sustainable tape products for
-          a greener future.</li>
-    </ul>
+      <div style="flex: 1 1 200px;">
+        <h4>Top Brands</h4>
+        <ul>
+          <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
+          <li><a href="Orafol.html">Orafol Adhesive</a></li>
+          <li><a href="3M.html">3M Tapes</a></li>
+          <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
+          <li><a href="Nittoku.html">Nittoku</a></li>
+          <li><a href="Avery.html">Avery Dennison</a></li>
+        </ul>
+      </div>
 
-    <p class="fade-in delay-2">
-      Nitto tapes are more than just adhesives—they’re problem-solving tools that help industries stick to their goals.
-    </p>
-  </div>
-</section>
-
-<style>
-  .hero-stretching {
-    position: relative;
-    min-height: 85vh;
-    background: linear-gradient(#1a1a1a, #000);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    padding: 100px 30px;
-    font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
-  }
-
-  .hero-stretching .overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top right, rgba(252,217,50,0.15), transparent 60%),
-                radial-gradient(circle at bottom left, rgba(69,195,240,0.15), transparent 60%);
-    z-index: 1;
-  }
-
-  .hero-stretching .hero-content {
-    max-width: 900px;
-    z-index: 2;
-    color: #444;
-    padding: 0 10px;
-    margin-top: -85px;
-  }
-
-  .hero-stretching h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2.2rem, 6vw, 4.5rem);
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 100;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    animation: fadeInUp 1s ease-out forwards;
-    white-space: nowrap;
-    text-align: center;
-  }
-
-  .yellow-heading {
-    color: #EC008C;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .hero-stretching p {
-    font-size: clamp(1rem, 2.5vw, 1.15rem);
-    line-height: 1.8;
-    margin-bottom: 18px;
-    color: #444;
-  }
-
-  .hero-stretching strong {
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-  }
-
-  .hero-stretching ul {
-    padding-left: 20px;
-    list-style: none;
-  }
-
-  .hero-stretching ul li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 28px;
-    line-height: 1.6;
-  }
-
-  .hero-stretching ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #EC008C;
-    font-size: 1.2rem;
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  .delay-1 { animation-delay: 0.4s; }
-  .delay-2 { animation-delay: 0.8s; }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .hero-stretching {
-      padding: 80px 20px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .hero-stretching {
-      padding: 150px 15px;
-      text-align: center;
-    }
-    .hero-stretching ul {
-      padding-left: 0;
-    }
-    .hero-stretching ul li {
-      padding-left: 0;
-    }
-    .hero-stretching ul li::before {
-      display: none;
-    }
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ?????????????????????????  FOOTER ????????????????????????????????// -->
-
-<!-- Font Awesome -->
-<style>
-  .modern-footer {
-    background-color: #0B0E14;
-    color: #e0e0e0;
-    padding: 80px 20px 40px;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    border-top: 3px solid transparent;
-    border-image: linear-gradient(90deg, #00b5e2, #9b59b6, #EC008C) 1;
-  }
-  .modern-footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
-  }
-  .modern-footer .brand-title {
-    font-size: 28px;
-    font-weight: 800;
-    margin: 0 0 15px 0;
-    letter-spacing: 0.5px;
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .modern-footer p {
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 0 0 20px 0;
-    color: #a0aab2;
-  }
-  .modern-footer h4 {
-    margin-bottom: 25px;
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  .modern-footer h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    background: #EC008C;
-    border-radius: 2px;
-  }
-  .modern-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .modern-footer ul li {
-    margin-bottom: 12px;
-  }
-  .modern-footer ul li a {
-    color: #a0aab2;
-    text-decoration: none;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .modern-footer ul li a:hover {
-    color: #00b5e2;
-    transform: translateX(5px);
-  }
-  .footer-socials {
-    display: flex;
-    gap: 15px;
-  }
-  .footer-socials a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,0.05);
-    color: #ffffff;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 18px;
-  }
-  .footer-socials a:hover {
-    background: linear-gradient(135deg, #00b5e2, #EC008C);
-    transform: translateY(-3px);
-  }
-  .footer-contact-item {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    color: #a0aab2;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-  .footer-contact-item i {
-    color: #00b5e2;
-    font-size: 18px;
-    margin-top: 3px;
-  }
-  .footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    margin-top: 50px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #707a82;
-    font-size: 14px;
-  }
-  .footer-bottom strong {
-    color: #a0aab2;
-  }
-</style>
-
-<footer class="modern-footer">
-  <div class="modern-footer-container">
-    
-    <!-- Company Info -->
-    <div style="flex: 1 1 250px;">
-      <h3 class="brand-title">Screensource</h3>
-      <p>
-        Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.
-      </p>
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><i class="fas fa-shopping-bag"></i></a>
+      <div style="flex: 1 1 250px;">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>designatscreensource@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+91 8080941627</span>
+        </div>
       </div>
     </div>
-
-    <!-- Quick Links -->
-    <div style="flex: 1 1 150px;">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Home</a></li>
-        <li><a href="About_US.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> About Us</a></li>
-        <li><a href="Contact.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Contact Us</a></li>
-        <li><a href="product.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> All Products</a></li>
-      </ul>
+    <div class="footer-bottom">
+      &copy; 2026 <strong>Screensource</strong>. All rights reserved. | Developed by <a href="https://mindaxisinnovation.com/" target="_blank" style="color: #ed1607; text-decoration: none; font-weight: 600;">MindAxis Innovation Pvt Ltd</a>
     </div>
+  </footer>
 
-    <!-- Brands -->
-    <div style="flex: 1 1 200px;">
-      <h4>Top Brands</h4>
-      <ul>
-        <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
-        <li><a href="Orafol.html">Orafol Adhesive</a></li>
-        <li><a href="3M.html">3M Tapes</a></li>
-        <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
-        <li><a href="Nittoku.html">Nittoku</a></li>
-        <li><a href="Avery.html">Avery Dennison</a></li>
-      </ul>
-    </div>
+  <!-- Scroll to Top Button -->
+  <button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    style="position:fixed; bottom:20px; right:20px; background:#ed1607; color: #ffffff; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(237,22,7,0.3);">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    <!-- Contact -->
-    <div style="flex: 1 1 250px;">
-      <h4>Contact Us</h4>
-      <div class="footer-contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-envelope"></i>
-        <span>designatscreensource@gmail.com</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-phone-alt"></i>
-        <span>+91 8080941627</span>
-      </div>
-    </div>
+  <!-- Floating Call Button -->
+  <a href="tel:+918080941627" 
+    style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color: #ffffff; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:999;">
+    <i class="fas fa-phone" style="font-size: 20px;"></i>
+  </a>
 
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 <strong>Screensource</strong>. All rights reserved.
-  </div>
-</footer>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/918080941627" target="_blank"
+    style="position:fixed; bottom:150px; right:20px; background:#25D366; color: #ffffff; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:999;">
+    <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+  </a>
 
-
-
-<!-- Scroll to Top Button -->
-<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
-  style="position:fixed; bottom:20px; right:20px; background:#00b5e2; color: #444; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
-  <img src="images/arrow_01.webp" alt="Scroll to top" style="width:22px; height:22px;">
-</button>
-
-<!-- Floating Call Button -->
-<a href="tel:+918080941627" 
-  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
-  <img src="images/call_01.png" alt="Call Us" style="width:24px; height:24px;">
-</a>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/918080941627" target="_blank"
-  style="position:fixed; bottom:150px; right:20px; background:#25D366; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
-  <img src="images/whatsapp_01.webp" alt="Chat on WhatsApp" style="width:26px; height:26px;">
-</a>
-
-
- <!-- ////////////////////    FOOTER END ////////////////////  -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-
-  <!-- JavaScript -->
+  <!-- Slider JavaScript -->
   <script>
-    function toggleMenu(icon) {
-      icon.classList.toggle("cross");
-      const sideMenu = document.getElementById("sideMenu");
-      sideMenu.classList.toggle("show");
-      document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
+    const container = document.getElementById('sliderContainer');
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+    const dotsContainer = document.getElementById('dots');
+    const cards = container.querySelectorAll('.slider-card');
+
+    let currentIndex = 0;
+    let cardWidth = cards[0].offsetWidth + 16;
+    const totalCards = cards.length;
+
+    // Create dots
+    for (let i = 0; i < totalCards; i++) {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
     }
+    const dots = dotsContainer.querySelectorAll('span');
+
+    function updateDots(index) {
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      container.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+      updateDots(currentIndex);
+    }
+
+    leftBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      goToSlide(currentIndex);
+    });
+
+    rightBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalCards;
+      goToSlide(currentIndex);
+    });
+
+    window.addEventListener('resize', () => {
+      cardWidth = cards[0].offsetWidth + 16;
+      goToSlide(currentIndex);
+    });
+
+    // Touch swipe
+    let startX = 0;
+    container.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    container.addEventListener('touchend', e => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) rightBtn.click();
+      if (endX - startX > 50) leftBtn.click();
+    });
   </script>
-<!-- /////////////////////////////////    SIDE BAR ////////////////// -->
-<script>
-  function toggleMenu(icon) {
-    icon.classList.toggle("cross");
-    const sideMenu = document.getElementById("sideMenu");
-    sideMenu.classList.toggle("show");
-    document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
-
-    // Animate nav items using GSAP
-    const items = document.querySelectorAll('.nav-links li');
-    if (sideMenu.classList.contains("show")) {
-      gsap.fromTo(items, {
-        opacity: 0,
-        y: 20
-      }, {
-        opacity: 1,
-        y: 0,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: "power3.out",
-        delay: 0.2
-      });
-    }
-  }
-</script>
-
-<!-- //////////////////////////////////////// SIDE BAR END ///////////// -->
-<script>
-  function scrollToProducts() {
-    window.scrollTo({
-      top: document.querySelector('#about').offsetTop,
-      behavior: 'smooth'
-    });
-  }
-
-  function scrollToServices() {
-    window.scrollTo({
-      top: document.querySelector('#services').offsetTop,
-      behavior: 'smooth'
-    });
-  }
-</script>
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.fromTo(".about-text", 
-    { opacity: 0, y: 50 }, 
-    { 
-      opacity: 1, y: 0, duration: 1.2, ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-text",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    }
-  );
-
-  gsap.fromTo(".about-image", 
-    { opacity: 0, y: 50 }, 
-    { 
-      opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.2,
-      scrollTrigger: {
-        trigger: ".about-image",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    }
-  );
-</script>
-<!-- //////////////////////////////////// SECTION --- 3333///////////////// -->
-<!-- Swiper Initialization -->
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    loop: true,
-    speed: 4000,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    grabCursor: true,
-    freeMode: true,
-    freeModeMomentum: false,
-  });
-</script>
-
-
-<!-- Swiper Initialization -->
-<script>
-  new Swiper(".testimonial-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-</script>
-  <!-- Script -->
-<!-- jQuery and Slick JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-  function scrollToProducts() {
-    const target = document.getElementById("products-section");
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  }
-
-  function scrollToServices() {
-    const target = document.getElementById("services-section");
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  }
-</script>
 
 </body>
 </html>
-
-
-
-

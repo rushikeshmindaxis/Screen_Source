@@ -1,23 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Screensource - One Stop Solution</title>
+  <title>Screen Exposing Machinery & Equipment - Screensource</title>
   <link rel="icon" type="image/png" href="images/LOGO_final.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-  <!-- Include in <head> -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
-
 
   <style>
     * {
@@ -25,767 +14,535 @@
       padding: 0;
       box-sizing: border-box;
     }
-body {
- font-family: 'Myriad Pro', Arial, sans-serif;
-background: #f9f9f9;
-  color: #222;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
 
+    .section-padding {
+      padding: 70px 24px;
+    }
+    .bg-white {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .bg-light {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .bg-soft-tint {
+      background: linear-gradient(180deg, #fff5f5 0%, #ffffff 100%);
+      border-bottom: 1px solid #fee2e2;
+    }
 
-  
+    .section-subtitle-badge {
+      color: #ed1607;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 18px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(237, 22, 7, 0.06);
+    }
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      text-align: center;
+      margin-bottom: 16px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: #ed1607;
+      border-radius: 3px;
+    }
+    .brand-red-text {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      background: none !important;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: #64748b !important;
+      -webkit-text-fill-color: #64748b !important;
+      text-align: center;
+      max-width: 750px;
+      margin: 14px auto 44px;
+    }
+
+    /* Hero Section */
+    .machine-hero {
+      padding-top: 140px !important;
+      padding-bottom: 40px;
+      background: linear-gradient(135deg, #0b0e14 0%, #1e293b 100%);
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 0 20px 20px;
+    }
+    .machine-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      margin-bottom: 14px;
+    }
+    .machine-hero p {
+      font-size: 1.05rem;
+      color: #cbd5e1 !important;
+      -webkit-text-fill-color: #cbd5e1 !important;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      line-height: 1.65;
+    }
+
+    /* 3-Column Equipment Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+    @media (max-width: 992px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-card {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      border-top: 3px solid #ed1607;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(237, 22, 7, 0.15);
+      border-color: #ed1607;
+    }
+    .gallery-img-wrapper {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+    }
+    .gallery-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-card:hover .gallery-img-wrapper img {
+      transform: scale(1.08);
+    }
+    .gallery-card-body {
+      padding: 16px 18px;
+      text-align: center;
+    }
+    .gallery-card-body p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+    }
+
+    /* Content Cards Section */
+    .machine-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .machine-info-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: all 0.35s ease;
+    }
+    .machine-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(237, 22, 7, 0.12);
+    }
+    .machine-info-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0f172a !important;
+      -webkit-text-fill-color: #0f172a !important;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .machine-info-card h3 i {
+      color: #ed1607;
+    }
+    .machine-info-card p {
+      font-size: 0.98rem;
+      color: #475569 !important;
+      -webkit-text-fill-color: #475569 !important;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .machine-info-card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 14px;
+    }
+    .machine-info-card ul li {
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: #334155 !important;
+      -webkit-text-fill-color: #334155 !important;
+      font-weight: 500;
+    }
+    .machine-info-card ul li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #ed1607;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .machine-hero {
+        padding-top: 130px !important;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header Navigation -->
+  <script src="navbar.js"></script>
 
-    <!-- Header -->
-  <!-- NAVBAR SECTION START -->
-<script src="navbar.js"></script>
-
-
-<!-- NAVBAR SECTION END -->
-
-
-
-
-<section style="padding:180px 20px;background: #f9f9f9;font-family:'Poppins',sans-serif;">
-  <h2 style="text-align:center;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;
-             background:linear-gradient(90deg,#00b5e2,#EC008C);
-             -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-             margin-bottom:20px;">
-     Machines & Services Gallery
-  </h2>
-
-  <div style="position:relative;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 10px;">
-    <button id="leftBtn" style="background:white;border:none;font-size:1.8rem;padding:6px 14px;border-radius:50%;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:10;transition:all 0.3s ease;">&#10094;</button>
-
-    <div id="sliderContainer" style="display:flex;gap:16px;overflow-x:hidden;scroll-behavior:smooth;padding:20px 0;flex:1;">
-      <!-- Example card (repeat for all images) -->
-      <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_01.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
+  <!-- 1. HERO SECTION -->
+  <section class="machine-hero">
+    <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+      <div style="text-align: center;">
+        <span class="section-subtitle-badge" style="background: rgba(237,22,7,0.15); border-color: rgba(237,22,7,0.4); color: #ff4d4d; -webkit-text-fill-color: #ff4d4d;">Screensource Pre-Press Equipment</span>
       </div>
-      <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_02.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_03.png" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_04.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_05.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_06.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_07.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_01.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_02.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_04.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_03.png" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_05.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_06.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-            <div class="card" style="background:white;border-radius:16px;max-height:420px;min-width:260px;max-width:280px;overflow:hidden;flex-shrink:0;">
-        <div style="width:100%;height:200px;overflow:hidden;">
-          <img src="images/ALL_Machines_07.JPG" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-   
-      <!-- Repeat for all images -->
+      <h1>UV Screen Exposing & <span class="brand-red-text">Processing Machinery</span></h1>
+      <p>Explore our professional UV screen exposing units and precision prepress equipment designed for sharp image reproduction and consistent stencil resolution.</p>
     </div>
+  </section>
 
-    <button id="rightBtn" style="background:white;border:none;font-size:1.8rem;padding:6px 14px;border-radius:50%;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:10;transition:all 0.3s ease;">&#10095;</button>
-  </div>
+  <!-- 2. DIRECT EQUIPMENT GALLERY GRID (DIRECT IMAGES - NO SLIDER) -->
+  <section class="section-padding bg-white">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center;">
+        <span class="section-subtitle-badge">Facility Equipment</span>
+      </div>
+      <h2 class="section-title">Our Screen Exposing <span class="brand-red-text">Machinery & Equipment</span></h2>
+      <p class="section-subtitle">View our direct equipment gallery for screen exposing, vacuum drawdown, and stencil preparation.</p>
 
-  <div id="dots" style="text-align:center;margin-top:15px;"></div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper"><img src="images/ALL_Machines_01.JPG" alt="UV Screen Exposing Unit"></div>
+          <div class="gallery-card-body"><p>UV Screen Exposing Unit</p></div>
+        </div>
 
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper"><img src="images/ALL_Machines_04.JPG" alt="Screen Preparation Station"></div>
+          <div class="gallery-card-body"><p>Screen Preparation Station</p></div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper"><img src="images/ALL_Machines_05.JPG" alt="Industrial Stencil Exposing System"></div>
+          <div class="gallery-card-body"><p>Industrial Stencil Exposing System</p></div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper"><img src="images/ALL_Machines_06.JPG" alt="Precision Vacuum Drawdown Setup"></div>
+          <div class="gallery-card-body"><p>Precision Vacuum Drawdown Setup</p></div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper"><img src="images/ALL_Machines_07.JPG" alt="Finished Exposed Stencil Assembly"></div>
+          <div class="gallery-card-body"><p>Finished Exposed Stencil Assembly</p></div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper"><img src="images/ALL_Machines_03.png" alt="Screen Washing & Inspection Unit"></div>
+          <div class="gallery-card-body"><p>Screen Washing & Inspection Unit</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. DETAILED MACHINERY SPECIFICATIONS SECTION -->
+  <section class="section-padding bg-light">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center;">
+        <span class="section-subtitle-badge">Technical Overview</span>
+      </div>
+      <h2 class="section-title">Exposing Capabilities & <span class="brand-red-text">Process Features</span></h2>
+      <p class="section-subtitle">Controlled UV exposure systems engineered for optical density and micro-fine detail stencil transfer.</p>
+
+      <div class="machine-info-grid">
+        <!-- Exposing Machine Card -->
+        <div class="machine-info-card">
+          <h3><i class="fas fa-sun"></i> Screen Exposing Machines</h3>
+          <p>Controlled UV <strong>screen exposing equipment</strong> transfers high-density positive artwork onto photo-sensitive emulsion coated screens with sub-micron edge definition.</p>
+          <p>Equipped with vacuum drawdown systems for intimate film-to-emulsion contact during UV exposure cycles.</p>
+          <h4 style="font-size: 1rem; color: #ed1607; margin-top: 16px; margin-bottom: 8px;">Key Features:</h4>
+          <ul>
+            <li>High-vacuum drawdown system ensures crisp film-to-mesh contact.</li>
+            <li>Sharp stencil resolution for fine lines, dots, and half-tones.</li>
+            <li>Programmable exposure timer for repeatable emulsion hardening.</li>
+            <li>Suitable for solvent-resistant, UV, and water-based emulsion systems.</li>
+          </ul>
+        </div>
+
+        <!-- Stretching Machine Card -->
+        <div class="machine-info-card">
+          <h3><i class="fas fa-expand-arrows-alt"></i> Screen Stretching Machines</h3>
+          <p>Achieve <strong>perfect, uniform tension every time</strong> with pneumatic screen stretching machinery designed to apply controlled tension across all screen sizes.</p>
+          <p>Eliminates slow manual hand-stretching for faster setup, perfectly taut screens, and consistent registration accuracy.</p>
+          <h4 style="font-size: 1rem; color: #ed1607; margin-top: 16px; margin-bottom: 8px;">Key Features:</h4>
+          <ul>
+            <li>Uniform pneumatic pressure eliminates mesh wrinkles & loose spots.</li>
+            <li>Rapid stretching cycle reduces setup time significantly.</li>
+            <li>Adjustable pneumatic clamps accommodate various aluminum and wooden frames.</li>
+            <li>Heavy-duty steel construction for reliable long-term production.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Dark Footer -->
   <style>
-    /* Ensure only one image visible on small screens */
-    @media (max-width: 768px) {
-      #sliderContainer .card {
-        min-width: 100% !important;
-        max-width: 100% !important;
-      }
+    .modern-footer {
+      background-color: #0B0E14;
+      color: #e0e0e0;
+      padding: 80px 20px 40px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      border-top: none;
+    }
+    .modern-footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
+    }
+    .modern-footer .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0 0 15px 0;
+      letter-spacing: 0.5px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+    }
+    .modern-footer p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 0 20px 0;
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+    }
+    .modern-footer h4 {
+      margin-bottom: 25px;
+      font-size: 18px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .modern-footer h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      background: #ed1607;
+      border-radius: 2px;
+    }
+    .modern-footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .modern-footer ul li {
+      margin-bottom: 12px;
+    }
+    .modern-footer ul li a {
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .modern-footer ul li a:hover {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      transform: translateX(5px);
+    }
+    .footer-socials {
+      display: flex;
+      gap: 15px;
+    }
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.05);
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff !important;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 18px;
+    }
+    .footer-socials a:hover {
+      background: #ed1607;
+      transform: translateY(-3px);
+    }
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .footer-contact-item i {
+      color: #ed1607 !important;
+      -webkit-text-fill-color: #ed1607 !important;
+      font-size: 18px;
+      margin-top: 3px;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #707a82 !important;
+      -webkit-text-fill-color: #707a82 !important;
+      font-size: 14px;
+    }
+    .footer-bottom strong {
+      color: #a0aab2 !important;
+      -webkit-text-fill-color: #a0aab2 !important;
     }
   </style>
 
-  <script>
-    const container = document.getElementById('sliderContainer');
-    const leftBtn = document.getElementById('leftBtn');
-    const rightBtn = document.getElementById('rightBtn');
-    const dotsContainer = document.getElementById('dots');
-    const cards = container.querySelectorAll('.card');
+  <footer class="modern-footer">
+    <div class="modern-footer-container">
+      <div style="flex: 1 1 250px;">
+        <h3 class="brand-title">Screensource</h3>
+        <p>Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><img src="images/indiamart.png" alt="IndiaMart" style="width: 22px; height: 22px; object-fit: contain; border-radius: 50%;"></a>
+        </div>
+      </div>
 
-    let currentIndex = 0;
-    let cardWidth = cards[0].offsetWidth + 16;
-    const totalCards = cards.length;
+      <div style="flex: 1 1 150px;">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Home</a></li>
+          <li><a href="About_US.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> About Us</a></li>
+          <li><a href="Contact.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Contact Us</a></li>
+          <li><a href="product.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> All Products</a></li>
+        </ul>
+      </div>
 
-    // Create dots
-    for (let i = 0; i < totalCards; i++) {
-      const dot = document.createElement('span');
-      dot.style.cssText = "display:inline-block;width:10px;height:10px;background:#ccc;border-radius:50%;margin:0 4px;cursor:pointer;transition:background 0.3s ease;";
-      if (i === 0) dot.style.background = "#EC008C";
-      dot.addEventListener('click', () => goToSlide(i));
-      dotsContainer.appendChild(dot);
-    }
-    const dots = dotsContainer.querySelectorAll('span');
+      <div style="flex: 1 1 200px;">
+        <h4>Top Brands</h4>
+        <ul>
+          <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
+          <li><a href="Orafol.html">Orafol Adhesive</a></li>
+          <li><a href="3M.html">3M Tapes</a></li>
+          <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
+          <li><a href="Nittoku.html">Nittoku</a></li>
+          <li><a href="Avery.html">Avery Dennison</a></li>
+        </ul>
+      </div>
 
-    function updateDots(index) {
-      dots.forEach(dot => dot.style.background = "#ccc");
-      dots[index].style.background = "#EC008C";
-    }
-
-    function goToSlide(index) {
-      currentIndex = index;
-      container.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
-      updateDots(currentIndex);
-    }
-
-    leftBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-      goToSlide(currentIndex);
-    });
-
-    rightBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % totalCards;
-      goToSlide(currentIndex);
-    });
-
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalCards;
-      goToSlide(currentIndex);
-    }, 3000);
-
-    window.addEventListener('resize', () => {
-      cardWidth = cards[0].offsetWidth + 16;
-      goToSlide(currentIndex);
-    });
-
-    // Touch swipe
-    let startX = 0;
-    container.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-    container.addEventListener('touchend', e => {
-      let endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) rightBtn.click();
-      if (endX - startX > 50) leftBtn.click();
-    });
-  </script>
-</section>
-
-
-
-<!-- Screen Exposing Machine Section -->
-<section class="hero-exposing">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1 class="fade-in">Exposing Machines</h1>
-    <p class="fade-in delay-1">
-      A <strong>screen exposing machine</strong> is used to transfer a design onto a screen printing mesh, using UV light to harden the emulsion on the screen in the pattern of the design.
-    </p>
-    <p class="fade-in delay-1">
-      It’s different from a screen stretching machine, which stretches mesh onto a frame. The exposing machine’s role is to <strong>create the stencil</strong> for printing.
-    </p>
-
-    <h3 class="yellow-heading fade-in delay-1">Purpose:</h3>
-    <p class="fade-in delay-1">To create the stencil on the screen printing mesh.</p>
-
-    <h3 class="yellow-heading fade-in delay-1">Function:</h3>
-    <p class="fade-in delay-1">It uses UV light to harden the emulsion (a light-sensitive coating) on the screen, creating a stencil of the desired image.</p>
-
-    <h3 class="yellow-heading fade-in delay-1">Key Features:</h3>
-    <ul class="fade-in delay-2">
-      <li>Vacuum system for precise film-to-screen contact.</li>
-      <li>High stencil accuracy and sharp edges.</li>
-      <li>Adjustable exposure times for different emulsions.</li>
-    </ul>
-
-    <h3 class="yellow-heading fade-in delay-1">Types:</h3>
-    <p class="fade-in delay-1">From basic manual units to advanced automatic machines with auto-vacuum and programmable controls.</p>
-  </div>
-</section>
-
-<!-- Screen Stretching Machine Section -->
-<section class="hero-exposing">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1 class="fade-in">Stretching Machines</h1>
-    <p class="fade-in delay-1">
-      Achieve <strong>perfect tension every time</strong> with our pneumatic screen stretching machine, designed to apply uniform tension across the mesh and eliminate inconsistencies.
-    </p>
-    <p class="fade-in delay-1">
-      Say goodbye to the slow, manual process of hand-stretching — our machine speeds up setup while ensuring a perfectly taut screen for sharper prints and fewer misprints.
-    </p>
-
-    <h3 class="yellow-heading fade-in delay-1">Why Choose It:</h3>
-    <ul class="fade-in delay-2">
-      <li>Uniform pneumatic pressure eliminates wrinkles.</li>
-      <li>Rapid stretching reduces setup time.</li>
-      <li>Adjustable clamps fit various screen frame sizes.</li>
-      <li>Robust construction for long-term performance.</li>
-    </ul>
-
-    <h3 class="yellow-heading fade-in delay-1">Built to Last:</h3>
-    <p class="fade-in delay-1">
-      Made from high-quality, durable materials, this machine is a reliable workhorse that supports heavy-duty, continuous production.
-    </p>
-  </div>
-</section>
-
-
-<style>
-  .hero-exposing {
-    position: relative;
-    min-height: 85vh;
-    background: #f9f9f9;
-    display: flex;
-    align-items: center;
-    margin-top: -40px; /* adjust value as needed */
-    justify-content: center;
-    text-align: left;
-    padding: 100px 30px;
-    font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
-  }
-
-  .hero-exposing .overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top right, rgba(252,217,50,0.15), transparent 60%),
-                radial-gradient(circle at bottom left, rgba(69,195,240,0.15), transparent 60%);
-    z-index: 1;
-  }
-
-  .hero-exposing .hero-content {
-    max-width: 900px;
-    z-index: 2;
-    color: #444;
-    padding: 0 10px;
-  }
-
-.hero-exposing h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2.2rem, 6vw, 4.5rem);
-  background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 100;
-  margin-top: -12%;
-  line-height: 1.2;
-  animation: fadeInUp 1s ease-out forwards;
-  white-space: nowrap; /* prevent wrapping */
-  text-align: center; /* center horizontally */
-  width: 100%; /* make sure it spans full width */
-}
-
-
-  .yellow-heading {
-    color: #EC008C;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .hero-exposing p {
-    font-size: clamp(1rem, 2.5vw, 1.15rem);
-    line-height: 1.8;
-    margin-bottom: 18px;
-    color: #444;
-  }
-
-  .hero-exposing strong {
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-  }
-
-  .hero-exposing ul {
-    padding-left: 20px;
-    list-style: none;
-  }
-
-  .hero-exposing ul li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 28px;
-    line-height: 1.6;
-  }
-
-  .hero-exposing ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #EC008C;
-    font-size: 1.2rem;
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  .delay-1 { animation-delay: 0.4s; }
-  .delay-2 { animation-delay: 0.8s; }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .hero-exposing {
-      padding: 80px 20px;
-      
-    }
-  }
-
-  @media (max-width: 600px) {
-    .hero-exposing {
-      padding: 150px 15px;
-      text-align: center;
-    }
-    .hero-exposing ul {
-      padding-left: 0;
-    }
-    .hero-exposing ul li {
-      padding-left: 0;
-    }
-    .hero-exposing ul li::before {
-      display: none;
-    }
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ?????????????????????????  FOOTER ????????????????????????????????// -->
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<style>
-  .modern-footer {
-    background-color: #0B0E14;
-    color: #e0e0e0;
-    padding: 80px 20px 40px;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    border-top: 3px solid transparent;
-    border-image: linear-gradient(90deg, #00b5e2, #9b59b6, #EC008C) 1;
-  }
-  .modern-footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
-  }
-  .modern-footer .brand-title {
-    font-size: 28px;
-    font-weight: 800;
-    margin: 0 0 15px 0;
-    letter-spacing: 0.5px;
-    background: linear-gradient(90deg, #3498db, #9b59b6, #EC008C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .modern-footer p {
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 0 0 20px 0;
-    color: #a0aab2;
-  }
-  .modern-footer h4 {
-    margin-bottom: 25px;
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 10px;
-  }
-  .modern-footer h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    background: #EC008C;
-    border-radius: 2px;
-  }
-  .modern-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .modern-footer ul li {
-    margin-bottom: 12px;
-  }
-  .modern-footer ul li a {
-    color: #a0aab2;
-    text-decoration: none;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .modern-footer ul li a:hover {
-    color: #00b5e2;
-    transform: translateX(5px);
-  }
-  .footer-socials {
-    display: flex;
-    gap: 15px;
-  }
-  .footer-socials a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,0.05);
-    color: #ffffff;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 18px;
-  }
-  .footer-socials a:hover {
-    background: linear-gradient(135deg, #00b5e2, #EC008C);
-    transform: translateY(-3px);
-  }
-  .footer-contact-item {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    color: #a0aab2;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-  .footer-contact-item i {
-    color: #00b5e2;
-    font-size: 18px;
-    margin-top: 3px;
-  }
-  .footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    margin-top: 50px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #707a82;
-    font-size: 14px;
-  }
-  .footer-bottom strong {
-    color: #a0aab2;
-  }
-</style>
-
-<footer class="modern-footer">
-  <div class="modern-footer-container">
-    
-    <!-- Company Info -->
-    <div style="flex: 1 1 250px;">
-      <h3 class="brand-title">Screensource</h3>
-      <p>
-        Screensource provides high-performance screen printing films, emulsions, squeegees, and industrial printing materials with reliable prepress services across Pune and beyond.
-      </p>
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><i class="fas fa-shopping-bag"></i></a>
+      <div style="flex: 1 1 250px;">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>designatscreensource@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+91 8080941627</span>
+        </div>
       </div>
     </div>
-
-    <!-- Quick Links -->
-    <div style="flex: 1 1 150px;">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Home</a></li>
-        <li><a href="About_US.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> About Us</a></li>
-        <li><a href="Contact.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> Contact Us</a></li>
-        <li><a href="product.html"><i class="fas fa-angle-right" style="font-size: 12px;"></i> All Products</a></li>
-      </ul>
+    <div class="footer-bottom">
+      &copy; 2026 <strong>Screensource</strong>. All rights reserved. | Developed by <a href="https://mindaxisinnovation.com/" target="_blank" style="color: #ed1607; text-decoration: none; font-weight: 600;">MindAxis Innovation Pvt Ltd</a>
     </div>
+  </footer>
 
-    <!-- Brands -->
-    <div style="flex: 1 1 200px;">
-      <h4>Top Brands</h4>
-      <ul>
-        <li><a href="MAC_DERMIDE.html">MacDermid Alpha</a></li>
-        <li><a href="Orafol.html">Orafol Adhesive</a></li>
-        <li><a href="3M.html">3M Tapes</a></li>
-        <li><a href="Polyvantis.html">Polyvantis (Sabic)</a></li>
-        <li><a href="Nittoku.html">Nittoku</a></li>
-        <li><a href="Avery.html">Avery Dennison</a></li>
-      </ul>
-    </div>
+  <!-- Scroll to Top Button -->
+  <button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    style="position:fixed; bottom:20px; right:20px; background:#ed1607; color: #ffffff; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(237,22,7,0.3);">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    <!-- Contact -->
-    <div style="flex: 1 1 250px;">
-      <h4>Contact Us</h4>
-      <div class="footer-contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Gala No.1, of Physiotherapy, Chaitanya Industrial, S.No 46/7, opposite to Sinhagad College, Manaji Nagar, Narhe, Pune, Maharashtra 411041</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-envelope"></i>
-        <span>designatscreensource@gmail.com</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-phone-alt"></i>
-        <span>+91 8080941627</span>
-      </div>
-    </div>
+  <!-- Floating Call Button -->
+  <a href="tel:+918080941627" 
+    style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color: #ffffff; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:999;">
+    <i class="fas fa-phone" style="font-size: 20px;"></i>
+  </a>
 
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 <strong>Screensource</strong>. All rights reserved.
-  </div>
-</footer>
-
-
-
-
-<!-- Scroll to Top Button -->
-<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
-  style="position:fixed; bottom:20px; right:20px; background:#00b5e2; color: #444; border:none; border-radius:50%; width:45px; height:45px; cursor:pointer; font-size:18px; z-index:999; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
-  <img src="images/arrow_01.webp" alt="Scroll to top" style="width:22px; height:22px;">
-</button>
-
-<!-- Floating Call Button -->
-<a href="tel:+918080941627" 
-  style="position:fixed; bottom:80px; right:20px; background:#00AEEF; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
-  <img src="images/call_01.png" alt="Call Us" style="width:24px; height:24px;">
-</a>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/918080941627" target="_blank"
-  style="position:fixed; bottom:150px; right:20px; background:#25D366; color: #444; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2); z-index:999;">
-  <img src="images/whatsapp_01.webp" alt="Chat on WhatsApp" style="width:26px; height:26px;">
-</a>
-
-
- <!-- ////////////////////    FOOTER END ////////////////////  -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-
-  <!-- JavaScript -->
-  <script>
-    function toggleMenu(icon) {
-      icon.classList.toggle("cross");
-      const sideMenu = document.getElementById("sideMenu");
-      sideMenu.classList.toggle("show");
-      document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
-    }
-  </script>
-<!-- /////////////////////////////////    SIDE BAR ////////////////// -->
-<script>
-  function toggleMenu(icon) {
-    icon.classList.toggle("cross");
-    const sideMenu = document.getElementById("sideMenu");
-    sideMenu.classList.toggle("show");
-    document.body.style.overflow = sideMenu.classList.contains("show") ? 'hidden' : 'auto';
-
-    // Animate nav items using GSAP
-    const items = document.querySelectorAll('.nav-links li');
-    if (sideMenu.classList.contains("show")) {
-      gsap.fromTo(items, {
-        opacity: 0,
-        y: 20
-      }, {
-        opacity: 1,
-        y: 0,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: "power3.out",
-        delay: 0.2
-      });
-    }
-  }
-</script>
-
-<!-- //////////////////////////////////////// SIDE BAR END ///////////// -->
-<script>
-  function scrollToProducts() {
-    window.scrollTo({
-      top: document.querySelector('#about').offsetTop,
-      behavior: 'smooth'
-    });
-  }
-
-  function scrollToServices() {
-    window.scrollTo({
-      top: document.querySelector('#services').offsetTop,
-      behavior: 'smooth'
-    });
-  }
-</script>
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.fromTo(".about-text", 
-    { opacity: 0, y: 50 }, 
-    { 
-      opacity: 1, y: 0, duration: 1.2, ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-text",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    }
-  );
-
-  gsap.fromTo(".about-image", 
-    { opacity: 0, y: 50 }, 
-    { 
-      opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.2,
-      scrollTrigger: {
-        trigger: ".about-image",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    }
-  );
-</script>
-<!-- //////////////////////////////////// SECTION --- 3333///////////////// -->
-<!-- Swiper Initialization -->
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    loop: true,
-    speed: 4000,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    grabCursor: true,
-    freeMode: true,
-    freeModeMomentum: false,
-  });
-</script>
-
-
-<!-- Swiper Initialization -->
-<script>
-  new Swiper(".testimonial-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-</script>
-  <!-- Script -->
-<!-- jQuery and Slick JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-  function scrollToProducts() {
-    const target = document.getElementById("products-section");
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  }
-
-  function scrollToServices() {
-    const target = document.getElementById("services-section");
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  }
-</script>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/918080941627" target="_blank"
+    style="position:fixed; bottom:150px; right:20px; background:#25D366; color: #ffffff; border:none; border-radius:50%; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:999;">
+    <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+  </a>
 
 </body>
 </html>
-
-
-
-

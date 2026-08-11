@@ -2,8 +2,12 @@ const navbarHTML = `
   <section id="navbar-section">
     <style>
       /* ============================================================
-         NAVBAR - Matching Reference Design (Floating Pill Style)
+         NAVBAR - Clean Floating Pill Design System
          ============================================================ */
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
 
       .navbar-wrapper {
         position: fixed;
@@ -11,12 +15,99 @@ const navbarHTML = `
         left: 0;
         width: 100%;
         z-index: 1000;
-        padding: 12px 24px;
-        transition: padding 0.4s ease;
+        transition: all 0.4s ease;
+        box-sizing: border-box;
       }
 
-      .navbar-wrapper.scrolled {
-        padding: 6px 24px;
+      /* ---- Top Bar ---- */
+      .top-bar {
+        background: #00AEEF; /* Light Sky Blue */
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 4px 0;
+        border-bottom: none;
+        transition: all 0.4s ease;
+        overflow: hidden;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .navbar-wrapper.scrolled .top-bar {
+        height: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+      }
+
+      .top-bar-container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+      }
+
+      .top-bar-contact {
+        display: flex;
+        align-items: center;
+      }
+
+      .top-bar-contact a {
+        color: #000000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .top-bar-contact a:hover {
+        color: #ffffff;
+      }
+
+      .top-bar-contact .separator {
+        margin: 0 10px;
+        opacity: 0.5;
+      }
+
+      .top-bar-socials {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .top-bar-socials a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 14px;
+        transition: transform 0.2s ease;
+      }
+
+      .top-bar-socials a:hover {
+        transform: scale(1.15);
+        color: #ffffff;
+      }
+
+      /* ---- Navbar Container & Floating Pill ---- */
+      .navbar-container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 6px auto 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+        transition: all 0.4s ease;
+      }
+
+      .navbar-wrapper.scrolled .navbar-container {
+        margin-top: 4px;
       }
 
       .navbar {
@@ -24,20 +115,20 @@ const navbarHTML = `
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         border-radius: 50px;
-        padding: 10px 20px 10px 16px;
+        padding: 8px 24px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
         box-shadow: 0 4px 28px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0,0,0,0.06);
         transition: all 0.4s ease;
-        max-width: 1280px;
-        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
       }
 
       .navbar-wrapper.scrolled .navbar {
         box-shadow: 0 8px 40px rgba(0,0,0,0.14);
-        padding: 8px 20px 8px 16px;
+        padding: 6px 24px;
       }
 
       /* ---- Logo ---- */
@@ -50,7 +141,7 @@ const navbarHTML = `
       }
 
       .nav-logo-icon {
-        height: 65px;
+        height: 52px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -84,7 +175,7 @@ const navbarHTML = `
         font-family: 'Poppins', sans-serif;
         font-size: 13.5px;
         font-weight: 600;
-        color: #333;
+        color: #333333;
         padding: 5px 2px;
         margin: 0 10px;
         display: flex;
@@ -100,34 +191,52 @@ const navbarHTML = `
         content: '';
         position: absolute;
         bottom: -2px;
-        left: 0;
-        right: 0;
+        left: 50%;
+        width: 0;
         height: 2.5px;
         border-radius: 99px;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
       }
       
       .nav-center > li:nth-child(1) > a::after { background: #00b5e2; }
-      .nav-center > li:nth-child(2) > a::after { background: #f39c12; }
+      .nav-center > li:nth-child(2) > a::after { background: #ed1607; }
       .nav-center > li:nth-child(3) > a::after { background: #9b59b6; }
       .nav-center > li:nth-child(4) > a::after { background: #EC008C; }
       .nav-center > li:nth-child(5) > a::after { background: #00b5e2; }
-      .nav-center > li:nth-child(6) > a::after { background: #9b59b6; }
-      .nav-center > li:nth-child(7) > a::after { background: #EC008C; }
+      .nav-center > li:nth-child(6) > a::after { background: #ed1607; }
 
-      .nav-center > li > a:hover {
-        color: #000;
+      .nav-center > li > a:hover::after,
+      .nav-center > li > a.nav-active::after,
+      .nav-center > li > a.active::after,
+      .nav-center > li.active > a::after {
+        width: 100%;
       }
 
-      /* ---- Dropdown ---- */
-      .nav-center .dropdown-menu,
-      .nav-center .sub-dropdown-menu {
+      .nav-center > li > a:hover,
+      .nav-center > li > a.nav-active {
+        color: #ed1607;
+      }
+
+      /* ---- Dropdown Arrow ---- */
+      .dd-arrow {
+        font-size: 9px;
+        opacity: 0.6;
+        transition: transform 0.25s ease;
+      }
+      .nav-center li:hover .dd-arrow {
+        transform: rotate(180deg);
+      }
+
+      /* ---- Dropdown Menu ---- */
+      .nav-center .dropdown-menu {
         display: none;
         position: absolute;
         top: calc(100% + 10px);
         left: 50%;
         transform: translateX(-50%);
         min-width: 230px;
-        background: #fff;
+        background: #ffffff;
         border-radius: 16px;
         box-shadow: 0 16px 48px rgba(0,0,0,0.12);
         padding: 8px;
@@ -138,9 +247,7 @@ const navbarHTML = `
         margin: 0;
       }
 
-      /* Bridge the gap so hover doesn't break */
-      .nav-center .dropdown-menu::before,
-      .nav-center .sub-dropdown-menu::before {
+      .nav-center .dropdown-menu::before {
         content: '';
         position: absolute;
         top: -15px;
@@ -155,8 +262,7 @@ const navbarHTML = `
         to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
       }
 
-      .nav-center .dropdown-menu a,
-      .nav-center .sub-dropdown-menu a {
+      .nav-center .dropdown-menu a {
         display: block;
         padding: 9px 14px;
         border-radius: 10px;
@@ -167,10 +273,9 @@ const navbarHTML = `
         transition: all 0.2s ease;
       }
 
-      .nav-center .dropdown-menu a:hover,
-      .nav-center .sub-dropdown-menu a:hover {
-        background: linear-gradient(90deg, rgba(236,0,140,0.08), rgba(69,195,240,0.08));
-        color: #EC008C;
+      .nav-center .dropdown-menu a:hover {
+        background: linear-gradient(90deg, rgba(237,22,7,0.08), rgba(0,174,239,0.08));
+        color: #ed1607;
         padding-left: 20px;
       }
 
@@ -184,34 +289,6 @@ const navbarHTML = `
         align-items: center;
         gap: 8px;
         flex-shrink: 0;
-      }
-
-      .nav-icon-btn {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 16px;
-        transition: transform 0.25s ease;
-        text-decoration: none;
-        border: none;
-      }
-
-      .nav-search-btn {
-        background: #f9dcee; /* Light Pink */
-        color: #EC008C;
-      }
-
-      .nav-user-btn {
-        background: #f0f0f0; /* Light Gray */
-        color: #444;
-      }
-
-      .nav-icon-btn:hover {
-        transform: scale(1.05);
       }
 
       /* ---- Mobile Toggle ---- */
@@ -230,19 +307,23 @@ const navbarHTML = `
       }
 
       /* ---- Mobile Responsive ---- */
-      /* Hide mobile elements on desktop */
       .nav-links-mobile, .mob-close-btn {
         display: none;
       }
 
       @media (max-width: 960px) {
-        .navbar-wrapper {
-          padding: 10px 16px;
+        .top-bar {
+          display: none;
+        }
+
+        .navbar-container {
+          padding: 0 12px;
+          margin-top: 8px;
         }
 
         .navbar {
           border-radius: 16px;
-          padding: 10px 14px;
+          padding: 8px 14px;
         }
 
         .nav-center {
@@ -252,9 +333,7 @@ const navbarHTML = `
         .menu-toggle {
           display: flex;
         }
-      }
 
-      @media (max-width: 960px) {
         .nav-links-mobile {
           position: fixed;
           top: 0; left: -100%;
@@ -294,11 +373,11 @@ const navbarHTML = `
 
         .nav-links-mobile > li > a:hover {
           color: #fff;
-          background: rgba(236,0,140,0.15);
+          background: rgba(237,22,7,0.2);
         }
 
         .nav-links-mobile > li > a.mob-header-link {
-          color: #EC008C;
+          color: #ed1607;
           font-weight: 700;
           pointer-events: none;
           background: rgba(0,0,0,0.2);
@@ -328,7 +407,7 @@ const navbarHTML = `
           display: flex; align-items: center; justify-content: center;
         }
 
-        .mob-close-btn:hover { background: rgba(236,0,140,0.4); color: #fff; }
+        .mob-close-btn:hover { background: rgba(237,22,7,0.4); color: #fff; }
 
         .mob-overlay {
           display: none;
@@ -339,178 +418,6 @@ const navbarHTML = `
         }
 
         .mob-overlay.active { display: block; }
-      }
-
-      /* Global Heading & Paragraph Style Overrides for Plain Black Theme */
-      h1, h2, h3, h4, h5, h6,
-      [class*="title"], 
-      [class*="heading"],
-      h1[style*="linear-gradient"],
-      h2[style*="linear-gradient"],
-      h3[style*="linear-gradient"] {
-        background: none !important;
-        -webkit-background-clip: initial !important;
-        -webkit-text-fill-color: #000000 !important;
-        background-clip: initial !important;
-        color: #000000 !important;
-      }
-      .hero-films p,
-      .hero-content p,
-      .hero-films span,
-      .hero-content span {
-        background: none !important;
-        -webkit-text-fill-color: initial !important;
-        color: #333333 !important;
-      }
-
-      /* Dropdown arrow */
-      .dd-arrow {
-        font-size: 9px;
-        opacity: 0.6;
-        transition: transform 0.25s ease;
-      }
-      .nav-center li:hover .dd-arrow {
-        transform: rotate(180deg);
-      }
-
-      .navbar-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        transition: all 0.4s ease;
-      }
-
-      .top-bar {
-        background: #00AEEF; /* Light Sky Blue */
-        color: #000000;
-        font-family: 'Poppins', sans-serif;
-        font-size: 13.5px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        padding: 8px 24px;
-        border-bottom: none;
-        transition: all 0.4s ease;
-        overflow: hidden;
-        height: 38px;
-        display: flex;
-        align-items: center;
-        border-radius: 30px;
-        max-width: 1280px;
-        margin: 10px auto 0 auto;
-      }
-
-      .navbar-wrapper.scrolled .top-bar {
-        height: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-top: 0;
-        opacity: 0;
-      }
-
-      .top-bar-container {
-        width: 100%;
-        max-width: 1280px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .top-bar-contact {
-        display: flex;
-        align-items: center;
-      }
-
-      .top-bar-contact a {
-        color: #000000;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        transition: opacity 0.3s ease;
-      }
-
-      .top-bar-contact a:hover {
-        opacity: 0.8;
-      }
-
-      .top-bar-contact .separator {
-        color: rgba(0, 0, 0, 0.4);
-        margin: 0 15px;
-      }
-
-      .top-bar-socials {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-      }
-
-      .top-bar-socials a {
-        color: #000000;
-        text-decoration: none;
-        transition: opacity 0.3s ease;
-        display: flex;
-        align-items: center;
-        font-size: 15px;
-      }
-
-      .top-bar-socials a:hover {
-        opacity: 0.8;
-      }
-
-      .navbar-container {
-        padding: 12px 24px;
-        transition: padding 0.4s ease;
-      }
-
-      .navbar-wrapper.scrolled .navbar-container {
-        padding: 6px 24px;
-      }
-
-      .navbar {
-        background: rgba(255, 255, 255, 0.97);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-radius: 50px;
-        padding: 10px 20px 10px 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        box-shadow: 0 4px 28px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0,0,0,0.06);
-        transition: all 0.4s ease;
-        max-width: 1280px;
-        margin: 0 auto;
-      }
-
-      .navbar-wrapper.scrolled .navbar {
-        box-shadow: 0 8px 40px rgba(0,0,0,0.14);
-        padding: 8px 20px 8px 16px;
-      }
-
-      /* ---- Logo ---- */
-      .nav-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        flex-shrink: 0;
-      }
-
-      .nav-logo-icon {
-        height: 65px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
-
-      .nav-logo-icon img {
-        height: 100%;
-        width: auto;
-        object-fit: contain;
       }
     </style>
 
@@ -531,6 +438,7 @@ const navbarHTML = `
           </div>
         </div>
       </div>
+
       <div class="navbar-container">
         <nav class="navbar" id="navbar">
           <!-- Logo -->
@@ -561,13 +469,18 @@ const navbarHTML = `
                 <li><a href="technova.html">TechNova (NovaLife)</a></li>
               </ul>
             </li>
-            
 
             <li>
               <a href="#" class="dropdown-toggle">Services <span class="dd-arrow">▾</span></a>
               <ul class="dropdown-menu">
                 <li><a href="Stretching.html">Stretching Services</a></li>
                 <li><a href="Exposing.html">Exposing Services</a></li>
+              </ul>
+            </li>
+            
+            <li>
+              <a href="#" class="dropdown-toggle">Machines <span class="dd-arrow">▾</span></a>
+              <ul class="dropdown-menu">
                 <li><a href="MAchine_Stre.html">Stretching Machines</a></li>
                 <li><a href="Machines_EXPO.html">Exposing Machines</a></li>
               </ul>
@@ -605,10 +518,11 @@ const navbarHTML = `
       <li><a href="Avery.html" class="mob-sub-link">Avery Dennison</a></li>
       <li><a href="technova.html" class="mob-sub-link">TechNova (NovaLife)</a></li>
 
-
       <li><a href="#" class="mob-header-link">Services</a></li>
       <li><a href="Stretching.html" class="mob-sub-link">Stretching Services</a></li>
       <li><a href="Exposing.html" class="mob-sub-link">Exposing Services</a></li>
+
+      <li><a href="#" class="mob-header-link">Machines</a></li>
       <li><a href="MAchine_Stre.html" class="mob-sub-link">Stretching Machines</a></li>
       <li><a href="Machines_EXPO.html" class="mob-sub-link">Exposing Machines</a></li>
 
@@ -649,13 +563,25 @@ document.write(navbarHTML);
 
 // Auto-set the active link based on the current URL
 setTimeout(() => {
+  const currentUrl = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const links = document.querySelectorAll('.nav-center > li > a');
-  let currentUrl = window.location.pathname.split('/').pop() || 'index.html';
+
+  const brandPages = ['mac_dermide.html', 'orafol.html', '3m.html', 'polyvantis.html', 'nittoku.html', 'print_color.html', 'yessor.html', 'sansui.html', 'nittol.html', 'avery.html', 'technova.html'];
+  const servicePages = ['stretching.html', 'exposing.html'];
+  const machinePages = ['machine_stre.html', 'machines_expo.html'];
 
   links.forEach(a => {
-    a.classList.remove('nav-active');
-    if (a.getAttribute('href') === currentUrl) {
+    a.classList.remove('nav-active', 'active');
+    const href = (a.getAttribute('href') || '').toLowerCase();
+    
+    if (href === currentUrl || (currentUrl === '' && href === 'index.html')) {
+      a.classList.add('nav-active');
+    } else if (href === '#' && a.textContent.includes('Brands') && brandPages.includes(currentUrl)) {
+      a.classList.add('nav-active');
+    } else if (href === '#' && a.textContent.includes('Services') && servicePages.includes(currentUrl)) {
+      a.classList.add('nav-active');
+    } else if (href === '#' && a.textContent.includes('Machines') && machinePages.includes(currentUrl)) {
       a.classList.add('nav-active');
     }
   });
-}, 0);
+}, 50);

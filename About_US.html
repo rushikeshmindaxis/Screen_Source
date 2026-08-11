@@ -121,14 +121,16 @@
   /* HERO SECTION */
   .hero-section {
     position: relative;
-    height: 50vh;
+    margin-top: 85px;
+    min-height: 140px; 
+    height: auto; 
+    padding: 35px 20px !important;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #444;
     overflow: hidden;
-    padding: 0 20px;
   }
 
   .parallax-bg {
@@ -164,16 +166,17 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 .banner-text {
-  font-size: clamp(2.5rem, 6vw, 4.2rem);
-  font-weight: 900;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   color: #ffffff; 
+  margin: 0;
 }
 
 .highlight {
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ed1607 !important;
+  -webkit-text-fill-color: #ed1607 !important;
+  background: none !important;
   display: inline-block;
 }
 
@@ -203,10 +206,16 @@
   .section-title {
     font-size: 3rem;
     font-weight: 900;
-    background: var(--gradient-text);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    background: none !important;
     margin-bottom: 15px;
+  }
+
+  .section-title span {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    background: none !important;
   }
 
   .section-subtitle {
@@ -325,6 +334,12 @@
   }
 
 @media (max-width: 600px) {
+  .hero-section {
+    margin-top: 75px;
+    padding: 25px 15px !important;
+    min-height: 110px;
+  }
+
   .hero-stretching {
     padding: 120px 15px; /* Reduced overall padding */
     text-align: center;
@@ -449,8 +464,8 @@
     padding: 80px 20px 40px;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    border-top: 3px solid transparent;
-    border-image: linear-gradient(90deg, #00b5e2, #9b59b6, #EC008C) 1;
+    border-top: none;
+    
   }
   .modern-footer-container {
     max-width: 1200px;
@@ -574,7 +589,7 @@
       <div class="footer-socials">
         <a href="https://www.facebook.com/ScreensourcePune/" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/screensource_india/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><i class="fas fa-shopping-bag"></i></a>
+        <a href="https://www.indiamart.com/screensource-pune/profile.html" target="_blank"><img src="images/indiamart.png" alt="IndiaMart" style="width: 22px; height: 22px; object-fit: contain; border-radius: 50%;"></a>
       </div>
     </div>
 
@@ -614,14 +629,14 @@
         <span>designatscreensource@gmail.com</span>
       </div>
       <div class="footer-contact-item">
-        <i class="fas fa-phone-alt"></i>
+        <img src="images/call_01.png" alt="Call" style="width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 8px;">
         <span>+91 8080941627</span>
       </div>
     </div>
 
   </div>
   <div class="footer-bottom">
-    &copy; 2026 <strong>Screensource</strong>. All rights reserved.
+    &copy; 2026 <strong>Screensource</strong>. All rights reserved. | Developed by <a href="https://mindaxisinnovation.com/" target="_blank" style="color: #00b5e2; text-decoration: none; font-weight: 600; transition: color 0.3s ease;">MindAxis Innovation Pvt Ltd</a>
   </div>
 </footer>
 
